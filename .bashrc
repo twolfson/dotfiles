@@ -14,28 +14,27 @@ fi
 if tput setaf 1 &> /dev/null; then
     tput sgr0
     if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-      MAGENTA=$(tput setaf 9)
-      ORANGE=$(tput setaf 172)
-      WHITE=$(tput setaf 7)
-      BLUE=$(tput setaf 27)
-      INDIGO=$(tput setaf 39)
-      GREEN=$(tput setaf 76)
-      YELLOW=$(tput setaf 154)
+      PREPOSITION=$(tput setaf 7) #WHITE
+      USER=$(tput setaf 27) #BLUE
+      DEVICE=$(tput setaf 39) #INDIGO
+      DIR=$(tput setaf 76) #GREEN
+      GIT_STATUS=$(tput setaf 154) #YELLOW
     else
       MAGENTA=$(tput setaf 5)
       ORANGE=$(tput setaf 4)
-      GREEN=$(tput setaf 2)
+      DIR=$(tput setaf 2)
       PURPLE=$(tput setaf 1)
-      WHITE=$(tput setaf 7)
+      PREPOSITION=$(tput setaf 7)
     fi
     BOLD=$(tput bold)
+    NORMAL=$PREPOSITION
     RESET=$(tput sgr0)
 else
     MAGENTA="\033[1;31m"
     ORANGE="\033[1;33m"
-    GREEN="\033[1;32m"
+    DIR="\033[1;32m"
     PURPLE="\033[1;35m"
-    WHITE="\033[1;37m"
+    PREPOSITION="\033[1;37m"
     BOLD=""
     RESET="\033[m"
 fi
@@ -47,4 +46,4 @@ parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-PS1="\[${BOLD}${BLUE}\]\u \[$WHITE\]at \[$INDIGO\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$YELLOW\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
+PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n\$ \[$RESET\]"
