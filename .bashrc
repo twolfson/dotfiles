@@ -3,13 +3,6 @@ alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 alias gcompile="java -jar /home/todd/Downloads/compiler-latest/compiler.jar"
 
-function _update_ps1()
-{
-   export PS1="$(~/powerline-bash.py $?)"
-}
-
-# export PROMPT_COMMAND="_update_ps1"
-
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
 # Screenshot: http://img.gf3.ca/d54942f474256ec26a49893681c49b5a.png
 # A big thanks to \amethyst on Freenode
