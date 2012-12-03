@@ -46,4 +46,16 @@ parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n\$ \[$RESET\]"
+# ⍺ - alpha &#9082;
+# λ - lambda &lambda; &#955;
+# ∴ - therefore &there4; &#8756;
+# ± - plus-minus &plusmn; &#177;
+# ∓ - plus-minus-alt &plusmn; &#8723;
+
+parse_on_git () {
+  # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
+  echo "$"
+}
+
+
+PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
