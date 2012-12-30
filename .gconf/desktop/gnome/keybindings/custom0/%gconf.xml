@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="action" mtime="1343611294" type="string">
+		<stringvalue>gnome-system-monitor</stringvalue>
+	</entry>
+	<entry name="name" mtime="1343611294" type="string">
+		<stringvalue>Task Manager</stringvalue>
+	</entry>
+	<entry name="binding" mtime="1343611307" type="string">
+		<stringvalue>&lt;Primary&gt;&lt;Alt&gt;Delete</stringvalue>
+	</entry>
+</gconf>
