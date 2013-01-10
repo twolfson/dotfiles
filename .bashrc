@@ -45,16 +45,17 @@ get_git_branch () {
 }
 
 parse_git_behind () {
-  BRANCH="$(get_git_branch)"
-  echo $BRANCH
-  # [[ git log origin/..$(get_git_branch) 2> \/dev\/null | head -n1 != "" ]] && echo "^"
+  BRANCH=$(get_git_branch)
+  git log origin/$BRANCH..$BRANCH
+  # CMD2='[[ $CMD 2> /dev/null | head -n1 != "" ]] && echo "^"'
+  # eval $CMD2
 }
 
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-  [[ $(git branch --no-color) != "" ]] && echo "$(get_git_branch)"
+  [[ $(git branch --no-color) != "" ]] && echo "$(get_git_branch)$(parse_git_dirty)$(parse_git_behind)"
 }
 
 # ⍺ - alpha &#9082;
