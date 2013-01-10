@@ -40,20 +40,21 @@ else
 fi
 
 get_git_branch () {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/git log origin\/\1..\1 2> \/dev\/null | head -n1/"
+  # Grab the branch                  | Left trim            Remove asterisk
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
 parse_git_behind () {
-  # Grab the branch                  | Left trim            Remove asterisk
-  # [[ $(get_git_branch) != "\r" ]] && echo "^"
-  echo "$(get_git_branch)"
+  BRANCH="$(get_git_branch)"
+  echo $BRANCH
+  # [[ git log origin/..$(get_git_branch) 2> \/dev\/null | head -n1 != "" ]] && echo "^"
 }
 
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_behind)/"
+  [[ $(git branch --no-color) != "" ]] && echo "$(get_git_branch)"
 }
 
 # ⍺ - alpha &#9082;
