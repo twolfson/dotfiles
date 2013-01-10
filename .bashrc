@@ -54,7 +54,9 @@ get_origin_diff () {
 }
 
 parse_git_behind () {
-  ## If the diff         begins with "commit",                        echo our character
+  # If the diff         begins with "commit",                        echo our character
+  # TODO: If the branch does is not merged into origin, also echo
+  # TODO: Echo filled in delta when dirty and unsynced
   [[ $(get_origin_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] && echo "Δ"
 }
 
@@ -62,7 +64,7 @@ parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-  [[ $(git branch --no-color) != "" ]] && echo "$(get_git_branch)$(parse_git_dirty)$(parse_git_behind)"
+  [[ $(get_git_branch) != "" ]] && echo "$(get_git_branch)$(parse_git_dirty)$(parse_git_behind)"
 }
 
 # ⍺ - alpha &#9082;
@@ -72,7 +74,6 @@ parse_git_branch () {
 # ∓ - plus-minus-alt &plusmn; &#8723;
 # Δ - &Delta; &#916;
 # ∇ - &nabla; &#8711;
-
 
 parse_on_git () {
   # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
