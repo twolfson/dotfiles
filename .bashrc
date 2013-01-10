@@ -44,7 +44,7 @@ get_git_branch () {
 }
 
 parse_git_behind () {
-  echo git log origin/master..master
+  [[ $(git log origin/master..master 2> /dev/null | head -n1) != "" ]] && echo "^"
 }
 
 parse_git_dirty () {
