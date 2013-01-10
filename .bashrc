@@ -113,5 +113,9 @@ parse_on_git () {
   echo "$"
 }
 
+# When on clean git branch,              $USER at $COMPUTER in $PWD on $branch
+# When on dirty git branch,              $USER at $COMPUTER in $PWD on $branch*
+# When on unsynced git branch,           $USER at $COMPUTER in $PWD on $branch▵
+# When on unsynced and dirty git branch, $USER at $COMPUTER in $PWD on $branch▴
 
 PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
