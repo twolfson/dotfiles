@@ -86,7 +86,7 @@ parse_git_branch () {
     if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
       OUTPUT=$OUTPUT"▴"
     # Otherwise, if we are behind, append
-    elif [[ $RANCH_BEHIND == 1 ]]; then
+    elif [[ $BRANCH_BEHIND == 1 ]]; then
       OUTPUT=$OUTPUT"▵"
     # Otherwise, if we are dirty, append
     elif [[ $DIRTY_BRANCH == 1 ]]; then
