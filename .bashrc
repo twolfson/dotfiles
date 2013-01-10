@@ -40,7 +40,7 @@ else
 fi
 
 get_git_branch () {
-  # Grab the branch                  | Left trim            Remove asterisk
+  # Grab the branch                  | ltrim unused rows    Remove asterisk
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
@@ -63,14 +63,39 @@ parse_git_behind () {
     # or it has not been merged into origin
     [[ $(git branch -r --no-color 2> /dev/null | grep origin/$BRANCH | tail -n1) == "" ]] &&
     # echo our character
-    echo "▵"
+    echo 1
 }
 
 parse_git_dirty () {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo 1
 }
 parse_git_branch () {
-  [[ $(get_git_branch) != "" ]] && echo "$(get_git_branch)$(parse_git_dirty)$(parse_git_behind)"
+  # Grab the branch
+  BRANCH=$(get_git_branch)
+
+  # If there are any branches
+  if [[ $BRANCH != "" ]]; then
+    # Echo the branch
+    OUTPUT=$BRANCH
+
+    # Grab the git dirty and git behind
+    DIRTY_BRANCH=$(parse_git_dirty)
+    BRANCH_BEHIND=$(parse_git_behind)
+
+    # If we are dirty and behind, append
+    if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
+      OUTPUT=$OUTPUT"▴"
+    # Otherwise, if we are behind, append
+    elif [[ $RANCH_BEHIND == 1 ]]; then
+      OUTPUT=$OUTPUT"▵"
+    # Otherwise, if we are dirty, append
+    elif [[ $DIRTY_BRANCH == 1 ]]; then
+      OUTPUT=$OUTPUT"*"
+    fi
+
+    # Echo our output
+    echo $OUTPUT
+  fi
 }
 
 # ⍺ - alpha &#9082;
