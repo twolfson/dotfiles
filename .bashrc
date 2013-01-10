@@ -40,11 +40,13 @@ else
 fi
 
 get_git_branch () {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/git log origin\/\1..\1 2> \/dev\/null | head -n1/"
 }
 
 parse_git_behind () {
-  [[ $(git log origin/master..master 2> /dev/null | head -n1) != "" ]] && echo "^"
+  # Grab the branch                  | Left trim            Remove asterisk
+  # [[ $(get_git_branch) != "\r" ]] && echo "^"
+  echo "$(get_git_branch)"
 }
 
 parse_git_dirty () {
