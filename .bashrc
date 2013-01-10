@@ -44,11 +44,18 @@ get_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
-parse_git_behind () {
+get_origin_diff () {
+  # Grab the branches
   BRANCH=$(get_git_branch)
-  git log origin/$BRANCH..$BRANCH
-  # CMD2='[[ $CMD 2> /dev/null | head -n1 != "" ]] && echo "^"'
-  # eval $CMD2
+  REMOTE_BRANCH=origin/$BRANCH
+
+  # Look up the result
+  git log $REMOTE_BRANCH..$BRANCH -1 --no-color 2> /dev/null | head -n1
+}
+
+parse_git_behind () {
+  ## If the diff         begins with "commit",                        echo our character
+  [[ $(get_origin_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] && echo "Δ"
 }
 
 parse_git_dirty () {
