@@ -39,11 +39,19 @@ else
     RESET="\033[m"
 fi
 
+get_git_branch () {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+}
+
+parse_git_behind () {
+  echo git log origin/master..master
+}
+
 parse_git_dirty () {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 parse_git_branch () {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)$(parse_git_behind)/"
 }
 
 # ⍺ - alpha &#9082;
@@ -51,6 +59,9 @@ parse_git_branch () {
 # ∴ - therefore &there4; &#8756;
 # ± - plus-minus &plusmn; &#177;
 # ∓ - plus-minus-alt &plusmn; &#8723;
+# Δ - &Delta; &#916;
+# ∇ - &nabla; &#8711;
+
 
 parse_on_git () {
   # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
