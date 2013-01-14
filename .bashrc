@@ -1,20 +1,33 @@
-# Common commands
+### Common commands ###
 alias inco="google-chrome --incognito"
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 
-# Directory movements
+### Directory movements ###
+
+# cd is now pushd ;D
 alias    cd="pushd $1          > /dev/null"
+
+# .. brings you up one level, ... is two levels, etc.
+# Additionally, these are added to the directory stack
 alias    ..="pushd ..          > /dev/null"
 alias   ...="pushd ../..       > /dev/null"
 alias  ....="pushd ../../..    > /dev/null"
 alias .....="pushd ../../../.. > /dev/null"
+
+# ~ brings you to your home directory and adds it to the directory stack
 alias     ~="pushd ~ > /dev/null"
+
+# ,, brings you to the last directory. ,,, brings you to the second to last directory, etc.
 alias    ,,="popd    > /dev/null"
 alias   ,,,=",,   && ,,"
 alias  ,,,,=",,,  && ,,"
 alias ,,,,,=",,,, && ,,"
+
+# , echoes out the current directory stack
 alias     ,="dirs -l -v $*"
+
+### Bash prompt ###
 
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
 # Screenshot: http://img.gf3.ca/d54942f474256ec26a49893681c49b5a.png
