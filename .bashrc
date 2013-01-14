@@ -1,7 +1,20 @@
+# Common commands
 alias inco="google-chrome --incognito"
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
-alias gcompile="java -jar /home/todd/Downloads/compiler-latest/compiler.jar"
+
+# Directory movements
+# TODO: Override cd with pushd or not?
+DIR_STACK="echo -n 'Dir stack: '"
+alias    ..="$DIR_STACK && pushd .."
+alias   ...="$DIR_STACK && pushd ../.."
+alias  ....="$DIR_STACK && pushd ../../.."
+alias .....="$DIR_STACK && pushd ../../../.."
+alias     ~="$DIR_STACK && pushd ~"
+alias    ,,="$DIR_STACK && popd"
+alias   ,,,="$DIR_STACK && popd -2"
+alias  ,,,,="$DIR_STACK && popd -3"
+alias ,,,,,="$DIR_STACK && popd -4"
 
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
 # Screenshot: http://img.gf3.ca/d54942f474256ec26a49893681c49b5a.png
