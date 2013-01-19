@@ -87,7 +87,7 @@ parse_git_behind () {
   # If the diff         begins with "commit"
   [[ $(get_origin_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] ||
     # or it has not been merged into origin
-    [[ $(git branch -r --no-color 2> /dev/null | grep origin/$BRANCH | tail -n1) == "" ]] &&
+    [[ $(git branch -r --no-color 2> /dev/null | grep origin/$BRANCH 2> /dev/null | tail -n1) == "" ]] &&
     # echo our character
     echo 1
 }
