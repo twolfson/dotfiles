@@ -1,0 +1,20 @@
+EJS
+FindPlusPlus
+Git
+Handlebars
+Jade
+LESS
+Origami
+Search++
+Search Anywhere
+SideBarEnhancements
+Strapdown.js Preview
+Stylus
+Sublime Files
+SublimeLinter
+SyncedSideBar
+Table Editor
+Terminal
+Theme - Soda
+
+
