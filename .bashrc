@@ -93,7 +93,9 @@ parse_git_behind () {
 }
 
 parse_git_dirty () {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo 1
+  # nothing to commit, working directory clean
+  # nothing to commit (working directory clean)
+  [[ $(git status 2> /dev/null | tail -n1 | sed -E "s/nothing to commit..working directory clean.?/1/") != "1" ]] && echo 1
 }
 parse_git_branch () {
   # Grab the branch
