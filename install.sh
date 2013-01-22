@@ -7,6 +7,10 @@ ln -s $PWD/.bash_profile ~/.bash_profile
 ln -s $PWD/sublime-text-2.desktop ~/.local/share/applications/sublime-text-2.desktop
 ln -s $PWD/defaults.list ~/.local/share/applications/defaults.list
 
+# Sublime settings
+mkdir -p ~/.config/sublime-text-2/Packages/User
+ln -s $PWD/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
+
 # Fonts
 mkdir -p ~/.fonts
 # I no longer use powerline (traded it in for Sexy Bash Prompt) but still like Anonymous Pro
