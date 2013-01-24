@@ -116,10 +116,10 @@ parse_git_branch () {
 
     # If we are dirty and behind, append
     if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"▴"
+      OUTPUT=$OUTPUT"▲"
     # Otherwise, if we are behind, append
     elif [[ $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"▵"
+      OUTPUT=$OUTPUT"△"
     # Otherwise, if we are dirty, append
     elif [[ $DIRTY_BRANCH == 1 ]]; then
       OUTPUT=$OUTPUT"*"
@@ -139,6 +139,8 @@ parse_git_branch () {
 # ∇ - &nabla; &#8711;
 # ▵ - Smaller delta &#9653;
 # ▴ - Smaller filled &#9652;
+# ▲ - Slightly bigger delta &#9651;
+# △ - Slightly bigger filled &#9650;
 
 parse_on_git () {
   # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
