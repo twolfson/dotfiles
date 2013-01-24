@@ -1,5 +1,9 @@
 ### Common commands ###
-alias inco="google-chrome --incognito"
+if [[ $(ls /Applications/Google\ Chrome.app) != "" ]]; then
+  alias inco="open -a /Applications/Google\\ Chrome.app --args --incognito"
+else
+  alias inco="google-chrome --incognito"
+fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 
