@@ -1,0 +1,8 @@
+[user]
+	name = Todd Wolfson
+	email = todd@twolfson.com
+[color]
+	ui = true
+[alias]
+	a=add -A
+	m=commit -m
