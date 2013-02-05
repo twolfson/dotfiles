@@ -32,9 +32,9 @@ alias ,,,,,=",,,, && ,,"
 alias     ,="dirs -l -v $*"
 
 ### Git aliases ###
-alias ~~="git checkout master"
-alias ~_=~-
-alias ~-="git checkout -"
+alias g--="git checkout -"
+alias g-~="git checkout master"
+alias g--m="git checkout - && git merge -"
 
 ### Bash prompt ###
 
