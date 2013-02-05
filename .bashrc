@@ -31,6 +31,11 @@ alias ,,,,,=",,,, && ,,"
 # , echoes out the current directory stack
 alias     ,="dirs -l -v $*"
 
+### Git aliases ###
+alias ~~="git checkout master"
+alias ~_=~-
+alias ~-="git checkout -"
+
 ### Bash prompt ###
 
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
