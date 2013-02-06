@@ -36,6 +36,11 @@ alias g--="git checkout -"
 alias g-~="git checkout master"
 alias g--m="git checkout - && git merge -"
 
+### Git autocompletion ###
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  . /usr/local/git/contrib/completion/git-completion.bash
+fi
+
 ### Bash prompt ###
 
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
