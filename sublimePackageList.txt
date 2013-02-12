@@ -16,5 +16,5 @@ SyncedSideBar
 Table Editor
 Terminal
 Theme - Soda
-
+Quick File Creator
 

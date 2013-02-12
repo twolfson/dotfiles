@@ -1,5 +1,9 @@
 ### Common commands ###
-alias inco="google-chrome --incognito"
+if [[ $(ls /Applications/Google\ Chrome.app) != "" ]]; then
+  alias inco="open -a /Applications/Google\\ Chrome.app --args --incognito"
+else
+  alias inco="google-chrome --incognito"
+fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 
@@ -26,6 +30,16 @@ alias ,,,,,=",,,, && ,,"
 
 # , echoes out the current directory stack
 alias     ,="dirs -l -v $*"
+
+### Git aliases ###
+alias g--="git checkout -"
+alias g-~="git checkout master"
+alias g--m="git checkout - && git merge -"
+
+### Git autocompletion ###
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+  . /usr/local/git/contrib/completion/git-completion.bash
+fi
 
 ### Bash prompt ###
 
@@ -112,10 +126,10 @@ parse_git_branch () {
 
     # If we are dirty and behind, append
     if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"▴"
+      OUTPUT=$OUTPUT"▲"
     # Otherwise, if we are behind, append
     elif [[ $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"▵"
+      OUTPUT=$OUTPUT"△"
     # Otherwise, if we are dirty, append
     elif [[ $DIRTY_BRANCH == 1 ]]; then
       OUTPUT=$OUTPUT"*"
@@ -135,6 +149,8 @@ parse_git_branch () {
 # ∇ - &nabla; &#8711;
 # ▵ - Smaller delta &#9653;
 # ▴ - Smaller filled &#9652;
+# ▲ - Slightly bigger delta &#9651;
+# △ - Slightly bigger filled &#9650;
 
 parse_on_git () {
   # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
