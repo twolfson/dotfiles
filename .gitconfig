@@ -1,8 +1,13 @@
 [user]
 	name = Todd Wolfson
 	email = todd@twolfson.com
+[mergetool]
+	keepBackup = false
+[mergetool "[tool]"]
+	cmd = meld
 [color]
 	ui = true
 [alias]
+	add-pr = !git config --add remote.pr.url $(git config --get remote.origin.url) && git config --add remote.pr.fetch +refs/pull/*/head:refs/remotes/origin/pr/*
 	a=add -A
 	m=commit -m

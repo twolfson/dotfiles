@@ -1,5 +1,5 @@
 ### Common commands ###
-if [[ $(ls /Applications/Google\ Chrome.app) != "" ]]; then
+if [[ $(ls /Applications/Google\ Chrome.app 2> /dev/null) != "" ]]; then
   alias inco="open -a /Applications/Google\\ Chrome.app --args --incognito"
 else
   alias inco="google-chrome --incognito"
