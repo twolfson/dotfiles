@@ -1,0 +1,15 @@
+{
+	"installed_packages":
+	[
+		"EJS",
+		"Jade",
+		"LESS",
+		"Origami",
+		"Quick File Creator",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SyncedSideBar",
+		"Table Editor",
+		"Terminal"
+	]
+}
