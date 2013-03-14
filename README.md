@@ -47,6 +47,7 @@ This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored a
 [sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
 
 Directory:
+
 ![sexy-bash-dir](https://f.cloud.github.com/assets/902488/257895/507260e0-8c7c-11e2-88b2-25e664804341.png)
 
 Git clean:
