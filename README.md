@@ -42,20 +42,74 @@ Files
 - `g--m` - Merge current branch to previous branch
 
 ### Bash prompt
+This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for unsynced branches.
+
+[sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
+
+Directory:
+![sexy-bash-dir](https://f.cloud.github.com/assets/902488/257895/507260e0-8c7c-11e2-88b2-25e664804341.png)
+
+Git clean:
+
+![sexy-bash-git](https://f.cloud.github.com/assets/902488/257931/fbc83b12-8c7d-11e2-8f99-e31b34611179.png)
+
+Git dirty:
+
+![sexy-bash-dirty](https://f.cloud.github.com/assets/902488/257932/00e49898-8c7e-11e2-91a1-507ff4634c19.png)
+
+Git unsynced:
+
+![sexy-bash-unsynced](https://f.cloud.github.com/assets/902488/257933/0393ab1a-8c7e-11e2-9e78-4f21891809bf.png)
+
+Git dirty + unsynced:
+
+![sexy-bash-dirty-unsynced](https://f.cloud.github.com/assets/902488/257934/0596d284-8c7e-11e2-92a4-8957085172d9.png)
 
 
 Workflow
 --------
 
+- Use multiple monitors, layout to see everything at a glance.
+    - [Spectacles][spectacles] (Mac OS X), [Compiz Config Settings Manager][ccsm] (Gnome), or [AeroSnap][aero] + [WindowPad][windowpad] (Windows) help **a ton**.
+    - For more info on Windows setup, see [twolfson/winfiles][winfiles].
+- Create new files at a keystroke within Sublime - Package: Quick File Creator - New File = Ctrl+Alt+O
+- Duplicate files via command palette + SideBarEnhancements - `File: Duplcate`
+- Debug via binary search of `console.log`
+- Clean up debug statements via command palette + FindPlusPlus - `Find: In Current File`
+    - Set Sublime Text to always Buffer `Find in Results` to bottom panel
+- Usually split Sublime into 2 panes (one for searching, the other for hacking)
+
+[spectacles]: http://spectacleapp.com/
+[cssm]: http://wiki.compiz.org/CCSM
+[aerosnap]: http://windows.microsoft.com/en-us/windows7/arrange-windows-side-by-side-on-the-desktop-using-snap
+[windowpad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool/
+[winfiles]: https://github.com/twolfson/winfiles
+
+### General purpose
+
+- Use Unix key bindings (Ctrl+A, Ctrl+E, Ctrl+D)
+- Use shortcutfoo to learn key bindings of new programs
+
 Installed Programs
 ------------------
 
-- Sublime Text 2
+- Sublime Text 2 with [Package Control]
+    - Installed packages
+      - SideBarEnhancements (for command palette file commands)
+      - SideBarSync (for reveal file command palette)
+      - Table Editor (for easy tables in Markdown - GFM accepted)
+      - Quick File Creator (for shortcuts to create new directories and files)
+      - Find in Files (for quick selection of files and better results)
+      - Jade, Mustache (syntax)
+      - Sublime Linter (constantly linting code)
+      - Origami (for when I want some funky custom layout *rare*)
 - nodemon
 - node/npm
 - hub
 - howdoi
 - grunt@0.3.17
+- Charles Proxy (only installed/used when acting as 3rd party script)
+    - Used to modify content (injecting scripts, faking pages, etc) for hands-free and dev-friendly environment
 
 ### Linux Specific
 
@@ -65,3 +119,8 @@ Installed Programs
 
 - Dock view
 - Spectacles
+
+Settings
+--------
+
+- Key repeat: Very high
