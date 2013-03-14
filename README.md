@@ -17,8 +17,28 @@ Files
 
 - `.bash_profile` - Run at login. Sets default editor to [Sublime Text 2][subl], enables CLI coloring, and runs `.bashrc` for aliases and such.
 - `.bashrc` - Run when a new terminal is opened, creates a bunch of aliases, enables tab completion for `git`, and adds customized sexy bash prompt.
+- `.config`, `Library` - Contains Sublime Text 2 preferences (Gnome, OS X respectively)
+- `.fonts` - An open source fork of Anonymous Pro (via [powerline][powerline])
+- `.gitconfig`
+    - Sets up default credentials, disable `.orig` files
+    - Set mergetool as `meld` (Tortoisediff for Windows)
+    - Enable color commands (helps with diff)
+    - Add aliases
+        - `add-pr` - Adds a new `remote`, `pr`,to pull `pull requests` (via [piscisaureus][pr-gist])
+        - `a` - To add all changes (never used)
+        - `m` - Commit with a message (never used)
+- `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
+- `defaults.list` - Application configuration list for Gnome
+- `install.sh` - Set up symlinks to our files
+- `once.sh` - Write/append content to files once
+- `sublime-text-2.desktop` - Application configuration for Sublime Text 2 for Gnome
+- `sublimePackageList.sh`, `sublimePackageList.txt` - Grabs list of installed packages from Sublime's folder and writes new ones into `.txt`
 
 [subl]: http://www.sublimetext.com/2
+[powerline]: https://github.com/milkbikis/powerline-shell
+[pr-gist]: https://gist.github.com/piscisaureus/3342247
+
+**.bashrc info**
 
 ### Aliases
 #### Programs
@@ -79,12 +99,14 @@ Workflow
 - Clean up debug statements via command palette + FindPlusPlus - `Find: In Current File`
     - Set Sublime Text to always Buffer `Find in Results` to bottom panel
 - Usually split Sublime into 2 panes (one for searching, the other for hacking)
+- Checkout and merge previous branches via `git checkout/merge -`. See [Coderwall protips][coderwall-protips] for more.
 
 [spectacles]: http://spectacleapp.com/
 [cssm]: http://wiki.compiz.org/CCSM
 [aerosnap]: http://windows.microsoft.com/en-us/windows7/arrange-windows-side-by-side-on-the-desktop-using-snap
 [windowpad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool/
 [winfiles]: https://github.com/twolfson/winfiles
+[coderwall-protips]: https://coderwall.com/p/u/twolfson
 
 ### General purpose
 
@@ -106,11 +128,12 @@ Installed Programs
       - Origami (for when I want some funky custom layout *rare*)
 - nodemon
 - node/npm
-- hub
+- hub - Create a new GitHub repo straight from the command line =D
 - howdoi
 - grunt@0.3.17
 - Charles Proxy (only installed/used when acting as 3rd party script)
     - Used to modify content (injecting scripts, faking pages, etc) for hands-free and dev-friendly environment
+- git-extras - Adds an extremely useful set of git commands (e.g. `git back`)
 
 ### Linux Specific
 
