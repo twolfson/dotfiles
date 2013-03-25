@@ -157,6 +157,9 @@ parse_on_git () {
   echo "$"
 }
 
+# Convenience method/variable
+BRANCH=get_git_branch
+
 # When on clean git branch,              $USER at $COMPUTER in $PWD on $branch
 # When on dirty git branch,              $USER at $COMPUTER in $PWD on $branch*
 # When on unsynced git branch,           $USER at $COMPUTER in $PWD on $branch▵
