@@ -4,6 +4,7 @@ ln -s $PWD/.bash_profile ~/.bash_profile
 
 # Applications (configured for Linux Mint)
 # cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-2.desktop;gedit.desktop/'
+mkdir -p ~/.local/share/applications
 ln -s $PWD/sublime-text-2.desktop ~/.local/share/applications/sublime-text-2.desktop
 ln -s $PWD/defaults.list ~/.local/share/applications/defaults.list
 
