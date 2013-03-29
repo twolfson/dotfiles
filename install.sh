@@ -11,6 +11,11 @@ mkdir -p ~/.local/share/applications
 ln -s $PWD/sublime-text-2.desktop ~/.local/share/applications/sublime-text-2.desktop
 ln -s $PWD/defaults.list ~/.local/share/applications/defaults.list
 
+# Symlink sublime text
+sudo ln -s /usr/lib/sublime-text-2/sublime_text /usr/bin/sublime_text
+su -c 'echo "sublime_text \$@ > /dev/null 2> /dev/null &" > /usr/bin/subl'
+sudo chmod +x /usr/bin/subl
+
 # Sublime settings
 mkdir -p ~/.config/sublime-text-2/Packages/User
 ln -s $PWD/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
