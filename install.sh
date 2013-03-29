@@ -2,6 +2,9 @@
 ln -s $PWD/.bashrc ~/.bashrc
 ln -s $PWD/.bash_profile ~/.bash_profile
 
+# Link up git config
+ln -s $PWD/.gitconfig ~/.gitconfig
+
 # Applications (configured for Linux Mint)
 # cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-2.desktop;gedit.desktop/'
 mkdir -p ~/.local/share/applications
