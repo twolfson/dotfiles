@@ -13,6 +13,6 @@
 	m=commit -m
 	cleanup=!_git_cleanup
 [sequence]
-	editor = subl -w
+	editor = sublime_text -w
 [core]
 	editor = pico
