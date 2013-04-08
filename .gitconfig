@@ -11,3 +11,8 @@
 	add-pr = !git config --add remote.pr.url $(git config --get remote.origin.url) && git config --add remote.pr.fetch +refs/pull/*/head:refs/remotes/origin/pr/*
 	a=add -A
 	m=commit -m
+	cleanup=!_git_cleanup
+[sequence]
+	editor = subl -w
+[core]
+	editor = pico
