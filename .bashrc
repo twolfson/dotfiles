@@ -42,6 +42,7 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
 fi
 
 ### Git command ###
+# http://rob.by/2013/remove-merged-branches-from-git/
 _git_cleanup () {
   current_branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
   if [ "$current_branch" != "master" ]; then
