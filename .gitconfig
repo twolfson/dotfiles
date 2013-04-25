@@ -16,3 +16,5 @@
 	editor = sublime_text -w
 [help]
 	autocorrect = 25
+[core]
+	editor = pico
