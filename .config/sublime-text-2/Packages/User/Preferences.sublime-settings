@@ -7,8 +7,7 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Git"
+		"Vintage"
 	],
 	"reveal-on-activate": false,
 	"scroll_past_end": false,
