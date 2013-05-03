@@ -138,6 +138,7 @@ Installed Programs
 ### Linux Specific
 
 - gnome-terminal
+- Quod Libet - Music tag manager
 
 ### Mac OS X Specific
 
