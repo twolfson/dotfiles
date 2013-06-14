@@ -15,6 +15,6 @@
 [sequence]
 	editor = sublime_text -w
 [help]
-	autocorrect = 25
+	autocorrect = 7
 [core]
 	editor = pico

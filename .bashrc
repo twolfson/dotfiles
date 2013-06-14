@@ -6,6 +6,7 @@ else
 fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
+alias ff-dev="firefox -no-remote -p dev"
 
 ### Directory movements ###
 
@@ -35,6 +36,10 @@ alias     ,="dirs -l -v $*"
 alias g--="git checkout -"
 alias g-~="git checkout master"
 alias g--m="git checkout - && git merge -"
+
+### Typos suck ###
+alias gi="git" # Works great with git config help.autocorrect
+alias gti="git"
 
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
