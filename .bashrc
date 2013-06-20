@@ -209,3 +209,4 @@ BRANCH () {
 PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:/usr/local/go/bin # Add Go to path
