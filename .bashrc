@@ -6,6 +6,7 @@ else
 fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
+alias ff-dev="firefox -no-remote -p dev"
 
 ### Directory movements ###
 
@@ -35,6 +36,10 @@ alias     ,="dirs -l -v $*"
 alias g--="git checkout -"
 alias g-~="git checkout master"
 alias g--m="git checkout - && git merge -"
+
+### Typos suck ###
+alias gi="git" # Works great with git config help.autocorrect
+alias gti="git"
 
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
@@ -217,3 +222,6 @@ BRANCH () {
 # When on unsynced and dirty git branch, $USER at $COMPUTER in $PWD on $branch▴
 
 PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:/usr/local/go/bin # Add Go to path
