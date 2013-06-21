@@ -84,6 +84,21 @@ _git_cleanup () {
   fi
 }
 
+### Fabric bash completion ###
+# Taken from http://rubayeet.wordpress.com/2012/03/26/tab-completion-for-fabric-tasks-on-os-x/
+function _fab_complete() {
+    local cur
+    if [ -f "fabfile.py" ]; then
+        cur="${COMP_WORDS[COMP_CWORD]}"
+        COMPREPLY=( $(compgen -W "$(fab -F short -l)" -- ${cur}) )
+        return 0
+    else
+        # no fabfile.py found. Don't do anything.
+        return 1
+    fi
+}
+complete -o nospace -F _fab_complete fab
+
 ### Bash prompt ###
 
 # Sexy Bash Prompt, inspired by "Extravagant Zsh Prompt"
