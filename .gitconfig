@@ -18,3 +18,5 @@
 	autocorrect = 7
 [core]
 	editor = pico
+[init]
+	templatedir = /home/todd/github/dotfiles/git-template-dir/
