@@ -8,7 +8,7 @@
  */
 
 // Basic template description.
-exports.description = 'Create a Node.js module, including Nodeunit unit tests.';
+exports.description = 'Create a Node.js module, including mocha unit tests.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '_Project name_ shouldn\'t contain "node" or "js" and should ' +
@@ -19,6 +19,11 @@ exports.warnOn = '*';
 
 // The actual init template.
 exports.template = function(grunt, init, done) {
+
+  // Add on a keywords prompt
+  grunt.helper('prompt_for_obj').keywords = {
+    message: 'What keywords relate to this plugin (comma separated)?'
+  };
 
   grunt.helper('prompt', {type: 'node'}, [
     // Prompt for these values.
@@ -34,9 +39,25 @@ exports.template = function(grunt, init, done) {
     grunt.helper('prompt_for', 'author_url'),
     grunt.helper('prompt_for', 'node_version'),
     grunt.helper('prompt_for', 'main'),
-    grunt.helper('prompt_for', 'npm_test')
+    grunt.helper('prompt_for', 'npm_test', 'mocha'),
+    grunt.helper('prompt_for', 'keywords')
   ], function(err, props) {
-    props.keywords = [];
+    // Set up dependencies
+    props.dependencies = {};
+    props.devDependencies = {
+      "grunt": "~0.3.17",
+      "mocha": "~1.11.0"
+    };
+
+    // Break up the keywords by commas
+    var keywords = props.keywords;
+    keywords = keywords ? keywords.split(',') : [];
+
+    // Trim each keyword and save
+    keywords = keywords.map(function (str) {
+      return str.trim();
+    });
+    props.keywords = keywords;
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
