@@ -1,11 +1,11 @@
 var {%= js_safe_name %} = require('../lib/{%= name %}.js');
 
-describe("{%= name %}", function () {
+describe('{%= name %}', function () {
   before(function () {
 
   });
 
-  it("", function () {
+  it('', function () {
 
   });
 });
