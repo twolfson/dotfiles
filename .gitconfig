@@ -12,6 +12,7 @@
 	a=add -A
 	m=commit -m
 	git=!git
+	head = !git rev-parse HEAD | cut -c 1,2,3,4,5,6,7
 [sequence]
 	editor = sublime_text -w
 [help]

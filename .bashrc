@@ -46,6 +46,10 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
 fi
 
+if [ -f /etc/bash_completion.d/git-extras ]; then
+  . /etc/bash_completion.d/git-extras
+fi
+
 ### Git command ###
 # http://rob.by/2013/remove-merged-branches-from-git/
 _git_cleanup () {
