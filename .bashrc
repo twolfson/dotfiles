@@ -37,6 +37,10 @@ alias g--="git checkout -"
 alias g-~="git checkout master"
 alias g--m="git checkout - && git merge -"
 
+### Node aliases ###
+# npm without 304 requests. Perfect for offline use!
+alias lnpm="npm --no-registry"
+
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
 alias gti="git"
