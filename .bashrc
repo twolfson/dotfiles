@@ -45,6 +45,9 @@ alias lnpm="npm --no-registry"
 alias gi="git" # Works great with git config help.autocorrect
 alias gti="git"
 
+### Clipboard help ###
+alias xclip="xclip -selection c"
+
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
