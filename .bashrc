@@ -48,6 +48,9 @@ alias gti="git"
 ### Clipboard help ###
 alias xclip="xclip -selection c"
 
+### Live-reload specific ###
+alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
+
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
