@@ -19,5 +19,6 @@
 	autocorrect = 7
 [core]
 	editor = pico
+	excludesfile = /home/todd/.gitignore
 [init]
 	templatedir = /home/todd/github/dotfiles/git-template-dir/

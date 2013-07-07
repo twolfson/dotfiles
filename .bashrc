@@ -51,6 +51,13 @@ alias xclip="xclip -selection c"
 ### Live-reload specific ###
 alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
 
+# The following 2 are taken from https://coderwall.com/p/lyutxw
+### Enable aliases to be `sudo`ed ###
+alias sudo="sudo "
+
+### Gzip-enabled `curl` ###
+alias gurl="curl --compressed"
+
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
