@@ -159,7 +159,7 @@ function get_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 
-get_origin_diff () {
+get_origin_ahead_diff () {
   # Grab the branches
   BRANCH=$(get_git_branch)
   REMOTE_BRANCH=origin/$BRANCH
@@ -168,15 +168,48 @@ get_origin_diff () {
   git log $REMOTE_BRANCH..$BRANCH -1 --no-color 2> /dev/null | head -n1
 }
 
-parse_git_behind () {
+parse_git_ahead () {
   # Grab the branch
   BRANCH=$(get_git_branch)
 
-  # TODO: Echo filled in delta when dirty and unsynced
+  # Linux Mint 14
+  # todd at Euclid in ~/github/dotfiles/test/test-files/unpushed on master△
+  # $ git log origin/master..master
+  # commit 4a633f715caf26f6e9495198f89bba20f3402a32
+  # Author: Todd Wolfson <todd@twolfson.com>
+  # Date:   Sun Jul 7 22:12:17 2013 -0700
+  #
+  #     Unsynced commit
+
   # If the diff         begins with "commit"
-  [[ $(get_origin_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] ||
+  [[ $(get_origin_ahead_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] ||
     # or it has not been merged into origin
     [[ $(git branch -r --no-color 2> /dev/null | grep origin/$BRANCH 2> /dev/null | tail -n1) == "" ]] &&
+    # echo our character
+    echo 1
+}
+
+get_origin_behind_diff () {
+  # Grab the branches
+  BRANCH=$(get_git_branch)
+  REMOTE_BRANCH=origin/$BRANCH
+
+  # Look up the result
+  git log $BRANCH..$REMOTE_BRANCH -1 --no-color 2> /dev/null | head -n1
+}
+
+parse_git_behind () {
+  # Linux Mint 14
+  # todd at Euclid in ~/github/dotfiles/test/test-files/unpulled on master
+  # $ git log master..origin/master
+  # commit 4a633f715caf26f6e9495198f89bba20f3402a32
+  # Author: Todd Wolfson <todd@twolfson.com>
+  # Date:   Sun Jul 7 22:12:17 2013 -0700
+  #
+  #     Unsynced commit
+
+  # If the diff         begins with "commit"
+  [[ $(get_origin_behind_diff | sed -e "s/^\(commit\).*/\1/") == "commit" ]] &&
     # echo our character
     echo 1
 }
@@ -190,13 +223,13 @@ parse_git_dirty () {
 function get_git_status() {
   # Grab the git dirty and git behind
   DIRTY_BRANCH=$(parse_git_dirty)
-  BRANCH_BEHIND=$(parse_git_behind)
+  BRANCH_AHEAD=$(parse_git_ahead)
 
-  # If we are dirty and behind, append
-  if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
+  # If we are dirty and ahead, append
+  if [[ $DIRTY_BRANCH == 1 && $BRANCH_AHEAD == 1 ]]; then
     echo "▲"
   # Otherwise, if we are behind, append
-  elif [[ $BRANCH_BEHIND == 1 ]]; then
+  elif [[ $BRANCH_AHEAD == 1 ]]; then
     echo "△"
   # Otherwise, if we are dirty, append
   elif [[ $DIRTY_BRANCH == 1 ]]; then
