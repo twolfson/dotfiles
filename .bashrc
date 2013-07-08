@@ -227,9 +227,8 @@ parse_git_branch () {
 # ▲ - Slightly bigger delta &#9651;
 # △ - Slightly bigger filled &#9650;
 
-not_on_git () {
-  test -n "$(git branch 2> /dev/null)"
-  exit $?
+is_on_git () {
+  git branch 2> /dev/null
 }
 
 parse_on_git () {
@@ -247,7 +246,6 @@ BRANCH () {
 # When on unsynced git branch,           $USER at $COMPUTER in $PWD on $branch▵
 # When on unsynced and dirty git branch, $USER at $COMPUTER in $PWD on $branch▴
 
-PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$(\$(not_on_git) || echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
-
+PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(is_on_git) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path

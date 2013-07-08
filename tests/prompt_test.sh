@@ -1,15 +1,7 @@
 # Navigate to test directory
 TEST_DIR=$PWD/tests/
 
-# not_on_git
-
-  # in a non-git directory
-  TMP_DIR=$(mktemp -d)
-  cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
-  cd $TMP_DIR
-
-    # returns true
-    $not_on_git || echo '`not_on_git` !== `true` in non-git directory' 1>&2
+# is_on_git
 
   # in a git directory
   TMP_DIR=$(mktemp -d)
@@ -17,8 +9,20 @@ TEST_DIR=$PWD/tests/
   cd $TMP_DIR
   mv dotgit .git
 
-    # returns false
-    $not_on_git && echo '`not_on_git` !== `false` in git directory' 1>&2
+    # returns a non-empty string
+    if test -n "$(is_on_git)"; then
+      echo '`is_on_git` === `false` in git directory' 1>&2
+    fi
+
+  # in a non-git directory
+  TMP_DIR=$(mktemp -d)
+  cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
+  cd $TMP_DIR
+
+    # returns an empty string
+    if test -z "$(is_on_git)"; then
+      echo '`is_on_git` === `true` in non-git directory' 1>&2
+    fi
 
 # parse_git_branch
 
