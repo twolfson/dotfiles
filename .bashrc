@@ -186,6 +186,24 @@ parse_git_dirty () {
   # nothing to commit (working directory clean)
   [[ $(git status 2> /dev/null | tail -n1 | sed -E "s/nothing to commit..working directory clean.?/1/") != "1" ]] && echo 1
 }
+
+function get_git_status() {
+  # Grab the git dirty and git behind
+  DIRTY_BRANCH=$(parse_git_dirty)
+  BRANCH_BEHIND=$(parse_git_behind)
+
+  # If we are dirty and behind, append
+  if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
+    echo "▲"
+  # Otherwise, if we are behind, append
+  elif [[ $BRANCH_BEHIND == 1 ]]; then
+    echo "△"
+  # Otherwise, if we are dirty, append
+  elif [[ $DIRTY_BRANCH == 1 ]]; then
+    echo "*"
+  fi
+}
+
 parse_git_branch () {
   # Grab the branch
   BRANCH=$(get_git_branch)
@@ -195,20 +213,8 @@ parse_git_branch () {
     # Echo the branch
     OUTPUT=$BRANCH
 
-    # Grab the git dirty and git behind
-    DIRTY_BRANCH=$(parse_git_dirty)
-    BRANCH_BEHIND=$(parse_git_behind)
-
-    # If we are dirty and behind, append
-    if [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"▲"
-    # Otherwise, if we are behind, append
-    elif [[ $BRANCH_BEHIND == 1 ]]; then
-      OUTPUT=$OUTPUT"△"
-    # Otherwise, if we are dirty, append
-    elif [[ $DIRTY_BRANCH == 1 ]]; then
-      OUTPUT=$OUTPUT"*"
-    fi
+    # Add on the git status
+    OUTPUT=$OUTPUT"$(get_git_status)"
 
     # Echo our output
     echo $OUTPUT

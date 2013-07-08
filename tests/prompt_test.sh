@@ -31,7 +31,7 @@ fixture_dir() {
     # returns an empty string
     test "$(is_on_git)" = "" || echo '`is_on_git` !== "" in non-git directory' 1>&2
 
-# parse_git_branch
+# get_git_branch
 
   # on a `master` branch
   fixture_dir 'branch-master'
