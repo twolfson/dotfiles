@@ -4,14 +4,23 @@ TEST_DIR=$PWD/tests/
 # not_on_git
 
   # in a non-git directory
-  cd $TEST_DIR/test-files/non-git
+  TMP_DIR=$(mktemp -d)
+  cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
+  cd $TMP_DIR
 
     # returns true
-    test $not_on_git || echo '`not_on_git` !== `true` in non-git directory' 1>&2
+    $not_on_git || echo '`not_on_git` !== `true` in non-git directory' 1>&2
 
   # in a git directory
+  TMP_DIR=$(mktemp -d)
+  cp -r $TEST_DIR/test-files/git/* $TMP_DIR
+  cd $TMP_DIR
+  mv dotgit .git
+  ls -la
+  git branch
 
-    # returns true
+    # returns false
+    ! $not_on_git || echo '`not_on_git` !== `false` in git directory' 1>&2
 
 # parse_git_branch
 
