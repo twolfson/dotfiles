@@ -4,7 +4,7 @@ TEST_DIR=$PWD/tests
 # Unfixture all git directories (all .git to dotgit)
 "$TEST_DIR"/utils/unfixture_git.sh
 
-# TODO: Write a demo.sh which moves through the test dirs
+# TODO: Write a demo.sh which moves through the test dirs (prob use a stack for ease of use)
 # TODO This would be practical for demo.sh, a pre-commit hook, and a pre-test command
 
 fixture_dir() {
@@ -21,27 +21,25 @@ fixture_dir() {
 
   # in a git directory
   fixture_dir 'git'
-  ls -la
 
     # returns a non-empty string
     test "$(is_on_git)" != "" || echo '`is_on_git` === `false` in git directory' 1>&2
 
   # in a non-git directory
   fixture_dir 'non-git'
-  ls -la
 
     # returns an empty string
     test "$(is_on_git)" = "" || echo '`is_on_git` === `true` in non-git directory' 1>&2
 
 # parse_git_branch
 
-  # on a master branch
+  # on a `master` branch
 
-    # is 'master'
+    # is `master`
 
-  # on dev/test branch
+  # on `dev/test` branch
 
-    # is dev/test
+    # is `dev/test`
 
   # off of a branch
 
