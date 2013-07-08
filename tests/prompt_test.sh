@@ -1,16 +1,20 @@
 # Navigate to test directory
 TEST_DIR=$PWD/tests/
 
+fixture_dir() {
+  TMP_DIR=$(mktemp -d)
+  cp -r "$TEST_DIR"test-files/$1/* $TMP_DIR
+  cd $TMP_DIR
+  test -f dotgit && mv dotgit .git
+}
+
 # Load in bashrc
 . .bashrc
 
 # is_on_git
 
   # in a git directory
-  TMP_DIR=$(mktemp -d)
-  cp -r $TEST_DIR/test-files/git/* $TMP_DIR
-  cd $TMP_DIR
-  mv dotgit .git
+  fixture_dir 'git'
 
     # returns a non-empty string
     if test -z "$(is_on_git)"; then
@@ -18,9 +22,7 @@ TEST_DIR=$PWD/tests/
     fi
 
   # in a non-git directory
-  TMP_DIR=$(mktemp -d)
-  cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
-  cd $TMP_DIR
+  fixture_dir 'not-git'
 
     # returns an empty string
     if test -n "$(is_on_git)"; then
