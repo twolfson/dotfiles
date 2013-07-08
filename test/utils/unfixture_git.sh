@@ -1,5 +1,5 @@
 # Find all ".git" directories
-for DOTGIT_DIR in $(find tests/test-files -path "*/.git"); do
+for DOTGIT_DIR in $(find test/test-files -path "*/.git"); do
   # Find the target directory
   TARGET_DOTGIT_DIR="$(dirname $DOTGIT_DIR)"/dotgit
 

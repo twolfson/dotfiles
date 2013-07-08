@@ -1,5 +1,5 @@
 # Navigate to test directory
-TEST_DIR=$PWD/tests
+TEST_DIR=$PWD/test
 
 # Unfixture all git directories (all .git to dotgit)
 "$TEST_DIR"/utils/unfixture_git.sh
