@@ -12,7 +12,7 @@ fi
 # Navigate through the test directories
 USE_NEXT_DIR=""
 TARGET_DEMO_DIR=""
-for DEMO_DIR in "clean-synced" "dirty" "unpushed" "dirty-unpushed"; do
+for DEMO_DIR in "clean-synced" "dirty" "unpushed" "dirty-unpushed" "unpulled" "dirty-unpulled" "unpushed-unpulled" "dirty-unpushed-unpulled"; do
   # If we should use this directory, navigate to it
   if test -n "$USE_NEXT_DIR"; then
     TARGET_DEMO_DIR="$DEMO_DIR"
@@ -20,7 +20,8 @@ for DEMO_DIR in "clean-synced" "dirty" "unpushed" "dirty-unpushed"; do
   fi
 
   # If the current directory was the last one, mark us to use the next one
-  if test -n "$(echo $PWD | grep -E ${DEMO_DIR}$)"; then
+  # echo $PWD
+  if test -n "$(echo $PWD | grep -E \/${DEMO_DIR}$)"; then
     USE_NEXT_DIR="1"
   fi
 done
