@@ -204,7 +204,7 @@ function get_git_status() {
   fi
 }
 
-parse_git_branch () {
+get_git_info () {
   # Grab the branch
   BRANCH=$(get_git_branch)
 
@@ -237,7 +237,7 @@ function is_on_git() {
   git branch 2> /dev/null
 }
 
-parse_on_git () {
+get_prompt_symbol () {
   # git branch --no-color 1> /dev/null 2> /dev/null && echo "∓" && return
   echo "$"
 }
@@ -252,6 +252,6 @@ BRANCH () {
 # When on unsynced git branch,           $USER at $COMPUTER in $PWD on $branch▵
 # When on unsynced and dirty git branch, $USER at $COMPUTER in $PWD on $branch▴
 
-PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(is_on_git) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
+PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(is_on_git) ]] && echo \" on \")\[$GIT_STATUS\]\$(get_git_info)\[$NORMAL\]\n$(get_prompt_symbol) \[$RESET\]"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path
