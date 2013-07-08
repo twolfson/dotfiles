@@ -1,6 +1,10 @@
 # Navigate to test directory
 TEST_DIR=$PWD/tests/
 
+# TODO: Write a demo.sh which moves through the test dirs
+# TODO: Write a fixture/unfixture.sh which moves all dotgit to .git and vice versa.
+# TODO This would be practical for demo.sh, a pre-commit hook, and a pre-test command
+
 fixture_dir() {
   TMP_DIR=$(mktemp -d)
   cp -r "$TEST_DIR"test-files/$1/* $TMP_DIR
