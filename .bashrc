@@ -215,8 +215,6 @@ parse_git_branch () {
   fi
 }
 
-echo 'hiii'
-
 # ⍺ - alpha &#9082;
 # λ - lambda &lambda; &#955;
 # ∴ - therefore &there4; &#8756;

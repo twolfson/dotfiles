@@ -4,34 +4,28 @@ TEST_DIR=$PWD/tests/
 # Load in bashrc
 . .bashrc
 
-echo $(is_on_git)
+# is_on_git
 
-# # is_on_git
+  # in a git directory
+  TMP_DIR=$(mktemp -d)
+  cp -r $TEST_DIR/test-files/git/* $TMP_DIR
+  cd $TMP_DIR
+  mv dotgit .git
 
-#   # in a git directory
-#   TMP_DIR=$(mktemp -d)
-#   cp -r $TEST_DIR/test-files/git/* $TMP_DIR
-#   cd $TMP_DIR
-#   mv dotgit .git
+    # returns a non-empty string
+    if test -z "$(is_on_git)"; then
+      echo '`is_on_git` === `false` in git directory' 1>&2
+    fi
 
-#     # returns a non-empty string
-#     echo "$(is_on_git)"
-#     git branch
-#     if test -n "$(is_on_git)"; then
-#       echo '`is_on_git` === `false` in git directory' 1>&2
-#     fi
+  # in a non-git directory
+  TMP_DIR=$(mktemp -d)
+  cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
+  cd $TMP_DIR
 
-#   # in a non-git directory
-#   TMP_DIR=$(mktemp -d)
-#   cp -r $TEST_DIR/test-files/non-git/* $TMP_DIR
-#   cd $TMP_DIR
-
-#     # returns an empty string
-#     echo "$(is_on_git)"
-#     git branch
-#     if test -z "$(is_on_git)"; then
-#       echo '`is_on_git` === `true` in non-git directory' 1>&2
-#     fi
+    # returns an empty string
+    if test -n "$(is_on_git)"; then
+      echo '`is_on_git` === `true` in non-git directory' 1>&2
+    fi
 
 # parse_git_branch
 
