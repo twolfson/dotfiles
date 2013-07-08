@@ -1,5 +1,5 @@
 # TODO: Move this into a Makefile
-bash --rcfile .nah --noprofile -i -c "./tests/prompt_test.sh" 2> test.stderr
+bash --rcfile .bashrc --noprofile -i -c "./tests/prompt_test.sh" 2> test.stderr
 
 # If there were test failures, fail
 STDERR=$(cat test.stderr)
