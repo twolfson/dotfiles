@@ -37,19 +37,19 @@ fixture_dir() {
   fixture_dir 'branch-master'
 
     # is `master`
-    test "$(get_git_branch)" = "master" || echo '`get_git_branch` === `master` on a `master` branch' 1>&2
+    test "$(get_git_branch)" = "master" || echo '`get_git_branch` !== `master` on a `master` branch' 1>&2
 
   # on `dev/test` branch
   fixture_dir 'branch-dev'
 
     # is `dev/test`
-    test "$(get_git_branch)" = "dev/test" || echo '`get_git_branch` === `dev/test` on `dev/test` branch' 1>&2
+    test "$(get_git_branch)" = "dev/test" || echo '`get_git_branch` !== `dev/test` on `dev/test` branch' 1>&2
 
   # off of a branch
   fixture_dir 'branch-non'
 
     # is 'no branch'
-    test "$(get_git_branch)" = "(no branch)" || echo '`get_git_branch` === `(no branch)` off of a branch' 1>&2
+    test "$(get_git_branch)" = "(no branch)" || echo '`get_git_branch` !== `(no branch)` off of a branch' 1>&2
 
   # TODO: Should we ever list tag?
   # TODO: What do you think about master~1 as a case?
@@ -57,21 +57,30 @@ fixture_dir() {
 # git_status
 
   # on a clean and synced branch
+  fixture_dir 'clean-synced'
 
     # is nothing
+    test "$(get_git_status)" = "" || echo '`get_git_status` !== "" on a clean and synced branch' 1>&2
 
   # on a dirty branch
+  fixture_dir 'dirty'
 
     # is an asterisk
+    test "$(get_git_status)" = "*" || echo '`get_git_status` !== "*" on a dirty branch' 1>&2
 
   # on an unpushed branch
-  # DEV: This covers new branches
+  # DEV: This covers new branches (for now)
+  fixture_dir 'unpushed'
 
     # is an empty up triangle
+    test "$(get_git_status)" = "△" || echo '`get_git_status` !== "△" on an unpushed branch' 1>&2
 
   # on a dirty and unpushed branch
+  fixture_dir 'dirty-unpushed'
 
     # is a filled up triangle
+    echo "$(get_git_status)"
+    test "$(get_git_status)" = "▲" || echo '`get_git_status` !== "▲" on a dirt and unpushed branch' 1>&2
 
   # TODO: These ones...
   # on an unpulled branch
