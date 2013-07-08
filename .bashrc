@@ -154,7 +154,7 @@ else
     RESET="\033[m"
 fi
 
-get_git_branch () {
+function get_git_branch() {
   # Grab the branch                  | ltrim unused rows    Remove asterisk
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }

@@ -23,27 +23,33 @@ fixture_dir() {
   fixture_dir 'git'
 
     # returns a non-empty string
-    test "$(is_on_git)" != "" || echo '`is_on_git` === `false` in git directory' 1>&2
+    test "$(is_on_git)" != "" || echo '`is_on_git` === "" in git directory' 1>&2
 
   # in a non-git directory
   fixture_dir 'non-git'
 
     # returns an empty string
-    test "$(is_on_git)" = "" || echo '`is_on_git` === `true` in non-git directory' 1>&2
+    test "$(is_on_git)" = "" || echo '`is_on_git` !== "" in non-git directory' 1>&2
 
 # parse_git_branch
 
   # on a `master` branch
+  fixture_dir 'branch-master'
 
     # is `master`
+    test "$(get_git_branch)" = "master" || echo '`get_git_branch` === `master` on a `master` branch' 1>&2
 
   # on `dev/test` branch
+  fixture_dir 'branch-dev'
 
     # is `dev/test`
+    test "$(get_git_branch)" = "dev/test" || echo '`get_git_branch` === `dev/test` on `dev/test` branch' 1>&2
 
   # off of a branch
+  fixture_dir 'branch-non'
 
     # is 'no branch'
+    test "$(get_git_branch)" = "(no branch)" || echo '`get_git_branch` === `(no branch)` off of a branch' 1>&2
 
   # TODO: Should we ever list tag?
   # TODO: What do you think about master~1 as a case?
