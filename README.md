@@ -66,7 +66,7 @@ This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored a
 
 [sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
 
-![Sexy bash prompt](https://f.cloud.github.com/assets/902488/759645/fc3f7706-e793-11e2-948d-a454282d3f98.png)
+![Sexy bash prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
 
 It also is now well-tested via `./test.sh`.
 
