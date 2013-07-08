@@ -79,22 +79,26 @@ fixture_dir() {
   fixture_dir 'dirty-unpushed'
 
     # is a filled up triangle
-    echo "$(get_git_status)"
     test "$(get_git_status)" = "▲" || echo '`get_git_status` !== "▲" on a dirt and unpushed branch' 1>&2
 
-  # TODO: These ones...
   # on an unpulled branch
+  fixture_dir 'unpulled'
 
     # is an empty down triangle
+    test "$(get_git_status)" = "▽" || echo '`get_git_status` !== "▽ " on an unpulled branch' 1>&2
 
   # on a dirty and unpulled branch
+  fixture_dir 'dirty-unpulled'
 
     # is an filled down triangle
+    test "$(get_git_status)" = "▼" || echo '`get_git_status` !== "▼" on a dirty unpulled branch' 1>&2
 
   # on an unpushed and an unpulled branch
+  fixture_dir 'unpushed-unpulled'
 
     # is an empty hexagon
 
   # on a dirty, unpushed, and unpulled branch
+  fixture_dir 'dirty-unpushed-unpulled'
 
     # is an filled hexagon

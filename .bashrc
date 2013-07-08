@@ -224,14 +224,16 @@ function get_git_status() {
   # Grab the git dirty and git behind
   DIRTY_BRANCH=$(parse_git_dirty)
   BRANCH_AHEAD=$(parse_git_ahead)
+  BRANCH_BEHIND=$(parse_git_behind)
 
-  # If we are dirty and ahead, append
   if [[ $DIRTY_BRANCH == 1 && $BRANCH_AHEAD == 1 ]]; then
     echo "▲"
-  # Otherwise, if we are behind, append
+  elif [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
+    echo "▼"
   elif [[ $BRANCH_AHEAD == 1 ]]; then
     echo "△"
-  # Otherwise, if we are dirty, append
+  elif [[ $BRANCH_BEHIND == 1 ]]; then
+    echo "▽"
   elif [[ $DIRTY_BRANCH == 1 ]]; then
     echo "*"
   fi
@@ -265,6 +267,7 @@ get_git_info () {
 # ▴ - Smaller filled &#9652;
 # ▲ - Slightly bigger delta &#9651;
 # △ - Slightly bigger filled &#9650;
+# More characters experimented in https://github.com/twolfson/dotfiles/issues/4
 
 function is_on_git() {
   git branch 2> /dev/null
