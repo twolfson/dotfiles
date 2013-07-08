@@ -10,8 +10,10 @@ TEST_DIR=$PWD/tests/
   mv dotgit .git
 
     # returns a non-empty string
-    if test -n "$(is_on_git)"; then
-      echo '`is_on_git` === `false` in git directory' 1>&2
+    echo "$IS_ON_GIT"
+    git branch
+    if test -n "$IS_ON_GIT"; then
+      echo '`IS_ON_GIT` === `false` in git directory' 1>&2
     fi
 
   # in a non-git directory
@@ -20,8 +22,10 @@ TEST_DIR=$PWD/tests/
   cd $TMP_DIR
 
     # returns an empty string
-    if test -z "$(is_on_git)"; then
-      echo '`is_on_git` === `true` in non-git directory' 1>&2
+    echo "$IS_ON_GIT"
+    git branch
+    if test -z "$IS_ON_GIT"; then
+      echo '`IS_ON_GIT` === `true` in non-git directory' 1>&2
     fi
 
 # parse_git_branch

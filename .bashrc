@@ -215,6 +215,8 @@ parse_git_branch () {
   fi
 }
 
+echo 'hiii'
+
 # ⍺ - alpha &#9082;
 # λ - lambda &lambda; &#955;
 # ∴ - therefore &there4; &#8756;
@@ -227,7 +229,7 @@ parse_git_branch () {
 # ▲ - Slightly bigger delta &#9651;
 # △ - Slightly bigger filled &#9650;
 
-is_on_git () {
+IS_ON_GIT () {
   git branch 2> /dev/null
 }
 
@@ -246,6 +248,6 @@ BRANCH () {
 # When on unsynced git branch,           $USER at $COMPUTER in $PWD on $branch▵
 # When on unsynced and dirty git branch, $USER at $COMPUTER in $PWD on $branch▴
 
-PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(is_on_git) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
+PS1="\[${BOLD}${USER}\]\u \[$PREPOSITION\]at \[$DEVICE\]\h \[$PREPOSITION\]in \[$DIR\]\w\[$PREPOSITION\]\$([[ -n \$(IS_ON_GIT) ]] && echo \" on \")\[$GIT_STATUS\]\$(parse_git_branch)\[$NORMAL\]\n$(parse_on_git) \[$RESET\]"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path
