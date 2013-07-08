@@ -62,7 +62,7 @@ Files
 - `g--m` - Merge current branch to previous branch
 
 ### Bash prompt
-This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for dirty/unpushed branches.
+This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for dirty/unpushed/unpulled branches.
 
 [sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
 
