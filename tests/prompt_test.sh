@@ -2,9 +2,9 @@
 _PWD=$PWD
 TEST_DIR=$PWD/tests
 
-# Unfixture all git directories (all .git to dotgit)
+# Fixture all git directories
 echo "Setting up..."
-"$TEST_DIR"/utils/unfixture_git.sh
+"$TEST_DIR"/utils/fixture_git.sh
 
 # TODO: Write a demo.sh which moves through the test dirs
 # TODO This would be practical for demo.sh, a pre-commit hook, and a pre-test command
@@ -12,8 +12,8 @@ echo "Setting up..."
 fixture_dir() {
   TMP_DIR=$(mktemp -d)
   cp -r "$TEST_DIR"/test-files/$1/* $TMP_DIR
+  cp -r "$TEST_DIR"/test-files/$1/.* $TMP_DIR
   cd $TMP_DIR
-  test -d dotgit && mv dotgit .git
 }
 
 # Load in bashrc
@@ -87,3 +87,10 @@ fixture_dir() {
   # on a dirty, unpushed, and unpulled branch
 
     # is an filled hexagon
+
+# Unfixture all git directores
+cd $_PWD
+echo ""
+echo "Cleaning up..."
+"$TEST_DIR"/utils/unfixture_git.sh
+echo ""
