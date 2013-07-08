@@ -62,30 +62,13 @@ Files
 - `g--m` - Merge current branch to previous branch
 
 ### Bash prompt
-This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for unsynced branches.
+This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for dirty/unpushed branches.
 
 [sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
 
-Directory:
+![Sexy bash prompt](https://f.cloud.github.com/assets/902488/759645/fc3f7706-e793-11e2-948d-a454282d3f98.png)
 
-![sexy-bash-dir](https://f.cloud.github.com/assets/902488/257895/507260e0-8c7c-11e2-88b2-25e664804341.png)
-
-Git clean:
-
-![sexy-bash-git](https://f.cloud.github.com/assets/902488/257931/fbc83b12-8c7d-11e2-8f99-e31b34611179.png)
-
-Git dirty:
-
-![sexy-bash-dirty](https://f.cloud.github.com/assets/902488/257932/00e49898-8c7e-11e2-91a1-507ff4634c19.png)
-
-Git unsynced:
-
-![sexy-bash-unsynced](https://f.cloud.github.com/assets/902488/257933/0393ab1a-8c7e-11e2-9e78-4f21891809bf.png)
-
-Git dirty + unsynced:
-
-![sexy-bash-dirty-unsynced](https://f.cloud.github.com/assets/902488/257934/0596d284-8c7e-11e2-92a4-8957085172d9.png)
-
+It also is now well-tested via `./test.sh`.
 
 Workflow
 --------
