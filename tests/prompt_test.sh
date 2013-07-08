@@ -15,10 +15,10 @@ TEST_DIR=$PWD/tests/
   TMP_DIR=$(mktemp -d)
   cp -r $TEST_DIR/test-files/git/* $TMP_DIR
   cd $TMP_DIR
-  # mv dotgit .git
+  mv dotgit .git
 
     # returns false
-    test ! $not_on_git || echo '`not_on_git` !== `false` in git directory' 1>&2
+    $not_on_git && echo '`not_on_git` !== `false` in git directory' 1>&2
 
 # parse_git_branch
 
