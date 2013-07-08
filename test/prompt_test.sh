@@ -97,8 +97,10 @@ fixture_dir() {
   fixture_dir 'unpushed-unpulled'
 
     # is an empty hexagon
+    test "$(get_git_status)" = "⬡" || echo '`get_git_status` !== "⬡" on an unpushed and unpulled branch' 1>&2
 
   # on a dirty, unpushed, and unpulled branch
   fixture_dir 'dirty-unpushed-unpulled'
 
     # is an filled hexagon
+    test "$(get_git_status)" = "⬢" || echo '`get_git_status` !== "⬢" on a dirty, unpushed, and unpulled branch' 1>&2

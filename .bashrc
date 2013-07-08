@@ -226,10 +226,14 @@ function get_git_status() {
   BRANCH_AHEAD=$(parse_git_ahead)
   BRANCH_BEHIND=$(parse_git_behind)
 
-  if [[ $DIRTY_BRANCH == 1 && $BRANCH_AHEAD == 1 ]]; then
+  if [[ $DIRTY_BRANCH == 1 && $BRANCH_AHEAD == 1 && $BRANCH_BEHIND == 1 ]]; then
+    echo "⬢"
+  elif [[ $DIRTY_BRANCH == 1 && $BRANCH_AHEAD == 1 ]]; then
     echo "▲"
   elif [[ $DIRTY_BRANCH == 1 && $BRANCH_BEHIND == 1 ]]; then
     echo "▼"
+  elif [[ $BRANCH_AHEAD == 1 && $BRANCH_BEHIND == 1 ]]; then
+    echo "⬡"
   elif [[ $BRANCH_AHEAD == 1 ]]; then
     echo "△"
   elif [[ $BRANCH_BEHIND == 1 ]]; then
