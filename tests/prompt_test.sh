@@ -23,12 +23,14 @@ fixture_dir() {
 
   # in a git directory
   fixture_dir 'git'
+  ls -la
 
     # returns a non-empty string
     test "$(is_on_git)" != "" || echo '`is_on_git` === `false` in git directory' 1>&2
 
   # in a non-git directory
   fixture_dir 'non-git'
+  ls -la
 
     # returns an empty string
     test "$(is_on_git)" = "" || echo '`is_on_git` === `true` in non-git directory' 1>&2
