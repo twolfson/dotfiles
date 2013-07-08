@@ -21,17 +21,13 @@ fixture_dir() {
   fixture_dir 'git'
 
     # returns a non-empty string
-    if test -z "$(is_on_git)"; then
-      echo '`is_on_git` === `false` in git directory' 1>&2
-    fi
+    test "$(is_on_git)" != "" || echo '`is_on_git` === `false` in git directory' 1>&2
 
   # in a non-git directory
   fixture_dir 'non-git'
 
     # returns an empty string
-    if test -n "$(is_on_git)"; then
-      echo '`is_on_git` === `true` in non-git directory' 1>&2
-    fi
+    test "$(is_on_git)" = "" || echo '`is_on_git` === `true` in non-git directory' 1>&2
 
 # parse_git_branch
 
