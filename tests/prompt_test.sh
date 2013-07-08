@@ -1,9 +1,7 @@
 # Navigate to test directory
-_PWD=$PWD
 TEST_DIR=$PWD/tests
 
 # Unfixture all git directories (all .git to dotgit)
-echo "Setting up..."
 "$TEST_DIR"/utils/unfixture_git.sh
 
 # TODO: Write a demo.sh which moves through the test dirs
