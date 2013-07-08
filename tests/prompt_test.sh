@@ -5,7 +5,7 @@ fixture_dir() {
   TMP_DIR=$(mktemp -d)
   cp -r "$TEST_DIR"test-files/$1/* $TMP_DIR
   cd $TMP_DIR
-  test -f dotgit && mv dotgit .git
+  test -d dotgit && mv dotgit .git
 }
 
 # Load in bashrc
@@ -22,7 +22,7 @@ fixture_dir() {
     fi
 
   # in a non-git directory
-  fixture_dir 'not-git'
+  fixture_dir 'non-git'
 
     # returns an empty string
     if test -n "$(is_on_git)"; then
