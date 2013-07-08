@@ -1,14 +1,13 @@
-# Load in assert
-cd tests
-./utils/assert.sh
+# Navigate to test directory
+TEST_DIR=$PWD/tests/
 
-# is_on_git
+# not_on_git
 
   # in a non-git directory
-  cd test-files/non-git
+  cd $TEST_DIR/test-files/non-git
 
-    # returns false
-    test ! $is_on_git || echo '`is_on_git` !== `false` in non-git directory' 1>&2
+    # returns true
+    test $not_on_git || echo '`not_on_git` !== `true` in non-git directory' 1>&2
 
   # in a git directory
 
