@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.4.0 - Moved from `grunt init` (`grunt@0.3`) to `grunt-init` (`grunt@0.4`)
+
 0.3.0 - Added `unpulled` state to bash prompt, giving it 4 more statuses.
 
 0.2.1 - Created `demo.sh` for showing off sexy bash script and updated screenshot
