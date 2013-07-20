@@ -1,4 +1,4 @@
-# {%= name %} [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
+# {%= name %}{% if (travis) { %} [![Build Status](https://secure.travis-ci.org/{%= git_user %}/{%= git_repo %}.png?branch=master)](http://travis-ci.org/{%= git_user %}/{%= git_repo %}){% } %}
 
 {%= description %}
 
@@ -17,9 +17,11 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via [grunt](https://github.com/gruntjs/grunt) and test via `npm test`.
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
 
 ## License
-Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
-
+Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}  
 Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
