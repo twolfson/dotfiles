@@ -6,13 +6,11 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
-
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
 
 // Template-specific notes to be displayed before question prompts.
-exports.notes = '_Project name_ shouldn\'t contain "node" or "js" and should ' +
+exports.notes = '_Project name_ shouldn\'t contain \'node\' or \'js\' and should ' +
   'be a unique ID not already in use at search.npmjs.org.';
 
 // Template-specific notes to be displayed after question prompts.
@@ -58,6 +56,7 @@ exports.template = function(grunt, init, done) {
     // Set up dependencies
     props.dependencies = {};
     props.devDependencies = {
+      'mocha': '~1.11.0',
       'grunt-contrib-jshint': '~0.6.0',
       'grunt-contrib-watch': '~0.4.0'
     };
