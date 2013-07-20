@@ -45,7 +45,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('main'),
     init.prompt('npm_test', 'mocha'),
     {
-      name: 'keyword',
+      name: 'keywords',
       message: 'What keywords relate to this plugin (comma separated)?'
     }
     // {
@@ -58,8 +58,8 @@ exports.template = function(grunt, init, done) {
     // Set up dependencies
     props.dependencies = {};
     props.devDependencies = {
-      "grunt": "~0.4.1",
-      "mocha": "~1.11.0"
+      'grunt-contrib-jshint': '~0.6.0',
+      'grunt-contrib-watch': '~0.4.0'
     };
     // // TODO: compute dynamically?
     // props.travis = /y/i.test(props.travis);

@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     jshint: {
-      files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
@@ -17,13 +17,13 @@ module.exports = function(grunt) {
         eqnull: true,
         node: true,
 
-        strict: false
-      },
-      globals: {
-        exports: true,
-        describe: true,
-        before: true,
-        it: true
+        strict: false,
+        globals: {
+          exports: true,
+          describe: true,
+          before: true,
+          it: true
+        }
       }
     },
     watch: {
@@ -39,6 +39,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'nodeunit']);
+  grunt.registerTask('default', ['jshint']);
 
 };
