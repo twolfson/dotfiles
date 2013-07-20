@@ -9,7 +9,7 @@
 'use strict';
 
 // Basic template description.
-exports.description = 'Create a Node.js module, including Nodeunit unit tests.';
+exports.description = 'Create a Node.js module, including mocha unit tests.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = '_Project name_ shouldn\'t contain "node" or "js" and should ' +
@@ -43,7 +43,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
-    init.prompt('npm_test', 'grunt nodeunit'),
+    init.prompt('npm_test', 'mocha'),
     {
       name: 'travis',
       message: 'Will this project be tested with Travis CI?',
@@ -53,9 +53,8 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.devDependencies = {
-      'grunt-contrib-jshint': '~0.6.0',
-      'grunt-contrib-nodeunit': '~0.2.0',
-      'grunt-contrib-watch': '~0.4.0',
+      "grunt": "~0.4.1",
+      "mocha": "~1.11.0"
     };
     // TODO: compute dynamically?
     props.travis = /y/i.test(props.travis);
