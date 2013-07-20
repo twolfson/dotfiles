@@ -45,24 +45,38 @@ exports.template = function(grunt, init, done) {
     init.prompt('main'),
     init.prompt('npm_test', 'mocha'),
     {
-      name: 'travis',
-      message: 'Will this project be tested with Travis CI?',
-      default: 'Y/n',
-      warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
-    },
+      name: 'keyword',
+      message: 'What keywords relate to this plugin (comma separated)?'
+    }
+    // {
+    //   name: 'travis',
+    //   message: 'Will this project be tested with Travis CI?',
+    //   default: 'Y/n',
+    //   warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
+    // }
   ], function(err, props) {
-    props.keywords = [];
+    // Set up dependencies
+    props.dependencies = {};
     props.devDependencies = {
       "grunt": "~0.4.1",
       "mocha": "~1.11.0"
     };
-    // TODO: compute dynamically?
-    props.travis = /y/i.test(props.travis);
-    props.travis_node_version = '0.10';
+    // // TODO: compute dynamically?
+    // props.travis = /y/i.test(props.travis);
+    // props.travis_node_version = '0.10';
+
+    // Break up the keywords by commas
+    var keywords = props.keywords;
+    keywords = keywords ? keywords.split(',') : [];
+
+    // Trim each keyword and save
+    keywords = keywords.map(function (str) {
+      return str.trim();
+    });
+    props.keywords = keywords;
 
     // Files to copy (and process).
     var files = init.filesToCopy(props);
-    if (!props.travis) { delete files['.travis.yml']; }
 
     // Add properly-named license files.
     init.addLicenseFiles(files, props.licenses);
