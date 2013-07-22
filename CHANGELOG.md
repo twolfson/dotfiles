@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.7.0 - Added `bower.json` and `component.json` updates to git-release
+
 0.6.0 - Added `npm run build` on git-release
 
 0.5.0 - Moved `grunt-init-node` to standalone fork
