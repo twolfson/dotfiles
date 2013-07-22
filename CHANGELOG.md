@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.6.0 - Added `npm run build` on git-release
+
 0.5.0 - Moved `grunt-init-node` to standalone fork
 
 0.4.0 - Moved from `grunt init` (`grunt@0.3`) to `grunt-init` (`grunt@0.4`)

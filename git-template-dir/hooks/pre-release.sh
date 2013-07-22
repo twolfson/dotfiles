@@ -3,6 +3,9 @@
 # npm
 if test -f package.json; then
   node -e "f = './package.json'; p = require(f); p.version = process.argv[1]; require('fs').writeFileSync(f, JSON.stringify(p, null, 2));" $2
+
+  # If there is a build script, run it
+  node -e "f = './package.json'; p = require(f); process.exit(+(!p.scripts.build))" && npm run build
 fi
 
 # Sublime Package Control
