@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.8.0 - Added convenience check to not run `npm publish` on private repos
+
 0.7.0 - Added `bower.json` and `component.json` updates to git-release
 
 0.6.0 - Added `npm run build` on git-release
