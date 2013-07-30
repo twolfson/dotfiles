@@ -119,5 +119,10 @@ complete -o nospace -F _fab_complete fab
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
 
+# Expose helper method for git branch
+function BRANCH() {
+  echo $(get_git_branch)
+}
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path
