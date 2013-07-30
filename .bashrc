@@ -121,3 +121,6 @@ complete -o nospace -F _fab_complete fab
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
