@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.10.0 - Added Python virtualenvs
+
 0.9.0 - Added `amend` to gitconfig and vendor-specific bashrc/gitconfig updates
 
 0.8.0 - Added convenience check to not run `npm publish` on private repos
