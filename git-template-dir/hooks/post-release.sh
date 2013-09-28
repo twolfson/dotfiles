@@ -8,7 +8,7 @@ fi
 
 if test -f setup.py && ! test -f .private; then
   # If the package is at 0.1.0, register it
-  if grep "version='0.1.0'" setup.py; then
+  if test "$2" = "0.1.0"; then
     python setup.py register
   fi
 
