@@ -6,11 +6,13 @@ if test -f package.json; then
   node -e "f = './package.json'; p = require(f); process.exit(+(p.private||0))" && npm publish
 fi
 
-if test -f setup.py; then
+if test -f setup.py && ! test -f .private; then
   # If the package is at 0.1.0, register it
   if grep "version='0.1.0'" setup.py; then
-    echo 'hi'
+    python setup.py register
   fi
 
   # Build and upload the package
+  python setup.py sdist --formats=gztar,zip
+  python setup.py upload
 fi
