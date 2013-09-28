@@ -67,6 +67,10 @@ if [ -f /etc/bash_completion.d/git-extras ]; then
   . /etc/bash_completion.d/git-extras
 fi
 
+if [ -f /etc/bash_completion.d/git-sqwish ]; then
+  . /etc/bash_completion.d/git-sqwish
+fi
+
 ### Git command ###
 # http://rob.by/2013/remove-merged-branches-from-git/
 _git_cleanup () {

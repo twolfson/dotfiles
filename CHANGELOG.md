@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.11.0 - Added bash completion for git-sqwish
+
 0.10.0 - Added Python virtualenvs
 
 0.9.0 - Added `amend` to gitconfig and vendor-specific bashrc/gitconfig updates
