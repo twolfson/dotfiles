@@ -13,6 +13,5 @@ if test -f setup.py && ! test -f .private; then
   fi
 
   # Build and upload the package
-  python setup.py sdist --formats=gztar,zip
-  python setup.py upload
+  python setup.py sdist --formats=gztar,zip upload
 fi

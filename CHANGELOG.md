@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.13.1 - Fixes for pre/post release scripts for Python
+
 0.13.0 - Added pre/post release scripts for Python
 
 0.12.0 - Set `meld` as default mergetool for git

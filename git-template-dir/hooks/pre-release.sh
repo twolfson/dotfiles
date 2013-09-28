@@ -25,6 +25,5 @@ fi
 
 # Python
 if test -f setup.py; then
-  echo 'hi'
   node -e "fs = require('fs'); f = './setup.py'; p = fs.readFileSync(f, 'utf8'); v = process.argv[1]; p = p.replace(/version='\d+.\d+.\d+'/, 'version=\'' + v + '\''); fs.writeFileSync(f, p, 'utf8');" $2
 fi
