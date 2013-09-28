@@ -25,3 +25,5 @@
 	templatedir = /home/todd/github/dotfiles/git-template-dir/
 [push]
 	default = simple
+[merge]
+	tool = meld
