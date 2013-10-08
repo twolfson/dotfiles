@@ -138,3 +138,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
+
+# added by travis gem
+source /home/todd/.travis/travis.sh
