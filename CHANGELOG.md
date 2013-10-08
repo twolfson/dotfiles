@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.14.0 - Added `git ad` as an alias for `git add`
+
 0.13.1 - Fixes for pre/post release scripts for Python
 
 0.13.0 - Added pre/post release scripts for Python
