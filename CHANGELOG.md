@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.16.0 - Added fallback for `scripts` in `package.json` build step
+
 0.15.0 - Added Travis username default for grunt-init
 
 0.14.0 - Added `git ad` as an alias for `git add`
