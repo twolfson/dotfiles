@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.17.1 - Fix for Travis CI logic
+
 0.17.0 - Made cross-platform command to alias copying
 
 0.16.0 - Added fallback for `scripts` in `package.json` build step
