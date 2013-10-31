@@ -143,5 +143,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
-# added by travis gem
-source /home/todd/.travis/travis.sh
+# Added by travis gem
+if test -f ~/.travis/travis.sh; then
+  source ~/.travis/travis.sh
+fi
