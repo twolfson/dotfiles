@@ -46,7 +46,11 @@ alias gi="git" # Works great with git config help.autocorrect
 alias gti="git"
 
 ### Clipboard help ###
-alias xclip="xclip -selection c"
+if which pbcopy > /dev/null; then
+  alias copy="pbcopy"
+else
+  alias copy="xclip -selection c"
+fi
 
 ### Live-reload specific ###
 alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
