@@ -25,5 +25,8 @@ mkdir -p ~/.fonts
 # I no longer use powerline (traded it in for Sexy Bash Prompt) but still like Anonymous Pro
 ln -s $PWD/.fonts/anonymous+Pro-Powerline.ttf ~/.fonts/anonymous+Pro-Powerline.ttf
 
+# Nano settings
+ln -s $PWD/.nanorc ~/.nanorc
+
 # One-time scripts
 ./once.sh
