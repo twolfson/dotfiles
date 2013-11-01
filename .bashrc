@@ -7,6 +7,7 @@ fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 alias ff-dev="firefox -no-remote -p dev"
+alias exitcode="echo \$?"
 
 ### Directory movements ###
 
