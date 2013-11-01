@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.18.0 - Added tab completable exit code output
+
 0.17.1 - Fix for Travis CI logic
 
 0.17.0 - Made cross-platform command to alias copying
