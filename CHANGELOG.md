@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.20.0 - Added tag aliases
+
 0.19.0 - Added .nanorc for bash syntax highlighting
 
 0.18.0 - Added tab completable exit code output
