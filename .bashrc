@@ -4,6 +4,12 @@ if [[ $(ls /Applications/Google\ Chrome.app 2> /dev/null) != "" ]]; then
 else
   alias inco="google-chrome --incognito"
 fi
+
+if which festival 2>&1 > /dev/null; then
+  function say() {
+    echo "(SayText \"$*\")" | festival --pipe
+  }
+fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 alias ff-dev="firefox -no-remote -p dev"
