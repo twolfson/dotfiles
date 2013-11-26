@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.22.0 - Moved TERM output from .bash_prompt to .bashrc
+
 0.21.0 - Added say command for Linux
 
 0.20.0 - Added tag aliases
