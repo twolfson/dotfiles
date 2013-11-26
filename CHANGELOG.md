@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.23.0 - Added git alias to clone gists easier
+
 0.22.0 - Moved TERM output from .bash_prompt to .bashrc
 
 0.21.0 - Added say command for Linux
