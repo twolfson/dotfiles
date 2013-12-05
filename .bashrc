@@ -10,6 +10,10 @@ if which festival 2>&1 > /dev/null; then
     echo "(SayText \"$*\")" | festival --pipe
   }
 fi
+
+if which pactl &> /dev/null; then
+  alias volume="pactl -- set-sink-volume 1"
+fi
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 alias naut="nautilus"
 alias ff-dev="firefox -no-remote -p dev"
