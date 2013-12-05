@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.24.0 - Moved to `current` as `push` model for `git. This fixes the `--set-upstream` message we would see
+
 0.23.0 - Added git alias to clone gists easier
 
 0.22.0 - Moved TERM output from .bash_prompt to .bashrc
