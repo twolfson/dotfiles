@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.26.0 - Stopping annoying ssh TERM errors
+
 0.25.0 - Added `volume` command for Linux Mint
 
 0.24.0 - Moved to `current` as `push` model for `git. This fixes the `--set-upstream` message we would see
