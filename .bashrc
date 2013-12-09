@@ -73,6 +73,9 @@ alias sudo="sudo "
 ### Gzip-enabled `curl` ###
 alias gurl="curl --compressed"
 
+### listen-spawn integration for Vagrant ###
+alias listen-spawn-vagrant="vagrant ssh -- -N -L 7060:localhost:7060"
+
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
