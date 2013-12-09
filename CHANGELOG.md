@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.27.0 - Added listen-spawn tunnel for Vagrant
+
 0.26.0 - Stopping annoying ssh TERM errors
 
 0.25.0 - Added `volume` command for Linux Mint
