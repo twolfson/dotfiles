@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.28.0 - Added commands to make node/listen-spawn installs easier on Vagrant
+
 0.27.0 - Added listen-spawn tunnel for Vagrant
 
 0.26.0 - Stopping annoying ssh TERM errors
