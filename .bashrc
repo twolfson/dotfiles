@@ -74,8 +74,8 @@ alias sudo="sudo "
 alias gurl="curl --compressed"
 
 ### Vagrant commands ###
-alias vagrant-install-node="if ! which node &> /dev/null; then sudo apt-get install -y python-software-properties python g++ make; sudo add-apt-repository -y ppa:chris-lea/node.js; sudo apt-get update; sudo apt-get install -y nodejs; fi"
-alias vagrant-install-listen-spawn="vagrant-install-node; if ! which listen-spawn &> /dev/null; then sudo npm install -g listen-spawn; fi"
+alias install-node="if ! which node &> /dev/null; then sudo apt-get install -y python-software-properties python g++ make; sudo add-apt-repository -y ppa:chris-lea/node.js; sudo apt-get update; sudo apt-get install -y nodejs; fi"
+alias install-listen-spawn="vagrant-install-node; if ! which listen-spawn &> /dev/null; then sudo npm install -g listen-spawn; fi"
 alias vagrant-listen-spawn="vagrant ssh -- -N -L 7060:localhost:7060"
 
 ### Git autocompletion ###
