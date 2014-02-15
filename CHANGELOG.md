@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.30.0 - Added git alias from dif to diff
+
 0.29.0 - Adjusted vagrant-listen-spawn to handle multi-Vagrant setups
 
 0.28.0 - Added commands to make node/listen-spawn installs easier on Vagrant
