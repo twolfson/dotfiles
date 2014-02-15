@@ -16,6 +16,7 @@
 	head = !git rev-parse HEAD | cut -c 1,2,3,4,5,6,7
 	amend = commit --amend
 	ad = add
+	dif = diff
 	tags-sorted = !git tag | (sort -V 2> /dev/null || gsort -V 2> /dev/null)
 	last-tag = !git tags-sorted | tail -n 1
 	compare-last-tag = !hub compare \"$(git last-tag)\"...master
