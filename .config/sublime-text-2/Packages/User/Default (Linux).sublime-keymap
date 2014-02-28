@@ -1,0 +1,7 @@
+[
+  // { "keys": ["alt+x"], "command": "request", "args": {"open_args": ["http://localhost:7060/"]} },
+  { "keys": ["alt+x"], "command": "what_shortcut"},
+  { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 20.0 } },
+  { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0 } },
+  { "keys": ["f12"], "command": "noop"}
+]

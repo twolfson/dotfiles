@@ -1,16 +1,45 @@
 {
 	"auto_complete": false,
 	"auto_match_enabled": false,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
 	"fade_inactive_panes": false,
-	"font_size": 10,
+	"font_size": 11,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"ScopeAlways",
+		"Color Highlighter",
+		"Vintage",
+		"RestructuredText",
+		"WordCount",
+		"Terminal",
+		"ScopeStatus",
+		"snippet-destroyer",
+		"optimal-lines",
+		"HostsEdit",
+		"CursorRuler"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"on_post_save_user":
+	[
+		{
+			"args":
+			{
+				"open_args":
+				[
+					"http://localhost:7060/"
+				]
+			},
+			"command": "request",
+			"scope": "window"
+		}
 	],
 	"reveal-on-activate": false,
-	"scroll_past_end": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
