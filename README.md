@@ -44,6 +44,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
         - `amend` - Update previous commit
         - `git` - For chaining of multiple `git's` (e.g. `git git status`)
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
+- `.nanorc` - Adds syntax highlighting for `nano`
 
 [Sublime Text 2]: http://www.sublimetext.com/2
 [Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
@@ -88,6 +89,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [Vagrant][], create and teardown development virtual machines on the fly
 - [ievms][], installs Internet Explorer virtual machines
 - [VirtualBox][], virtual machine runtime
+- [nano][], small and intuitive text editor that I use for `git commit` messages
 
 ### Linux Specific
 - [gnome-terminal][], terminal emulator for Gnome
@@ -100,7 +102,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [Dock view][], adds badge for how many windows are open for a program
 - [Spectacles][], adds shortcuts to position windows
 - [Alfred][], makes actions more accessible (e.g. `lock`)
-
+- [gotoshell][], open a shell via button in Finder window
 
 ## Workflow
 - Key repeat is set to very high
