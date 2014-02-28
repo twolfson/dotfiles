@@ -196,7 +196,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Create new repos in [GitHub][] via [hub][]
 - Create templated repos via [grunt-init-node][]
 - Learn program shortcuts early on (e.g. `bash`, `less`)
-    - Use [shortcutfoo][] to learn key bindings of new programs
+    - Use [Shortcut Foo][] to learn key bindings of new programs
 - Inside [Sublime Text][], multiple word selection is great for deleting a single word as well as adjusting multiple
 
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
