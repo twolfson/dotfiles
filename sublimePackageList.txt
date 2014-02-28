@@ -1,9 +1,0 @@
-FindPlusPlus
-Origami
-SideBarEnhancements
-SublimeLinter
-SyncedSideBar
-Table Editor
-Terminal
-Quick File Creator
-EasyMotion
