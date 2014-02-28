@@ -12,6 +12,14 @@ To install `dotfiles`, run `./install.sh`.
 
 This will create symlinks and copy/append files when symlinks are inappropriate.
 
+### Documentation
+#### Bash prompt
+My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file system, `git branch`, and `git status` via symbols.
+
+[twolfson/sexy-bash-prompt]: https://github.com/twolfson/sexy-bash-prompt
+
+![Example screenshot of sexy-bash-prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
+
 ## Files
 
 - `.bash_profile` - Run at login. Sets default editor to [Sublime Text 2][subl], enables CLI coloring, and runs `.bashrc` for aliases and such.
@@ -53,21 +61,6 @@ This will create symlinks and copy/append files when symlinks are inappropriate.
 - `~` - Navigate to the home directory (via `pushd`)
 - `,,`, [...], `,,,,,` - Navigate back one, [...], five directories (in the `pushd` stack via `popd`)
 - `,` - List out current `pushd`/`popd` stack
-
-#### Git aliases (not used often)
-
-- `g--` - Checkout previous branch
-- `g-~` - Checkout master branch (I really wanted `git ~` but failed to get it working)
-- `g--m` - Merge current branch to previous branch
-
-### Bash prompt
-This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored and has additional functionality for dirty/unpushed/unpulled branches.
-
-[sexy-bash-prompt]: https://gist.github.com/306785/8af2bfe0cce960d0286bf31379d89c69e760b94d
-
-![Sexy bash prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
-
-It also is now well-tested via `./test.sh`.
 
 ## Workflow
 
