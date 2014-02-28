@@ -21,7 +21,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 ![Example screenshot of sexy-bash-prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
 
 #### Files
-
 - `.bash_profile` - Bash script that is run at login
     - Sets default editor to [Sublime Text 2][]
     - Enables CLI coloring
@@ -42,51 +41,66 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Enable `git` colors
     - Add aliases
         - `add-pr` - Adds a new `remote` for fetching pull requests as branches
+        - `amend` - Update previous commit
+        - `git` - For chaining of multiple `git's` (e.g. `git git status`)
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
 
 [Sublime Text 2]: http://www.sublimetext.com/2
 [Package Control.sublime-settings]: .config/sublime-text-2/Packages/User/Package Control.sublime-settings
 [Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
 [powerline]: https://github.com/milkbikis/powerline-shell
-[pr-gist]: https://gist.github.com/piscisaureus/3342247
 
 ##### `.bashrc` aliases
-
 - `inco` - Opens a Chrome Incognito window
 - `lock` - Locks computer via screensaver on Gnome/Cinnamon
+- `volume` - Control sound output
 
 #### Directory movements
-
 - `cd` - Moved to directory and pushes onto directory stack (via `pushd`)
 - `..`, [...], `.....` - Navigate up one, [...], five directories (via `pushd`)
 - `~` - Navigate to the home directory (via `pushd`)
 - `,,`, [...], `,,,,,` - Navigate back one, [...], five directories (in the `pushd` stack via `popd`)
 - `,` - List out current `pushd`/`popd` stack
+- `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
 ## Workflow
+- Use multiple monitors, layout to see everything at a glance
+    - Move windows around via shortcuts; [Spectacles][] (Mac OS X), [wmctrl-pad][] (Gnome)
+- Create new files via a shortcut
+    - 'Quick File Creator' inside Sublime Text
+- Duplicate files files in one command
+    - 'File: Duplcate' via [SideBarEnhancements][] inside Sublime Text
+- When debugging a problem, I use a binary search of `console.log` statements
+- When finding methods/strings in foreign code bases, I use 'Find: In Current File' via [FindPlusPlus][] in Sublime Text
+    - Alternatively, I use `git grep` to search the `git` filesystem
+- Checkout and merge previous branches via `git checkout/merge -`. See [Coderwall protips][] for more.
+- I use live coding frequently in multiple scenarios
+    - [nodemon][] to reload local node servers whenever a `.js` file changes
+    - [livereload][] in combination with [Hooks][] and [Request][] in Sublime Text to trigger actions (e.g. `npm test`) on save
+    - More information can be found at http://twolfson.com/2013-07-27-develop-faster
+- Open [GitHub][] and [Phabricator][] from Sublime Text via [Githubinator][] and [Phabricator][subl-phab] plugins
+- Create new repos in [GitHub][] via [hub][]
+- Create templated repos via [grunt-init-node][]
+- Learn program shortcuts early on (e.g. `bash`, `less`)
+    - Use [shortcutfoo][] to learn key bindings of new programs
 
-- Use multiple monitors, layout to see everything at a glance.
-    - [Spectacles][spectacles] (Mac OS X), [Compiz Config Settings Manager][ccsm] (Gnome), or [AeroSnap][aero] + [WindowPad][windowpad] (Windows) help **a ton**.
-    - For more info on Windows setup, see [twolfson/winfiles][winfiles].
-- Create new files at a keystroke within Sublime - Package: Quick File Creator - New File = Ctrl+Alt+O
-- Duplicate files via command palette + SideBarEnhancements - `File: Duplcate`
-- Debug via binary search of `console.log`
-- Clean up debug statements via command palette + FindPlusPlus - `Find: In Current File`
-    - Set Sublime Text to always Buffer `Find in Results` to bottom panel
-- Usually split Sublime into 2 panes (one for searching, the other for hacking)
-- Checkout and merge previous branches via `git checkout/merge -`. See [Coderwall protips][coderwall-protips] for more.
-
-[spectacles]: http://spectacleapp.com/
-[cssm]: http://wiki.compiz.org/CCSM
-[aerosnap]: http://windows.microsoft.com/en-us/windows7/arrange-windows-side-by-side-on-the-desktop-using-snap
-[windowpad]: http://www.autohotkey.com/board/topic/19990-windowpad-window-moving-tool/
-[winfiles]: https://github.com/twolfson/winfiles
-[coderwall-protips]: https://coderwall.com/p/u/twolfson
+[Spectacles]: http://spectacleapp.com/
+[wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
+[Coderwall protips]: https://coderwall.com/p/u/twolfson
+[SideBarEnhancements]:
+[FindPlusPlus]:
+[nodemon]:
+[Hooks]:
+[Request]:
+[GitHub]:
+[Phabricator]:
+[Githubinator]:
+[subl-phab]:
+[grunt-init-node]:
+[shortcutfoo]:
 
 ### General purpose
 
-- Use Unix key bindings (Ctrl+A, Ctrl+E, Ctrl+D)
-- Use shortcutfoo to learn key bindings of new programs
 
 ## Installed Programs
 
