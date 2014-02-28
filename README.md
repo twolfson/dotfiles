@@ -83,7 +83,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
         - Used for article timestamping
     - [Markdown Extended][] and [Monokai Extended][], extended syntax highlighting to support GitHub Flavored Markdown
     - [Case Conversion][], switch between various cases easily
-    - [CanISwitchToSublimeText3][], determine if all my plugins are ready to upgrade to [Sublime Text 3][],
+    - [CanISwitchToSublimeText3][], determine if all my plugins are ready to upgrade to [Sublime Text 3][]
     - [Maybs Quit][], prevent accidental exits by adding prompt to `ctrl+q`
 - [nodemon][], watches `.js` files for changes and re-executes a script
     - Great for restarting local development servers on save
@@ -134,6 +134,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [listen-spawn]: https://github.com/twolfson/listen-spawn
 [Hooks]: https://github.com/twolfson/sublime-hooks
 [Request]: https://github.com/twolfson/sublime-request
+[Sublime Text]: http://www.sublimetext.com/
 [livereload]: https://github.com/lepture/python-livereload
 [hub]: https://github.com/defunkt/hub
 [howdoi]: https://github.com/gleitz/howdoi
