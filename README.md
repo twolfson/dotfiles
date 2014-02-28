@@ -63,33 +63,44 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
 ## Programs
-- [Sublime Text 2][] with [Package Control][]
+- [Sublime Text 2][] with [Package Control][], text editor with great plugin system and ecosystem
+    // TODO: Update list of plugins
     - [SideBarEnhancements][], adds a bunch of file system comands to command palette
     - [SideBarSync][], adds command to reveal current file in side bar (expands folder structure)
     - [Table Editor][], edit Markdown tables easily (GFM compatible)
     - [Quick File Creator][], adds shortcuts for creating new directories and files
-    - [Find in Files][], adds commands for searching project, current file, or all open files
+    - [FindPlusPlus][], adds commands for searching project, current file, or all open files
     - Any syntax file I work with (e.g. `Jade`, `SASS`)
     - [SublimeLinter][], lints Python and JavaScript on every save
     - [Origami][], rearranges files betweens panes
-- [nodemon][]
-- [node/npm][]
-- hub - Create a new GitHub repo straight from the command line =D
-- howdoi
-- grunt@0.3.17
-- Charles Proxy (only installed/used when acting as 3rd party script)
-    - Used to modify content (injecting scripts, faking pages, etc) for hands-free and dev-friendly environment
-- git-extras - Adds an extremely useful set of git commands (e.g. `git back`)
-- Google Music for non-home music
+- [nodemon][], watches `.js` files for changes and re-executes a script
+    - Great for restarting local development servers on save
+- [listen-spawn][], listens for HTTP requests and re-executes a script
+    - Great for tests when used in junction with [Hooks][] and [Request][] in [Sublime Text][]
+- [livereload][], automatically refresh browser when a file is updated
+- [hub][], adds more [GitHub][] commands (e.g. repo creation, open current repo in browser)
+- [howdoi][], look up StackOverflow answers from the command line
+- [Charles Proxy][], inject scripts and fake pages when developing against 3rd party sites
+- [git-extras][], adds bonus `git` commands (e.g. `git back` to reset previous commit, `git ignore` to add a file pattern to `.gitignore`)
+- [Google Music][], music player hosted by Google
+- [Pixlr][], [Photoshop][] from the browser
+- [Firefox][] with [Firebug][], browser and development tool of choice
+- [Vagrant][], create and teardown development virtual machines on the fly
+- [ievms][], installs Internet Explorer virtual machines
+- [VirtualBox][], virtual machine runtime
 
 ### Linux Specific
-- gnome-terminal
-- Quod Libet - Music tag manager
-- Amarok - Music player
+- [gnome-terminal][], terminal emulator for Gnome
+- [Amarok][], music player for Linux
+- [Quod Libet][], manage music library tags
+- [wmctrl-pad][], manage window positions and layout
+    - Integrates nicely with keyboard shortcuts
 
 ### Mac OS X Specific
-- Dock view
-- Spectacles
+- [Dock view][], adds badge for how many windows are open for a program
+- [Spectacles][], adds shortcuts to position windows
+- [Alfred][], makes actions more accessible (e.g. `lock`)
+
 
 ## Workflow
 - Key repeat is set to very high
