@@ -31,7 +31,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Enables tab completion for `git` and `fab`
     - Adds customized sexy bash prompt
 - `.config/sublime-text-2/Packages/User` - Configuration for [Sublime Text 2][]
-    - Includes list of commonly used packages in [Package Control.sublime-settings][]
+    - Includes list of commonly used packages in [Package Control.sublime-settings](.config/sublime-text-2/Packages/User/Package Control.sublime-settings)
 - `.fonts/anonymous+Pro-Powerline.ttf` - [Anonymous Pro][], a monospaced font with serifs
     - This font comes from [powerline][] which contains additional characters. However, I don't use them.
 - `.gitconfig`
@@ -46,7 +46,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
 
 [Sublime Text 2]: http://www.sublimetext.com/2
-[Package Control.sublime-settings]: .config/sublime-text-2/Packages/User/Package Control.sublime-settings
 [Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
 [powerline]: https://github.com/milkbikis/powerline-shell
 
