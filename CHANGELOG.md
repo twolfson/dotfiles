@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.31.1 - Added missing conditional `.private_bash_profile` inside `~/.bash_profile`
+
 0.31.0 - Added `.private_bash_profile` support
 
 0.30.0 - Added git alias from dif to diff
