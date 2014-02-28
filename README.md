@@ -105,6 +105,8 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Keyboard shortcuts, key bindings to navigate and categorize emails
     - Undo, allows me to undo an accidental archive action
     - Favicon, view unread email count in favicon
+- [Shortcut Foo][], flash cards for program shortcuts
+- [grunt-init-node][], prompt style boilerplate for `node` modules
 
 [SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
 [SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
@@ -147,24 +149,36 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [VirtualBox]: http://virtualbox.org/
 [nano]: http://www.nano-editor.org/
 [Gmail]: https://mail.google.com/
+[Shortcut Foo]: http://shortcutfoo.com/
+[grunt-init-node]: https://github.com/twolfson/grunt-init-node
 
 ### Linux Specific
-- [gnome-terminal][], terminal emulator for Gnome
+- `gnome-terminal`, terminal emulator for Gnome
 - [Amarok][], music player for Linux
 - [Quod Libet][], manage music library tags
 - [wmctrl-pad][], manage window positions and layout
     - Integrates nicely with keyboard shortcuts
 
+[Amarok]: http://amarok.kde.org/
+[Quod Libet]: https://code.google.com/p/quodlibet/
+[wmctrl-pad]: https://github.com/twolfson/controlpad
+
 ### Mac OS X Specific
-- [Dock view][], adds badge for how many windows are open for a program
-- [Spectacles][], adds shortcuts to position windows
+- `Terminal`, OSX built in terminal
+- [DockView][], adds badge for how many windows are open for a program
+- [Spectacle][], adds shortcuts to position windows
 - [Alfred][], makes actions more accessible (e.g. `lock`)
-- [gotoshell][], open a shell via button in Finder window
+- [Go2Shell][], open a shell via button in Finder window
+
+[DockView]: http://www.macworld.com/product/682136/dockview.html
+[Spectacle]: http://spectacleapp.com/
+[Alfred]: http://www.alfredapp.com/
+[Go2Shell]: https://itunes.apple.com/us/app/go2shell/id445770608?mt=12
 
 ## Workflow
 - Key repeat is set to very high
 - Use multiple monitors, layout to see everything at a glance
-    - Move windows around via shortcuts; [Spectacles][] (Mac OS X), [wmctrl-pad][] (Gnome)
+    - Move windows around via shortcuts; [Spectacle][] (Mac OS X), [wmctrl-pad][] (Gnome)
 - Create new files via a shortcut
     - 'Quick File Creator' inside Sublime Text
 - Duplicate files files in one command
@@ -184,6 +198,4 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Use [shortcutfoo][] to learn key bindings of new programs
 - Inside [Sublime Text][], multiple word selection is great for deleting a single word as well as adjusting multiple
 
-[Spectacles]: http://spectacleapp.com/
-[wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
