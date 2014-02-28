@@ -63,6 +63,36 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `,` - List out current `pushd`/`popd` stack
 - `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
+## Programs
+- Sublime Text 2 with [Package Control]
+    - Installed packages
+      - SideBarEnhancements (for command palette file commands)
+      - SideBarSync (for reveal file command palette)
+      - Table Editor (for easy tables in Markdown - GFM accepted)
+      - Quick File Creator (for shortcuts to create new directories and files)
+      - Find in Files (for quick selection of files and better results)
+      - Jade, Mustache (syntax)
+      - Sublime Linter (constantly linting code)
+      - Origami (for when I want some funky custom layout *rare*)
+- nodemon
+- node/npm
+- hub - Create a new GitHub repo straight from the command line =D
+- howdoi
+- grunt@0.3.17
+- Charles Proxy (only installed/used when acting as 3rd party script)
+    - Used to modify content (injecting scripts, faking pages, etc) for hands-free and dev-friendly environment
+- git-extras - Adds an extremely useful set of git commands (e.g. `git back`)
+- Google Music for non-home music
+
+### Linux Specific
+- gnome-terminal
+- Quod Libet - Music tag manager
+- Amarok - Music player
+
+### Mac OS X Specific
+- Dock view
+- Spectacles
+
 ## Workflow
 - Use multiple monitors, layout to see everything at a glance
     - Move windows around via shortcuts; [Spectacles][] (Mac OS X), [wmctrl-pad][] (Gnome)
@@ -84,6 +114,9 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Learn program shortcuts early on (e.g. `bash`, `less`)
     - Use [shortcutfoo][] to learn key bindings of new programs
 
+## Settings
+- Key repeat: Very high
+
 [Spectacles]: http://spectacleapp.com/
 [wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
@@ -98,41 +131,3 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [subl-phab]:
 [grunt-init-node]:
 [shortcutfoo]:
-
-### General purpose
-
-
-## Installed Programs
-
-- Sublime Text 2 with [Package Control]
-    - Installed packages
-      - SideBarEnhancements (for command palette file commands)
-      - SideBarSync (for reveal file command palette)
-      - Table Editor (for easy tables in Markdown - GFM accepted)
-      - Quick File Creator (for shortcuts to create new directories and files)
-      - Find in Files (for quick selection of files and better results)
-      - Jade, Mustache (syntax)
-      - Sublime Linter (constantly linting code)
-      - Origami (for when I want some funky custom layout *rare*)
-- nodemon
-- node/npm
-- hub - Create a new GitHub repo straight from the command line =D
-- howdoi
-- grunt@0.3.17
-- Charles Proxy (only installed/used when acting as 3rd party script)
-    - Used to modify content (injecting scripts, faking pages, etc) for hands-free and dev-friendly environment
-- git-extras - Adds an extremely useful set of git commands (e.g. `git back`)
-
-### Linux Specific
-
-- gnome-terminal
-- Quod Libet - Music tag manager
-
-### Mac OS X Specific
-
-- Dock view
-- Spectacles
-
-## Settings
-
-- Key repeat: Very high
