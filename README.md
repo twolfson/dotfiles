@@ -63,18 +63,17 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
 ## Programs
-- Sublime Text 2 with [Package Control]
-    - Installed packages
-      - SideBarEnhancements (for command palette file commands)
-      - SideBarSync (for reveal file command palette)
-      - Table Editor (for easy tables in Markdown - GFM accepted)
-      - Quick File Creator (for shortcuts to create new directories and files)
-      - Find in Files (for quick selection of files and better results)
-      - Jade, Mustache (syntax)
-      - Sublime Linter (constantly linting code)
-      - Origami (for when I want some funky custom layout *rare*)
-- nodemon
-- node/npm
+- [Sublime Text 2][] with [Package Control][]
+    - [SideBarEnhancements][], adds a bunch of file system comands to command palette
+    - [SideBarSync][], adds command to reveal current file in side bar (expands folder structure)
+    - [Table Editor][], edit Markdown tables easily (GFM compatible)
+    - [Quick File Creator][], adds shortcuts for creating new directories and files
+    - [Find in Files][], adds commands for searching project, current file, or all open files
+    - Any syntax file I work with (e.g. `Jade`, `SASS`)
+    - [SublimeLinter][], lints Python and JavaScript on every save
+    - [Origami][], rearranges files betweens panes
+- [nodemon][]
+- [node/npm][]
 - hub - Create a new GitHub repo straight from the command line =D
 - howdoi
 - grunt@0.3.17
@@ -112,6 +111,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Create templated repos via [grunt-init-node][]
 - Learn program shortcuts early on (e.g. `bash`, `less`)
     - Use [shortcutfoo][] to learn key bindings of new programs
+- Inside [Sublime Text][], multiple word selection is great for deleting a single word as well as adjusting multiple
 
 ## Settings
 - Key repeat: Very high
