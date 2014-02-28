@@ -65,7 +65,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 
 ## Programs
 - [Sublime Text 2][] with [Package Control][], text editor with great plugin system and ecosystem
-    // TODO: Update list of plugins
     - [SideBarEnhancements][], adds a bunch of file system comands to command palette
     - [SideBarSync][], adds command to reveal current file in side bar (expands folder structure)
     - [Table Editor][], edit Markdown tables easily (GFM compatible)
