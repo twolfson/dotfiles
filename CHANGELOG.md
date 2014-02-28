@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.36.0 - Added better backup for Sublime Text configuration
+
 0.35.0 - Removed forgotten `git-sqwish` autocomplete
 
 0.34.0 - Moved all of install script into conditionals
