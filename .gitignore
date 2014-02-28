@@ -1,3 +1,4 @@
 *.pyc
 *.bak
 *.cache
+*.last-run
