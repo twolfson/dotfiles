@@ -200,3 +200,18 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Inside [Sublime Text][], multiple word selection is great for deleting a single word as well as adjusting multiple
 
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
+
+## Donating
+Support this project and [others by twolfson][gittip] via [gittip][].
+
+[![Support via Gittip][gittip-badge]][gittip]
+
+[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+[gittip]: https://www.gittip.com/twolfson/
+
+## Unlicense
+As of Feb 28 2014, Todd Wolfson has released this repository and its contents to the public domain.
+
+It has been released under the [UNLICENSE][].
+
+[UNLICENSE]: UNLICENSE
