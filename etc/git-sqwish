@@ -1,3 +1,0 @@
-_git_sqwish(){
-  __gitcomp "$(__git_heads)"
-}
