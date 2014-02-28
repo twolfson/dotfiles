@@ -40,11 +40,12 @@ else
 fi
 
 # Sublime settings
-if false; then
-  mkdir -p ~/.config/sublime-text-2/Packages/User
-  ln -s $PWD/.config/sublime-text-2/Packages/User/Preferences.sublime-settings ~/.config/sublime-text-2/Packages/User/Preferences.sublime-settings
+if ! test -d ~/.config/sublime-text-2/Packages/User; then
+  mkdir -p ~/.config/sublime-text-2/Packages/
+  ln -s $PWD/.config/sublime-text-2/Packages/User ~/.config/sublime-text-2/Packages/User
+  echo "Installed Sublime Text \`User\` folder" 1>&2
 else
-  echo "Skipping \`sublime_text\` config (not maintained frequently enough)" 1>&2
+  echo "Sublime Text \`User\` folder already exists" 1>&2
 fi
 
 # Fonts
