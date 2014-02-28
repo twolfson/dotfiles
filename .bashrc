@@ -171,3 +171,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 if test -f ~/.travis/travis.sh; then
   source ~/.travis/travis.sh
 fi
+
+# If there is a private bash profile, use it
+if test -f ~/.private_bash_profile; then
+  source ~/.private_bash_profile
+fi
