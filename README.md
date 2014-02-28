@@ -132,21 +132,21 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [listen-spawn]: https://github.com/twolfson/listen-spawn
 [Hooks]: https://github.com/twolfson/sublime-hooks
 [Request]: https://github.com/twolfson/sublime-request
-[livereload]:
-[hub]:
-[howdoi]:
-[Charles Proxy]:
-[git-extras]:
-[Google Music]:
-[Pixlr]:
-[Photoshop]:
-[Firefox]:
-[Firebug]:
-[Vagrant]:
-[ievms]:
-[VirtualBox]:
-[nano]:
-[Gmail]:
+[livereload]: https://github.com/lepture/python-livereload
+[hub]: https://github.com/defunkt/hub
+[howdoi]: https://github.com/gleitz/howdoi
+[Charles Proxy]: http://charlesproxy.com/
+[git-extras]: https://github.com/visionmedia/git-extras
+[Google Music]: http://music.google.com/
+[Pixlr]: http://pixlr.com/
+[Photoshop]: http://www.photoshop.com/
+[Firefox]: http://www.mozilla.org/en-US/firefox/new/
+[Firebug]: https://getfirebug.com/
+[Vagrant]: http://vagrantup.com/
+[ievms]: https://github.com/xdissent/ievms/
+[VirtualBox]: http://virtualbox.org/
+[nano]: http://www.nano-editor.org/
+[Gmail]: https://mail.google.com/
 
 ### Linux Specific
 - [gnome-terminal][], terminal emulator for Gnome
