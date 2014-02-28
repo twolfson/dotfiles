@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.35.0 - Removed forgotten `git-sqwish` autocomplete
+
 0.34.0 - Moved all of install script into conditionals
 
 0.33.0 - Removed abstracted `sexy-bash-prompt` and `git-sqwish` files
