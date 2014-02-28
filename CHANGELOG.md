@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.32.0 - Documenting and cleaning up `.gitconfig` and `.bashrc`
+
 0.31.1 - Added missing conditional `.private_bash_profile` inside `~/.bash_profile`
 
 0.31.0 - Added `.private_bash_profile` support
