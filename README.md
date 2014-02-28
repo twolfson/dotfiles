@@ -101,6 +101,10 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [ievms][], installs Internet Explorer virtual machines
 - [VirtualBox][], virtual machine runtime
 - [nano][], small and intuitive text editor that I use for `git commit` messages
+- [Gmail][] with labs plugins, Google's mail program
+    - Keyboard shortcuts, key bindings to navigate and categorize emails
+    - Undo, allows me to undo an accidental archive action
+    - Favicon, view unread email count in favicon
 
 [SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
 [SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
@@ -120,6 +124,29 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [InsertDate]: https://github.com/FichteFoll/sublimetext-insertdate
 [Markdown Extended]: https://github.com/jonschlinkert/sublime-markdown-extended
 [Monokai Extended]: https://github.com/jonschlinkert/sublime-monokai-extended
+[Case Conversion]: https://github.com/jdc0589/CaseConversion
+[CanISwitchToSublimeText3]: https://github.com/SublimeGit/CanISwitchToSublimeText3
+[Sublime Text 3]: http://www.sublimetext.com/3
+[Maybs Quit]: https://github.com/xavi-/sublime-maybs-quit
+[nodemon]: https://github.com/remy/nodemon
+[listen-spawn]: https://github.com/twolfson/listen-spawn
+[Hooks]: https://github.com/twolfson/sublime-hooks
+[Request]: https://github.com/twolfson/sublime-request
+[livereload]:
+[hub]:
+[howdoi]:
+[Charles Proxy]:
+[git-extras]:
+[Google Music]:
+[Pixlr]:
+[Photoshop]:
+[Firefox]:
+[Firebug]:
+[Vagrant]:
+[ievms]:
+[VirtualBox]:
+[nano]:
+[Gmail]:
 
 ### Linux Specific
 - [gnome-terminal][], terminal emulator for Gnome
@@ -160,5 +187,3 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [Spectacles]: http://spectacleapp.com/
 [wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
-[grunt-init-node]:
-[shortcutfoo]:
