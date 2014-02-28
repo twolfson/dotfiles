@@ -1,19 +1,18 @@
-dotfiles
-========
+# dotfiles
 
-A collection of my dotfiles, currently fragmented between [Linux Mint (Cinnamon)][mint] and [Mac OS X Mountain Lion][osx].
+A collection of my dotfiles (e.g. `.config`, `.bashrc`)
+
+This is written for both [Linux Mint 14 (Cinnamon)][mint] and [Mac OS X Mountain Lion][osx].
 
 [mint]: http://www.linuxmint.com/
 [osx]: http://www.apple.com/osx/
 
-Getting started
----------------
-To install `dotfiles` (Mint only), run `./install.sh`.
+## Getting started
+To install `dotfiles`, run `./install.sh`.
 
 This will create symlinks and copy/append files when symlinks are inappropriate.
 
-Files
------
+## Files
 
 - `.bash_profile` - Run at login. Sets default editor to [Sublime Text 2][subl], enables CLI coloring, and runs `.bashrc` for aliases and such.
 - `.bashrc` - Run when a new terminal is opened, creates a bunch of aliases, enables tab completion for `git`, and adds customized sexy bash prompt.
@@ -70,8 +69,7 @@ This is a fork of the [sexy bash prompt][sexy-bash-prompt]. It is cool colored a
 
 It also is now well-tested via `./test.sh`.
 
-Workflow
---------
+## Workflow
 
 - Use multiple monitors, layout to see everything at a glance.
     - [Spectacles][spectacles] (Mac OS X), [Compiz Config Settings Manager][ccsm] (Gnome), or [AeroSnap][aero] + [WindowPad][windowpad] (Windows) help **a ton**.
@@ -96,8 +94,7 @@ Workflow
 - Use Unix key bindings (Ctrl+A, Ctrl+E, Ctrl+D)
 - Use shortcutfoo to learn key bindings of new programs
 
-Installed Programs
-------------------
+## Installed Programs
 
 - Sublime Text 2 with [Package Control]
     - Installed packages
@@ -128,7 +125,6 @@ Installed Programs
 - Dock view
 - Spectacles
 
-Settings
---------
+## Settings
 
 - Key repeat: Very high
