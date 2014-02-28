@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.31.0 - Added `.private_bash_profile` support
+
 0.30.0 - Added git alias from dif to diff
 
 0.29.0 - Adjusted vagrant-listen-spawn to handle multi-Vagrant setups
