@@ -59,6 +59,11 @@ else
   alias copy="xclip -selection c"
 fi
 
+### Consistent sorting command ###
+if which gsort > /dev/null; then
+  alias sort="gsort"
+fi
+
 ### Live-reload specific ###
 alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
 
