@@ -20,39 +20,40 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 
 ![Example screenshot of sexy-bash-prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
 
-## Files
+#### Files
 
-- `.bash_profile` - Run at login. Sets default editor to [Sublime Text 2][subl], enables CLI coloring, and runs `.bashrc` for aliases and such.
-- `.bashrc` - Run when a new terminal is opened, creates a bunch of aliases, enables tab completion for `git`, and adds customized sexy bash prompt.
-- `.config`, `Library` - Contains Sublime Text 2 preferences (Gnome, OS X respectively)
-- `.fonts` - An open source fork of Anonymous Pro (via [powerline][powerline])
+- `.bash_profile` - Bash script that is run at login
+    - Sets default editor to [Sublime Text 2][]
+    - Enables CLI coloring
+    - Runs `.bashrc` for aliases and `PATH` updates
+- `.bashrc` - Run when a new terminal is opened
+    - Creates aliases
+    - Add helper and polyfill commands
+    - Enables tab completion for `git` and `fab`
+    - Adds customized sexy bash prompt
+- `.config/sublime-text-2/Packages/User` - Configuration for [Sublime Text 2][]
+    - Includes list of commonly used packages in [Package Control.sublime-settings][]
+- `.fonts/anonymous+Pro-Powerline.ttf` - [Anonymous Pro][], a monospaced font with serifs
+    - This font comes from [powerline][] which contains additional characters. However, I don't use them.
 - `.gitconfig`
-    - Sets up default credentials, disable `.orig` files
-    - Set mergetool as `meld` (Tortoisediff for Windows)
-    - Enable color commands (helps with diff)
+    - Set up credentials for `twolfson` (me)
+    - Disable creation of `.orig` files
+    - Set `meld` as mergetool/difftool
+    - Enable `git` colors
     - Add aliases
-        - `add-pr` - Adds a new `remote`, `pr`,to pull `pull requests` (via [piscisaureus][pr-gist])
-        - `a` - To add all changes (never used)
-        - `m` - Commit with a message (never used)
+        - `add-pr` - Adds a new `remote` for fetching pull requests as branches
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
-- `defaults.list` - Application configuration list for Gnome
-- `install.sh` - Set up symlinks to our files
-- `once.sh` - Write/append content to files once
-- `sublime-text-2.desktop` - Application configuration for Sublime Text 2 for Gnome
-- `sublimePackageList.sh`, `sublimePackageList.txt` - Grabs list of installed packages from Sublime's folder and writes new ones into `.txt`
 
-[subl]: http://www.sublimetext.com/2
+[Sublime Text 2]: http://www.sublimetext.com/2
+[Package Control.sublime-settings]: .config/sublime-text-2/Packages/User/Package Control.sublime-settings
+[Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
 [powerline]: https://github.com/milkbikis/powerline-shell
 [pr-gist]: https://gist.github.com/piscisaureus/3342247
 
-**.bashrc info**
-
-### Aliases
-#### Programs
+##### `.bashrc` aliases
 
 - `inco` - Opens a Chrome Incognito window
-- `lock` - Locks computer via screensaver (designed for Gnome/Cinnamon)
-- `naut` - Opens file browser (designed for Nautilus)
+- `lock` - Locks computer via screensaver on Gnome/Cinnamon
 
 #### Directory movements
 
