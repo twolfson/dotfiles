@@ -92,6 +92,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Spectacles
 
 ## Workflow
+- Key repeat is set to very high
 - Use multiple monitors, layout to see everything at a glance
     - Move windows around via shortcuts; [Spectacles][] (Mac OS X), [wmctrl-pad][] (Gnome)
 - Create new files via a shortcut
@@ -112,9 +113,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Learn program shortcuts early on (e.g. `bash`, `less`)
     - Use [shortcutfoo][] to learn key bindings of new programs
 - Inside [Sublime Text][], multiple word selection is great for deleting a single word as well as adjusting multiple
-
-## Settings
-- Key repeat: Very high
 
 [Spectacles]: http://spectacleapp.com/
 [wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
