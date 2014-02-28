@@ -2,35 +2,46 @@
 	name = Todd Wolfson
 	email = todd@twolfson.com
 [mergetool]
+	# Do not create `.orig` files (I trust my git history competency)
 	keepBackup = false
 [mergetool "[tool]"]
 	cmd = meld
+[merge]
+	tool = meld
 [color]
+	# Get colors for all commands
 	ui = true
 [alias]
+	# Add `remote` that allows fetching of GitHub pull requests as a branch
+	# Interpreted from https://gist.github.com/piscisaureus/3342247
 	add-pr = !git config --add remote.pr.url $(git config --get remote.origin.url) && git config --add remote.pr.fetch +refs/pull/*/head:refs/remotes/origin/pr/*
-	a=add -A
-	m=commit -m
-	cleanup=!_git_cleanup
+	# Allow infinite `git` chains (e.g. `git git status`)
 	git=!git
+	# Get the first 7 characters of the HEAD sha
 	head = !git rev-parse HEAD | cut -c 1,2,3,4,5,6,7
+	# Quickly amend the existing commit
 	amend = commit --amend
+	# Correct typos that `help.autocorrect` does not fix
 	ad = add
 	dif = diff
+	# Utility methods for working with tags
 	tags-sorted = !git tag | (sort -V 2> /dev/null || gsort -V 2> /dev/null)
 	last-tag = !git tags-sorted | tail -n 1
 	compare-last-tag = !hub compare \"$(git last-tag)\"...master
+	# Clone a gist via `ssh` from an `https` url
 	clone-gist = "!f() { git clone $(echo \"$1\" | sed \"s/https:\\/\\/gist.github.com\\//git@gist.github.com:/\") $2; }; f"
 [sequence]
+	# Edit rebases inside of Sublime Text
 	editor = sublime_text -w
 [help]
+	# Automatically correct typos within 0.7 seconds (e.g. `git sttus` -> `git status`)
 	autocorrect = 7
 [core]
+	# Edit commit messages inside of `pico`
 	editor = pico
 	excludesfile = /home/todd/.gitignore
 [init]
+	# Instantiate `git` directories with custom set of hooks
 	templatedir = /home/todd/github/dotfiles/git-template-dir/
-[merge]
-	tool = meld
 [push]
 	default = current
