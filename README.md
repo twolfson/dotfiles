@@ -70,10 +70,22 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - [SideBarSync][], adds command to reveal current file in side bar (expands folder structure)
     - [Table Editor][], edit Markdown tables easily (GFM compatible)
     - [Quick File Creator][], adds shortcuts for creating new directories and files
-    - [FindPlusPlus][], adds commands for searching project, current file, or all open files
+    - [Find++][], adds commands for searching project, current file, or all open files
     - Any syntax file I work with (e.g. `Jade`, `SASS`)
     - [SublimeLinter][], lints Python and JavaScript on every save
     - [Origami][], rearranges files betweens panes
+    - [snippet-destroyer][], removes all snippet autocompletes for consistent `tab` functionality
+    - [CodeFormatter][], beautifies a JavaScript or Python file
+    - [Pretty JSON][], beautifies a JSON file
+    - [Githubinator][], open GitHub browse and blame for the active file
+    - [Phabricator][subl-phab], open Phabricator browse for the active file
+    - [Insert Nums][], inserts an ordered list of numbers at each cursor position
+    - [InsertDate][], insert a date string
+        - Used for article timestamping
+    - [Markdown Extended][] and [Monokai Extended][], extended syntax highlighting to support GitHub Flavored Markdown
+    - [Case Conversion][], switch between various cases easily
+    - [CanISwitchToSublimeText3][], determine if all my plugins are ready to upgrade to [Sublime Text 3][],
+    - [Maybs Quit][], prevent accidental exits by adding prompt to `ctrl+q`
 - [nodemon][], watches `.js` files for changes and re-executes a script
     - Great for restarting local development servers on save
 - [listen-spawn][], listens for HTTP requests and re-executes a script
@@ -113,7 +125,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - Duplicate files files in one command
     - 'File: Duplcate' via [SideBarEnhancements][] inside Sublime Text
 - When debugging a problem, I use a binary search of `console.log` statements
-- When finding methods/strings in foreign code bases, I use 'Find: In Current File' via [FindPlusPlus][] in Sublime Text
+- When finding methods/strings in foreign code bases, I use 'Find: In Current File' via [Find++][] in Sublime Text
     - Alternatively, I use `git grep` to search the `git` filesystem
 - Checkout and merge previous branches via `git checkout/merge -`. See [Coderwall protips][] for more.
 - I use live coding frequently in multiple scenarios
@@ -131,7 +143,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
 [SideBarEnhancements]:
-[FindPlusPlus]:
+[Find++]:
 [nodemon]:
 [Hooks]:
 [Request]:
