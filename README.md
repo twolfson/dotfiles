@@ -66,7 +66,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 ## Programs
 - [Sublime Text 2][] with [Package Control][], text editor with great plugin system and ecosystem
     - [SideBarEnhancements][], adds a bunch of file system comands to command palette
-    - [SideBarSync][], adds command to reveal current file in side bar (expands folder structure)
+    - [SyncedSideBar][], adds command to reveal current file in side bar (expands folder structure)
     - [Table Editor][], edit Markdown tables easily (GFM compatible)
     - [Quick File Creator][], adds shortcuts for creating new directories and files
     - [Find++][], adds commands for searching project, current file, or all open files
@@ -76,8 +76,8 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - [snippet-destroyer][], removes all snippet autocompletes for consistent `tab` functionality
     - [CodeFormatter][], beautifies a JavaScript or Python file
     - [Pretty JSON][], beautifies a JSON file
-    - [Githubinator][], open GitHub browse and blame for the active file
-    - [Phabricator][subl-phab], open Phabricator browse for the active file
+    - [Githubinator][], open [GitHub][] browse and blame for the active file
+    - [Phabricator][subl-phab], open [Phabricator][] browse for the active file
     - [Insert Nums][], inserts an ordered list of numbers at each cursor position
     - [InsertDate][], insert a date string
         - Used for article timestamping
@@ -101,6 +101,25 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [ievms][], installs Internet Explorer virtual machines
 - [VirtualBox][], virtual machine runtime
 - [nano][], small and intuitive text editor that I use for `git commit` messages
+
+[SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
+[SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
+[Table Editor]: https://github.com/vkocubinsky/SublimeTableEditor
+[Quick File Creator]: https://github.com/noklesta/SublimeQuickFileCreator
+[Find++]: https://github.com/twolfson/FindPlusPlus
+[SublimeLinter]: https://github.com/SublimeLinter/SublimeLinter
+[Origami]: https://github.com/SublimeText/Origami
+[snippet-destroyer]: https://github.com/twolfson/sublime-snippet-destroyer
+[CodeFormatter]: https://github.com/akalongman/sublimetext-codeformatter/
+[Pretty JSON]: https://github.com/dzhibas/SublimePrettyJson
+[GitHubinator]: https://github.com/ehamiter/ST2-GitHubinator
+[GitHub]: http://github.com/
+[subl-phab]: https://github.com/uber/sublime-phabricator
+[Phabricator]: https://github.com/facebook/phabricator
+[Insert Nums]: https://github.com/jbrooksuk/InsertNums
+[InsertDate]: https://github.com/FichteFoll/sublimetext-insertdate
+[Markdown Extended]: https://github.com/jonschlinkert/sublime-markdown-extended
+[Monokai Extended]: https://github.com/jonschlinkert/sublime-monokai-extended
 
 ### Linux Specific
 - [gnome-terminal][], terminal emulator for Gnome
@@ -141,14 +160,5 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [Spectacles]: http://spectacleapp.com/
 [wmctrl-pad]: https://www.npmjs.org/package/wmctrl-pad
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
-[SideBarEnhancements]:
-[Find++]:
-[nodemon]:
-[Hooks]:
-[Request]:
-[GitHub]:
-[Phabricator]:
-[Githubinator]:
-[subl-phab]:
 [grunt-init-node]:
 [shortcutfoo]:
