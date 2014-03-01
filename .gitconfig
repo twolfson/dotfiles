@@ -46,6 +46,8 @@
 	# Instantiate `git` directories with custom set of hooks
 	templatedir = ~/github/dotfiles/git-template-dir/
 [push]
+	# Push to remote branch of the same name by default
 	default = current
 [grep]
+	# Display line numbers in `git grep`
 	lineNumber = true
