@@ -30,6 +30,8 @@
 	compare-last-tag = !hub compare \"$(git last-tag)\"...master
 	# Clone a gist via `ssh` from an `https` url
 	clone-gist = "!f() { git clone $(echo \"$1\" | sed \"s/https:\\/\\/gist.github.com\\//git@gist.github.com:/\") $2; }; f"
+        # List sha1, author, and subject in one line
+        author-log = "log --format='%h %aN: %s'"
 [sequence]
 	# Edit rebases inside of Sublime Text
 	editor = sublime_text -w
@@ -45,3 +47,5 @@
 	templatedir = ~/github/dotfiles/git-template-dir/
 [push]
 	default = current
+[grep]
+	lineNumber = true

@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.39.0 - Added line numbers to `git grep` and alias to get authors in a log quickly
+
 0.38.0 - Updated documentation and added UNLICENSE
 
 0.37.0 - Removed more unnecessary Sublime Text files
