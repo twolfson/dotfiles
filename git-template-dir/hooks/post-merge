@@ -2,5 +2,5 @@
 # Modified from https://github.com/DanaDanger/victorious-merge
 
 if [ "$GIT_REFLOG_ACTION" != "pull" ]; then
-  afplay -v 8 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
+  afplay -v 5 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
 fi
