@@ -1,8 +1,5 @@
 #!/bin/sh
 
 if [ "$GIT_REFLOG_ACTION" != "pull" ]; then
-  branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-  if [ "$branch" = "master" ]; then
-    afplay -v 8 FinalFantasyVictory.mp3 &> /dev/null &
-  fi
+  afplay -v 8 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
 fi
