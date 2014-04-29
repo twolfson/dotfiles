@@ -1,0 +1,10 @@
+#!/bin/sh
+# Modified from https://github.com/DanaDanger/victorious-merge
+
+# On merge conflict actions (e.g. fighting merge conflicts)
+log="$(git log -n 1 2> /dev/null)"
+echo "wat $log"
+# Play fanfare
+if echo "$log" | grep "Conflicts:" &> /dev/null; then
+  afplay -v 5 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
+fi
