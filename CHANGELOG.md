@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.41.0 - Altered `victorious-merge` to only sound when we triumphed a conflict
+
 0.40.0 - Moved to `victorious-merge` for git template
 
 0.39.1 - Added comments to `.gitconfig` for future reference
