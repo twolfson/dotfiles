@@ -1,6 +1,11 @@
 #!/bin/sh
 # Modified from https://github.com/DanaDanger/victorious-merge
 
+# On merge actions (e.g. merge/pull)
 if [ "$GIT_REFLOG_ACTION" != "pull" ]; then
-  afplay -v 5 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
+  # If we fought against merge conflicts, play fanfare
+  log="$(git log -n 1 2> /dev/null)"
+  if echo "$log" | grep "Conflicts:" &> /dev/null; then
+    afplay -v 5 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
+  fi
 fi
