@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.45.0 - Updated `grunt-init` defaults
+
 0.44.0 - Added latest Sublime Text 2 updates
 
 0.43.0 - Added linuxbrew to .bashrc
