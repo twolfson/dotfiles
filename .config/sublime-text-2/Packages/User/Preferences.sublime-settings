@@ -4,20 +4,21 @@
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_inactive_panes": false,
-	"font_size": 11,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
 		"ScopeAlways",
+		"Terminal",
 		"Color Highlighter",
 		"Vintage",
 		"RestructuredText",
-		"WordCount",
-		"Terminal",
+		"HostsEdit",
+		"Stylus",
 		"ScopeStatus",
+		"LoremIpsum",
 		"snippet-destroyer",
 		"optimal-lines",
-		"HostsEdit",
 		"CursorRuler"
 	],
 	"indent_guide_options":
