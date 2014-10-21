@@ -2,6 +2,7 @@
   "author_name": "Todd Wolfson",
   "author_email": "todd@twolfson.com",
   "author_url": "http://twolfson.com/",
-  "gittip_username": "twolfson",
-  "travis_username": "twolfson"
+  "gratipay_username": "twolfson",
+  "travis_username": "twolfson",
+  "version": "1.0.0"
 }
