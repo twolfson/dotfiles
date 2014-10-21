@@ -107,9 +107,10 @@ function _fab_complete() {
 }
 complete -o nospace -F _fab_complete fab
 
-# Set up terminal colors (originally from sexy-bash-prompt)
-# if [[ $COLORTERM = gnome-* && $TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
-if [[ $TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
+# If we are in an xterm and we can support 256 colors, do it
+# DEV: This is used to get better colors in sexy-bash-prompt
+if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
+  export TERM="xterm-256color"
 fi
 
 # Run twolfson/sexy-bash-prompt
