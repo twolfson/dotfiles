@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.43.0 - Added linuxbrew to .bashrc
+
 0.42.0 - Fixed up coloring to be better in TTY shells
 
 0.41.0 - Altered `victorious-merge` to only sound when we triumphed a conflict
