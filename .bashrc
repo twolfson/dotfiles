@@ -137,6 +137,12 @@ if test -f ~/.travis/travis.sh; then
   source ~/.travis/travis.sh
 fi
 
+# If there is linuxbrew, add it to PATH/LD_LIBRARY_PATH
+if test -d ~/.linuxbrew; then
+  export PATH="$HOME/.linuxbrew/bin:$PATH"
+  export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+fi
+
 # If there is a private bash profile, use it
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
