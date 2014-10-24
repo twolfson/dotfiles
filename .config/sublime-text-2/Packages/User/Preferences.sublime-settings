@@ -8,18 +8,19 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"ScopeAlways",
-		"Terminal",
+		"Stylus",
 		"Color Highlighter",
 		"Vintage",
 		"RestructuredText",
 		"HostsEdit",
-		"Stylus",
+		"ScopeAlways",
 		"ScopeStatus",
 		"LoremIpsum",
 		"snippet-destroyer",
 		"optimal-lines",
-		"CursorRuler"
+		"CursorRuler",
+		"Request",
+		"Terminal"
 	],
 	"indent_guide_options":
 	[
@@ -41,6 +42,10 @@
 		}
 	],
 	"reveal-on-activate": false,
+	"rulers":
+	[
+		120
+	],
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
