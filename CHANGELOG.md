@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.47.0 - Updated Sublime Text settings
+
 0.46.0 - Added out of date installation files found during a cleanup
 
 0.45.0 - Updated `grunt-init` defaults
