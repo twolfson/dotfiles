@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.49.0 - Added better error messaging for fanfare issues
+
 0.48.0 - Fixed up cross platform fanfare issues
 
 0.47.0 - Updated Sublime Text settings
