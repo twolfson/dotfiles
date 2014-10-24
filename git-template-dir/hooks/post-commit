@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Modified from https://github.com/DanaDanger/victorious-merge
 
 # On merge conflict actions (e.g. fighting merge conflicts)
 if git log -n 1 2> /dev/null | grep "Conflicts:" &> /dev/null; then
   # Play fanfare
-  afplay -v 5 "$PWD/.git/hooks/FinalFantasyVictory.mp3" &
+  fanfare="$PWD/.git/hooks/FinalFantasyVictory.mp3"
+  if which afplay &> /dev/null; then
+    afplay -v 5 "$fanfare" &> /dev/null &
+  else
+    mplayer "$fanfare" &> /dev/null &
+  fi
 fi
