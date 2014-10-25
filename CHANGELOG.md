@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.51.0 - Fixed up `bash --posix` invocation issues with `.bashrc`
+
 0.50.0 - Committing latest set of changes for Sublime Text
 
 0.49.0 - Added better error messaging for fanfare issues
