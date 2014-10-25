@@ -1,7 +1,7 @@
 {
 	"auto_complete": false,
 	"auto_match_enabled": false,
-	"color_scheme": "Packages/Monokai Extended/Monokai Extended Bright.tmTheme",
+	"color_scheme": "Packages/User/Theme Extender/Monokai Extended Bright.extended.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_inactive_panes": false,
 	"font_size": 11.0,
