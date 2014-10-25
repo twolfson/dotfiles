@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 ### Common commands ###
 # Open an incognito window in Chrome
 if [[ $(ls /Applications/Google\ Chrome.app 2> /dev/null) != "" ]]; then
@@ -74,10 +75,11 @@ alias sudo="sudo "
 ### Vagrant commands ###
 alias install-node="if ! which node &> /dev/null; then sudo apt-get install -y python-software-properties python g++ make; sudo add-apt-repository -y ppa:chris-lea/node.js; sudo apt-get update; sudo apt-get install -y nodejs; fi"
 alias install-listen-spawn="vagrant-install-node; if ! which listen-spawn &> /dev/null; then sudo npm install -g listen-spawn; fi"
-vagrant-listen-spawn () {
+vagrant_listen_spawn () {
   echo "Connected to $1 localhost:7060"
   vagrant ssh $1 -- -N -L 7060:localhost:7060
 }
+alias vagrant-listen-spawn="vagrant_listen_spawn"
 
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
