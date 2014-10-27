@@ -107,6 +107,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Favicon, view unread email count in favicon
 - [Shortcut Foo][], flash cards for program shortcuts
 - [grunt-init-node][], prompt style boilerplate for `node` modules
+- [gti][], "alias" similar to `sl` for `ls` that plays GTI animation but runs `git command afterwards
 
 [SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
 [SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
@@ -152,6 +153,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [Gmail]: https://mail.google.com/
 [Shortcut Foo]: http://shortcutfoo.com/
 [grunt-init-node]: https://github.com/twolfson/grunt-init-node
+[gti]: https://github.com/rwos/gti
 
 ### Linux Specific
 - `gnome-terminal`, terminal emulator for Gnome
