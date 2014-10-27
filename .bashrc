@@ -51,7 +51,8 @@ alias lnpm="npm --no-registry"
 
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
-alias gti="git"
+# Replaced `gti` with https://github.com/rwos/gti (speed 100)
+alias tgi="git"
 
 ### Clipboard help ###
 if which pbcopy > /dev/null; then
