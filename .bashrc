@@ -119,6 +119,9 @@ fi
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
 
+# Add title reset to Terminal
+PS1="$(echo -ne "\033]2;test change title\007")$PS1"
+
 # Expose helper method for git branch
 function BRANCH() {
   echo $(get_git_branch)
