@@ -120,6 +120,7 @@ fi
 . ~/.bash_prompt
 
 # Define function to update title
+# DEV: Makes it less annoying to deal with ssh titles
 title () {
   echo -ne "\033]2;$*\007"
 }
