@@ -119,9 +119,10 @@ fi
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
 
-# Always reset title reset to Terminal
-# DEV: This is to stop annoyances with `ssh`
-PS1="$(echo -ne "\033]2;Terminal\007")$PS1"
+# Define function to update title
+title () {
+  echo -ne "\033]2;$*\007"
+}
 
 # Expose helper method for git branch
 function BRANCH() {
