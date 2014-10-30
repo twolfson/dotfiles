@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.53.0 - Added function to make updating terminal title easier
+
 0.52.0 - Replaced `gti` alias with `git` correcting animation
 
 0.51.0 - Fixed up `bash --posix` invocation issues with `.bashrc`
