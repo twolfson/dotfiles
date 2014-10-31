@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.54.0 - Updated Sublime settings to include keymap notes and custom user commands
+
 0.53.0 - Added function to make updating terminal title easier
 
 0.52.0 - Replaced `gti` alias with `git` correcting animation
