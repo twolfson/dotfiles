@@ -2,25 +2,32 @@
 	"auto_complete": false,
 	"auto_match_enabled": false,
 	"color_scheme": "Packages/User/Theme Extender/Monokai Extended Bright.extended.tmTheme",
+	"commands":
+	[
+		{
+			"caption": "Find3: In Current File",
+			"command": "fpp_find_in_current_file"
+		}
+	],
 	"ensure_newline_at_eof_on_save": true,
 	"fade_inactive_panes": false,
 	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Stylus",
+		"ScopeAlways",
+		"Theme Extender",
+		"RestructuredText",
 		"Color Highlighter",
 		"Vintage",
-		"RestructuredText",
+		"theme-extender",
 		"HostsEdit",
-		"ScopeAlways",
+		"Stylus",
 		"ScopeStatus",
 		"LoremIpsum",
 		"snippet-destroyer",
 		"optimal-lines",
-		"CursorRuler",
-		"Request",
-		"Terminal"
+		"CursorRuler"
 	],
 	"indent_guide_options":
 	[
