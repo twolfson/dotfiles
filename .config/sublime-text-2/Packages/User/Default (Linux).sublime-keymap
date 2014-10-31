@@ -1,6 +1,14 @@
 [
-  { "keys": ["alt+x"], "command": "theme_extender_extend_theme"},
+  // Dev key binding
+  { "keys": ["alt+x"], "command": "commands_open"},
+
+  // Make scrolling easier
   { "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 20.0 } },
   { "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0 } },
-  { "keys": ["f12"], "command": "noop"}
+
+  // Stop opening help pages in Chrome
+  { "keys": ["f12"], "command": "noop"},
+
+  // Fix over-aggressive key bindings from Terminal plugin
+  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" }
 ]
