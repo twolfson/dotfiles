@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.55.0 - Added `SelectUntil` command
+
 0.54.0 - Updated Sublime settings to include keymap notes and custom user commands
 
 0.53.0 - Added function to make updating terminal title easier
