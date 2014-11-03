@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.56.0 - Moved to `Edit Command Palette` rename
+
 0.55.0 - Added `SelectUntil` command
 
 0.54.0 - Updated Sublime settings to include keymap notes and custom user commands
