@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.57.0 - Added `alias` for process management
+
 0.56.0 - Moved to `Edit Command Palette` rename
 
 0.55.0 - Added `SelectUntil` command
