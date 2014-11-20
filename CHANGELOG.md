@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.59.0 - Added latest set of Sublime Text updates
+
 0.58.0 Added `igt` alias for `git`
 
 0.57.0 - Added `alias` for process management
