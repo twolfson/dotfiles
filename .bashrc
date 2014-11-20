@@ -56,6 +56,7 @@ alias fu="fuck you $*"
 alias gi="git" # Works great with git config help.autocorrect
 # Replaced `gti` with https://github.com/rwos/gti (speed 100)
 alias tgi="git"
+alias igt="git"
 
 ### Clipboard help ###
 if which pbcopy > /dev/null; then
