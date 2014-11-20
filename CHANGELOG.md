@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.58.0 Added `igt` alias for `git`
+
 0.57.0 - Added `alias` for process management
 
 0.56.0 - Moved to `Edit Command Palette` rename
