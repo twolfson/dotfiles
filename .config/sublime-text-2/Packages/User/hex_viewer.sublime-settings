@@ -1,0 +1,7 @@
+{
+    // Auto open binary files in hex viewer (uses auto_open_patterns)
+    "auto_open" : true,
+
+    // Auto open patterns to open in hex viewer
+    "auto_open_patterns" : ["*.bin", "*.hex", "*.pyc"]
+}
