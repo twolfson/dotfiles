@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.61.0 - Added simpler set of bash symbols for `getty` sessions
+
 0.60.0 - Added `gt` alias for `gti` (typo intentional)
 
 0.59.0 - Added latest set of Sublime Text updates
