@@ -119,6 +119,16 @@ complete -o nospace -F _fab_complete fab
 # DEV: This is used to get better colors in sexy-bash-prompt
 if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
   export TERM="xterm-256color"
+# Otherwise, if we are in a `linux` terminal (e.g. getty) use a simpler set of symbols
+elif [[ "$TERM" == "linux" ]]; then
+  PROMPT_SYNCED_SYMBOL=""
+  PROMPT_DIRTY_SYNCED_SYMBOL="*"
+  PROMPT_UNPUSHED_SYMBOL="↑"
+  PROMPT_DIRTY_UNPUSHED_SYMBOL="*↑"
+  PROMPT_UNPULLED_SYMBOL="↓"
+  PROMPT_DIRTY_UNPULLED_SYMBOL="*↓"
+  PROMPT_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
+  PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
 fi
 
 # Run twolfson/sexy-bash-prompt
