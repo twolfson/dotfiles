@@ -1,5 +1,5 @@
 {
-	// "ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": false,
 	"extensions":
 	[
 		".jscsrc"

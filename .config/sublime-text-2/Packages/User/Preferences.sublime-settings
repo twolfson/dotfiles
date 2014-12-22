@@ -17,10 +17,10 @@
 	[
 		"ScopeAlways",
 		"Theme Extender",
-		"RestructuredText",
+		"theme-extender",
 		"Color Highlighter",
 		"Vintage",
-		"theme-extender",
+		"RestructuredText",
 		"HostsEdit",
 		"Stylus",
 		"ScopeStatus",
