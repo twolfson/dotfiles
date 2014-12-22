@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.67.0 - Updated Sublime Text packages and settings
+
 0.66.0 - Added active guide for Sublime Text
 
 0.65.0 - Fixed alias for branch to match `sexy-bash-prompt` updates
