@@ -145,7 +145,7 @@ title () {
 
 # Expose helper method for git branch
 function BRANCH() {
-  echo $(get_git_branch)
+  echo $(sexy_bash_prompt_get_git_branch)
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
