@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.63.0 - Added `hex-practice` alias for easier practice
+
 0.62.0 - Added `JSON` syntax for `.jscsrc` files
 
 0.61.0 - Added simpler set of bash symbols for `getty` sessions
