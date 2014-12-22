@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.65.0 - Fixed alias for branch to match `sexy-bash-prompt` updates
+
 0.64.0 - Moved `virtualenvwrapper` behind conditional
 
 0.63.0 - Added `hex-practice` alias for easier practice
