@@ -35,8 +35,12 @@
 				<key>selectionBorder</key>
 				<string>#1C1C1C</string>
 				<!--/X-->
+				<!-- New content -->
 				<key>activeGuide</key>
+				<string>#A8794CB0</string>
+				<key>stackGuide</key>
 				<string>#9D550FB0</string>
+				<!-- /New content -->
 
 				<key>bracketsForeground</key>
 				<string>#F8F8F2A5</string>
