@@ -155,9 +155,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Python virtualenvs
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+if test -f /usr/local/bin/virtualenvwrapper.sh; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  export PROJECT_HOME=$HOME/Devel
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # Added by travis gem
 if test -f ~/.travis/travis.sh; then
