@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.64.0 - Moved `virtualenvwrapper` behind conditional
+
 0.63.0 - Added `hex-practice` alias for easier practice
 
 0.62.0 - Added `JSON` syntax for `.jscsrc` files
