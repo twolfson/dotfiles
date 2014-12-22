@@ -87,6 +87,9 @@ vagrant_listen_spawn () {
 }
 alias vagrant-listen-spawn="vagrant_listen_spawn"
 
+### Hexadecimal practice for my current level ###
+alias hex-practice="hexadecimal-practice --maximum-digits 1"
+
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
