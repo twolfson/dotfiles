@@ -11,6 +11,7 @@
 	],
 	"ensure_newline_at_eof_on_save": true,
 	"fade_inactive_panes": false,
+	"font_face": "Input",
 	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
