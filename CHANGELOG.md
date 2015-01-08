@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.68.0 - Added `grunt-completion` to `.bashrc`
+
 0.67.0 - Updated Sublime Text packages and settings
 
 0.66.0 - Added active guide for Sublime Text
