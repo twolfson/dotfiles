@@ -1,5 +1,14 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"ssl-linux"
+	],
 	"installed_packages":
 	[
 		"CanISwitchToSublimeText3",
@@ -8,6 +17,7 @@
 		"CoffeeScript",
 		"Color Highlighter",
 		"CTags",
+		"Cucumber",
 		"CursorRuler",
 		"EasyMotion",
 		"Edit Command Palette",
@@ -41,6 +51,7 @@
 		"Puppet Syntax checking",
 		"Quick File Creator",
 		"Request",
+		"RestructuredText Improved",
 		"Sass",
 		"ScopeAlways",
 		"ScopeStatus",
@@ -49,7 +60,6 @@
 		"StringEncode",
 		"Stylus",
 		"SublimeLinter",
-		"SublimeReStructuredText",
 		"SyncedSideBar",
 		"Syntax Highlighting for Sass",
 		"Table Editor",

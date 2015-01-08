@@ -15,17 +15,15 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"ScopeAlways",
 		"Theme Extender",
-		"theme-extender",
+		"RestructuredText",
 		"Color Highlighter",
 		"Vintage",
-		"RestructuredText",
+		"theme-extender",
 		"HostsEdit",
-		"Stylus",
+		"ScopeAlways",
 		"ScopeStatus",
 		"LoremIpsum",
-		"snippet-destroyer",
 		"optimal-lines",
 		"CursorRuler"
 	],
