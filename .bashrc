@@ -118,6 +118,11 @@ function _fab_complete() {
 }
 complete -o nospace -F _fab_complete fab
 
+### Grunt bash completion ###
+if which grunt &> /dev/null; then
+  eval "$(grunt --completion=bash)"
+fi
+
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
 if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
