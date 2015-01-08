@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.69.1 - Added missing files to last release
+
 0.69.0 - Added mixed Sublime Text updates
 
 0.68.0 - Added `grunt-completion` to `.bashrc`
