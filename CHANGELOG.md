@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.71.0 - Updated latest Sublime Text 2 settings
+
 0.70.0 - Updated font preferences
 
 0.69.1 - Added missing files to last release
