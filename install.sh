@@ -30,6 +30,14 @@ else
   echo "Skipping Linux Mint dotfiles (they seem like a bad idea)" 1>&2
 fi
 
+# gnome-pie
+if false; then
+  mkdir -p ~/.config/
+  ln -s $PWD/.config/gnome-pie ~/.config/gnome-pie
+else
+  echo "Skipping gnome-pie configuration (already exists)" 1>&2
+fi
+
 # Symlink sublime text
 if false; then
   sudo ln -s /usr/lib/sublime-text-2/sublime_text /usr/bin/sublime_text
