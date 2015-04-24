@@ -161,10 +161,13 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [Quod Libet][], manage music library tags
 - [wmctrl-pad][], manage window positions and layout
     - Integrates nicely with keyboard shortcuts
+- [gnome-pie][], cursor based launcher
+    - Useful for GUI tasks like quick launching screenshot selection
 
 [Amarok]: http://amarok.kde.org/
 [Quod Libet]: https://code.google.com/p/quodlibet/
 [wmctrl-pad]: https://github.com/twolfson/controlpad
+[gnome-pie]: https://github.com/Simmesimme/Gnome-Pie
 
 ### Mac OS X Specific
 - `Terminal`, OSX built in terminal
