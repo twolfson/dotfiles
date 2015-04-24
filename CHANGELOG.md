@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.73.0 - Added gnome-pie to configuration and list of applications
+
 0.72.0 - Updated latest Sublime Text 2 settings
 
 0.71.0 - Updated latest Sublime Text 2 settings
