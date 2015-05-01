@@ -1,6 +1,43 @@
 {
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"Package Control"
+		"Case Conversion",
+		"CodeFormatter",
+		"CTags",
+		"EasyMotion",
+		"Edit Command Palette",
+		"Extract Sublime Package",
+		"FileDiffs",
+		"Find++",
+		"GitHubinator",
+		"HexViewer",
+		"Hooks",
+		"HostsEdit",
+		"Insert Nums",
+		"InsertDate",
+		"Jade",
+		"Keymaps",
+		"Markdown Extended",
+		"Maybs Quit",
+		"Monokai Extended",
+		"MultiEditUtils",
+		"nginx",
+		"Origami",
+		"Package Control",
+		"Preference Helper",
+		"Pretty JSON",
+		"Quick File Creator",
+		"Request",
+		"RestructuredText Improved",
+		"Sass",
+		"SelectUntil",
+		"SideBarEnhancements",
+		"StringEncode",
+		"Table Editor",
+		"Terminal",
+		"WordCount"
 	]
 }
