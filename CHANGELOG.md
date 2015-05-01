@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.76.0 - Set up more of Sublime Text 3
+
 0.75.0 - Getting started with basic Sublime Text 3 setup
 
 0.74.0 - Removed gnome-pie log and added log ignore
