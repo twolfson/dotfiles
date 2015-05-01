@@ -4,9 +4,36 @@
 	],
 	"installed_packages":
 	[
+		"Case Conversion",
+		"CodeFormatter",
+		"CTags",
+		"EasyMotion",
+		"Edit Command Palette",
 		"FileDiffs",
+		"Find++",
+		"GitHubinator",
+		"HexViewer",
+		"HostsEdit",
+		"Insert Nums",
+		"InsertDate",
+		"Jade",
+		"Keymaps",
 		"Markdown Extended",
+		"Maybs Quit",
 		"Monokai Extended",
-		"Package Control"
+		"nginx",
+		"Origami",
+		"Package Control",
+		"Preference Helper",
+		"Pretty JSON",
+		"Quick File Creator",
+		"Request",
+		"RestructuredText Improved",
+		"Sass",
+		"SelectUntil",
+		"StringEncode",
+		"Table Editor",
+		"Terminal",
+		"WordCount"
 	]
 }

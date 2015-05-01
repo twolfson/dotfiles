@@ -1,0 +1,4 @@
+[
+  // Fix over-aggressive key bindings from Terminal plugin
+  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" }
+]
