@@ -5,6 +5,8 @@
 	"installed_packages":
 	[
 		"FileDiffs",
+		"Markdown Extended",
+		"Monokai Extended",
 		"Package Control"
 	]
 }
