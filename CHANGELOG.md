@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.74.0 - Removed gnome-pie log and added log ignore
+
 0.73.0 - Added gnome-pie to configuration and list of applications
 
 0.72.0 - Updated latest Sublime Text 2 settings
