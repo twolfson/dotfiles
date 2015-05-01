@@ -47,13 +47,22 @@ else
   echo "Skipping \`sublime_text\` symlink (also seems like a bad idea)" 1>&2
 fi
 
-# Sublime settings
+# Sublime Text 2 settings
 if ! test -d ~/.config/sublime-text-2/Packages/User; then
   mkdir -p ~/.config/sublime-text-2/Packages/
   ln -s $PWD/.config/sublime-text-2/Packages/User ~/.config/sublime-text-2/Packages/User
-  echo "Installed Sublime Text \`User\` folder" 1>&2
+  echo "Installed Sublime Text 2 \`User\` folder" 1>&2
 else
-  echo "Sublime Text \`User\` folder already exists" 1>&2
+  echo "Sublime Text 2 \`User\` folder already exists" 1>&2
+fi
+
+# Sublime Text 3 settings
+if ! test -d ~/.config/sublime-text-3/Packages/User; then
+  mkdir -p ~/.config/sublime-text-3/Packages/
+  ln -s $PWD/.config/sublime-text-3/Packages/User ~/.config/sublime-text-3/Packages/User
+  echo "Installed Sublime Text 3 \`User\` folder" 1>&2
+else
+  echo "Sublime Text 3 \`User\` folder already exists" 1>&2
 fi
 
 # Fonts
