@@ -1,35 +1,45 @@
 {
-  // "auto_complete": false,
-  // "auto_match_enabled": false,
+  "always_show_minimap_viewport": true,
+  "auto_close_tags": false,
+  "auto_complete": false,
+  "auto_match_enabled": false,
   // "color_scheme": "Packages/User/Theme Extender/Monokai Extended Bright.extended.tmTheme",
+  "enable_tab_scrolling": false,
   "ensure_newline_at_eof_on_save": true,
-  // "fade_inactive_panes": false,
   "font_face": "Input",
   "font_size": 11.0,
   "highlight_line": true,
-  // "indent_guide_options": [
-  //     "draw_normal",
-  //     "draw_active"
-  // ],
-  // "on_post_save_user": [
-  //     {
-  //         "args":
-  //         {
-  //             "open_args":
-  //             [
-  //                 "http://localhost:7060/"
-  //             ]
-  //         },
-  //         "command": "request",
-  //         "scope": "window"
-  //     }
-  // ],
-  // "reveal-on-activate": false,
-  "rulers": [
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "indent_guide_options":
+  [
+    "draw_normal",
+    "draw_active"
+  ],
+  "on_post_save_user":
+  [
+    {
+      "args":
+      {
+        "open_args":
+        [
+          "http://localhost:7060/"
+        ]
+      },
+      "command": "request",
+      "scope": "window"
+    }
+  ],
+  "rulers":
+  [
     120
   ],
-  // "spell_check": false,
+  "show_encoding": true,
+  "show_line_endings": true,
+  "spell_check": false,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "trim_automatic_white_space": true,
+  "trim_trailing_white_space_on_save": true
 }
