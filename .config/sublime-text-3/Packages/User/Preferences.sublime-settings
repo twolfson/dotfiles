@@ -3,7 +3,7 @@
 	"auto_close_tags": false,
 	"auto_complete": false,
 	"auto_match_enabled": false,
-	"color_scheme": "Packages/User/Monokai Extended Bright.custom.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai Extended Bright.custom (SL).tmTheme",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input",
@@ -11,8 +11,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"RestructuredText"
+		"RestructuredText",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[

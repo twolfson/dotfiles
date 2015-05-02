@@ -5,6 +5,7 @@
 	"installed_packages":
 	[
 		"Case Conversion",
+		"Chmod",
 		"CodeFormatter",
 		"CTags",
 		"EasyMotion",
@@ -36,6 +37,11 @@
 		"SelectUntil",
 		"SideBarEnhancements",
 		"StringEncode",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-flake8",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
 		"Table Editor",
 		"Terminal",
 		"WordCount"
