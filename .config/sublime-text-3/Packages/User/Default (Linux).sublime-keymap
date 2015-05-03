@@ -1,4 +1,5 @@
 [
   // Fix over-aggressive key bindings from Terminal plugin
-  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" }
+  { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
+  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": " "} }
 ]
