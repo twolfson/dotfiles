@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.78.0 - Finding Sublime Text 3 plugins and commands
+
 0.77.0 - Set up SublimeLinter for Sublime Text 3
 
 0.76.0 - Set up more of Sublime Text 3
