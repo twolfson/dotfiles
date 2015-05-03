@@ -1,5 +1,11 @@
 [
   // Fix over-aggressive key bindings from Terminal plugin
   { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
-  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": " "} }
+
+  // Prevent Command Palette from reusing last command
+  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": " "} },
+
+  // Add back alt+- due to resize pane plugin overriding it
+  { "keys": ["ctrl+alt+-"], "command": "jump_back" },
+  { "keys": ["ctrl+alt+shift+-"], "command": "jump_forward" }
 ]
