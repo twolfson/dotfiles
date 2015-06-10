@@ -11,8 +11,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"RestructuredText",
-		"Vintage"
+		"Vintage",
+		"RestructuredText"
 	],
 	"indent_guide_options":
 	[
@@ -33,6 +33,7 @@
 			"scope": "window"
 		}
 	],
+	"reveal-on-activate": false,
 	"rulers":
 	[
 		120

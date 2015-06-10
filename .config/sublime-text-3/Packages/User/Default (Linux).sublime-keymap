@@ -3,7 +3,7 @@
   { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
 
   // Prevent Command Palette from reusing last command
-  { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": " "} },
+  // { "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": " "} },
 
   // Add back alt+- due to resize pane plugin overriding it
   { "keys": ["ctrl+alt+-"], "command": "jump_back" },
