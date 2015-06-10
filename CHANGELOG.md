@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.80.0 - Added `add-remote-pr` git alias to handle upstream PRs easier
+
 0.79.0 - Added more config updates from living with Sublime Text 3
 
 0.78.0 - Finding Sublime Text 3 plugins and commands
