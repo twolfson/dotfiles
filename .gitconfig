@@ -15,6 +15,7 @@
 	# Add `remote` that allows fetching of GitHub pull requests as a branch
 	# Interpreted from https://gist.github.com/piscisaureus/3342247
 	add-pr = !git config --add remote.pr.url $(git config --get remote.origin.url) && git config --add remote.pr.fetch +refs/pull/*/head:refs/remotes/origin/pr/*
+	add-upstream-pr = !git config --add remote.upstream-pr.url $(git config --get remote.upstream.url) && git config --add remote.upstream-pr.fetch +refs/pull/*/head:refs/remotes/upstream/pr/*
 	# Allow infinite `git` chains (e.g. `git git status`)
 	git=!git
 	# Get the first 7 characters of the HEAD sha
