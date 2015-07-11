@@ -4,10 +4,10 @@
 # On merge conflict actions (e.g. fighting merge conflicts)
 # DEV: We use a placeholder file because as of git@2, there is no long "Conflicts:" in the `git log`
 git_dir="$(git rev-parse --git-dir)"
-fanfare_file="$git_dir/__fanfare_merge_occurred"
-if test -f "$fanfare_file"; then
+merge_occurred_filepath="$git_dir/__fanfare_merge_occurred"
+if test -f "$merge_occurred_filepath"; then
   # Play fanfare
-  fanfare="$PWD/.git/hooks/FinalFantasyVictory.mp3"
+  fanfare="$git_dir/hooks/FinalFantasyVictory.mp3"
   if which afplay &> /dev/null; then
     afplay -v 5 "$fanfare" &> /dev/null &
   elif which mplayer &> /dev/null; then

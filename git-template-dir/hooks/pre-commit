@@ -2,10 +2,10 @@
 # If we are about to complete a merge, save a placeholder file
 # https://github.com/twolfson/sexy-bash-prompt/blob/0.26.1/.bash_prompt#L112-L118
 git_dir="$(git rev-parse --git-dir)"
-fanfare_file="$git_dir/__fanfare_merge_occurred"
+merge_occurred_filepath="$git_dir/__fanfare_merge_occurred"
 if test -f "$git_dir/MERGE_HEAD"; then
-  touch "$fanfare_file"
+  touch "$merge_occurred_filepath"
 # Otherwise, wipe out our placeholder file (in case it was there from earlier)
 else
-  rm "$fanfare_file" &> /dev/null || true
+  rm "$merge_occurred_filepath" &> /dev/null || true
 fi
