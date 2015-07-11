@@ -2,7 +2,10 @@
 # Modified from https://github.com/DanaDanger/victorious-merge
 
 # On merge conflict actions (e.g. fighting merge conflicts)
-if git log -n 1 2> /dev/null | grep "Conflicts:" &> /dev/null; then
+# DEV: We use a placeholder file because as of git@2, there is no long "Conflicts:" in the `git log`
+git_dir="$(git rev-parse --git-dir)"
+fanfare_file="$git_dir/__fanfare_merge_occurred"
+if test -f "$fanfare_file"; then
   # Play fanfare
   fanfare="$PWD/.git/hooks/FinalFantasyVictory.mp3"
   if which afplay &> /dev/null; then
