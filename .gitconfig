@@ -35,7 +35,7 @@
         author-log = "log --format='%h %aN: %s'"
 [sequence]
 	# Edit rebases inside of Sublime Text
-	editor = sublime_text -w
+	editor = subl -w
 [help]
 	# Automatically correct typos within 0.7 seconds (e.g. `git sttus` -> `git status`)
 	autocorrect = 7
