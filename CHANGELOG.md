@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.82.0 - Updated fanfare git hooks to support git@2
+
 0.81.0 - Updated Sublime Text 3 configuration
 
 0.80.0 - Added `add-remote-pr` git alias to handle upstream PRs easier
