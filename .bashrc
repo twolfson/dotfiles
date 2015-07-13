@@ -93,6 +93,8 @@ alias hex-practice="hexadecimal-practice --maximum-digits 1"
 ### Git autocompletion ###
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
+elif [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+  . "$(brew --prefix)/etc/bash_completion"
 fi
 
 if [ -f /etc/bash_completion.d/git-extras ]; then
@@ -181,3 +183,5 @@ fi
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
 fi
+# Run twolfson/sexy-bash-prompt
+. ~/.bash_prompt

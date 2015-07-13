@@ -42,7 +42,7 @@
 [core]
 	# Edit commit messages inside of `pico`
 	editor = pico
-	excludesfile = /home/todd/.gitignore
+	excludesfile = /Users/todd/.gitignore
 [init]
 	# Instantiate `git` directories with custom set of hooks
 	templatedir = ~/github/dotfiles/git-template-dir/
