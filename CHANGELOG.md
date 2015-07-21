@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.83.0 - Moved SublimeLinter to be enabled by default
+
 0.82.1 - Fixed up variables for fanfare hooks
 
 0.82.0 - Updated fanfare git hooks to support git@2
