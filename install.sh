@@ -17,7 +17,7 @@ fi
 if ! test -d dist; then
   mkdir -p dist/git-template-dir
   for path in $(ls git-template-dir/); do
-    ln -s "$PWD/git-template-dir/$path" "dist/$path"
+    ln -s "$PWD/git-template-dir/$path" "dist/git-template-dir/$path"
   done
 fi
 
