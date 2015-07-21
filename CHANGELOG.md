@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.84.0 - Moved to dynamic symlinked git-template-dir with hooks
+
 0.83.0 - Moved SublimeLinter to be enabled by default
 
 0.82.1 - Fixed up variables for fanfare hooks
