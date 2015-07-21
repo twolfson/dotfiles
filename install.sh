@@ -12,6 +12,15 @@ else
   echo "~/.bash_profile already exists" 1>&2
 fi
 
+# If we have no `dist/` folder (e.g. assets that need per-env compilation), then build it
+# DEV: This is required by `.gitconfig` for proper symlinking of `git-template-dir` hooks
+if ! test -d dist; then
+  mkdir -p dist/git-template-dir
+  for path in $(ls git-template-dir/); do
+    ln -s "$PWD/git-template-dir/$path" "dist/$path"
+  done
+fi
+
 # Link up git config
 if ! test -f ~/.gitconfig; then
   ln -s $PWD/.gitconfig ~/.gitconfig
