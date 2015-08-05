@@ -87,6 +87,30 @@ vagrant_listen_spawn () {
 }
 alias vagrant-listen-spawn="vagrant_listen_spawn"
 
+### SSH commands ###
+ssh_tunnel () {
+  # Load in our parameters
+  server="$1"
+  if [[ "$server" == "" ]]; then
+    echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
+    exit 1
+  fi
+  local_port="$2"
+  if [[ "$local_port" == "" ]]; then
+    echo "\`ssh_tunnel\` requires \`local_port\` to be passed in but it was empty" 1>&2
+    exit 1
+  fi
+  remote_port="$3"
+  if [[ "$remote_port" == "" ]]; then
+    # Fallback our local/remote port by default
+    remote_port="$local_port"
+  fi
+
+  # Run our command
+  ssh -N -L "$remote_port:localhost:$local_port" "$server"
+}
+alias ssh-tunnel="ssh_tunnel"
+
 ### Hexadecimal practice for my current level ###
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
