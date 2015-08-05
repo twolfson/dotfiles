@@ -108,7 +108,7 @@ ssh_tunnel () {
 
   # Run our command
   echo "Opened SSH tunnel on $server:$remote_port to localhost:$local_port"
-  ssh -N -L "$remote_port:localhost:$local_port" "$server"
+  ssh -N -L "$local_port:localhost:$remote_port" "$server"
 }
 alias ssh-tunnel="ssh_tunnel"
 
