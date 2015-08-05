@@ -45,7 +45,7 @@
 	excludesfile = /Users/todd/.gitignore
 [init]
 	# Instantiate `git` directories with custom set of hooks
-	templatedir = ~/github/dotfiles/git-template-dir/
+	templatedir = ~/github/dotfiles/dist/git-template-dir/
 [push]
 	# Push to remote branch of the same name by default
 	default = current
