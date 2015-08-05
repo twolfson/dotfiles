@@ -95,18 +95,19 @@ ssh_tunnel () {
     echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
     exit 1
   fi
-  local_port="$2"
-  if [[ "$local_port" == "" ]]; then
-    echo "\`ssh_tunnel\` requires \`local_port\` to be passed in but it was empty" 1>&2
+  remote_port="$2"
+  if [[ "$remote_port" == "" ]]; then
+    echo "\`ssh_tunnel\` requires \`remote_port\` to be passed in but it was empty" 1>&2
     exit 1
   fi
-  remote_port="$3"
-  if [[ "$remote_port" == "" ]]; then
-    # Fallback our local/remote port by default
-    remote_port="$local_port"
+  local_port="$3"
+  if [[ "$local_port" == "" ]]; then
+    # Fallback our local port to the same as the remote port
+    local_port="$remote_port"
   fi
 
   # Run our command
+  echo "Opened SSH tunnel on $server:$remote_port to localhost:$local_port"
   ssh -N -L "$remote_port:localhost:$local_port" "$server"
 }
 alias ssh-tunnel="ssh_tunnel"
