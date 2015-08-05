@@ -12,9 +12,9 @@
 	"ignored_packages":
 	[
 		"Snippet Destroyer",
-		"Maybs Quit",
 		"Vintage",
-		"RestructuredText"
+		"RestructuredText",
+		"Maybs Quit"
 	],
 	"indent_guide_options":
 	[
@@ -35,11 +35,12 @@
 			"scope": "window"
 		}
 	],
-	"reveal-on-activate": false,
+	"reveal-on-activate": true,
 	"rulers":
 	[
 		120
 	],
+	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"spell_check": false,

@@ -147,7 +147,7 @@ fi
 # Define function to update title
 # DEV: Makes it less annoying to deal with ssh titles
 title () {
-  echo -ne "\033]2;$*\007"
+  echo -ne "\033]0;$*\007"
 }
 
 # Expose helper method for git branch
