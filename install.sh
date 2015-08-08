@@ -47,6 +47,14 @@ else
   echo "Skipping gnome-pie configuration (already exists)" 1>&2
 fi
 
+# gnome-terminal
+if false; then
+  mkdir -p ~/.gconf/apps/
+  ln -s $PWD/.gconf/apps/gnome-terminal ~/.gconf/apps/gnome-terminal
+else
+  echo "Skipping gnome-terminal configuration (already exists)" 1>&2
+fi
+
 # Symlink sublime text
 if false; then
   sudo ln -s /usr/lib/sublime-text-2/sublime_text /usr/bin/sublime_text
