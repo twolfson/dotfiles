@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.86.0 - Updated Sublime Text packages
+
 0.85.0 - Added `ssh-tunnel` command
 
 0.84.0 - Moved to dynamic symlinked git-template-dir with hooks
