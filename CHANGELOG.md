@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.87.0 - Updated gnome-terminal settings
+
 0.86.0 - Updated Sublime Text packages
 
 0.85.0 - Added `ssh-tunnel` command
