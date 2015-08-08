@@ -1,36 +1,21 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="set_window_title" mtime="1342250186" type="string">
-		<stringvalue>&lt;Primary&gt;space</stringvalue>
-	</entry>
-	<entry name="next_tab" mtime="1342250167" type="string">
-		<stringvalue>&lt;Alt&gt;Right</stringvalue>
-	</entry>
-	<entry name="prev_tab" mtime="1342250164" type="string">
-		<stringvalue>&lt;Alt&gt;Left</stringvalue>
-	</entry>
-	<entry name="zoom_in" mtime="1342250144" type="string">
-		<stringvalue>&lt;Primary&gt;equal</stringvalue>
-	</entry>
-	<entry name="toggle_menubar" mtime="1342250052" type="string">
-		<stringvalue>F12</stringvalue>
-	</entry>
-	<entry name="paste" mtime="1342250046" type="string">
+	<entry name="paste" mtime="1419065228" type="string">
 		<stringvalue>&lt;Primary&gt;v</stringvalue>
 	</entry>
-	<entry name="copy" mtime="1342250044" type="string">
+	<entry name="copy" mtime="1419065226" type="string">
 		<stringvalue>&lt;Primary&gt;c</stringvalue>
 	</entry>
-	<entry name="close_window" mtime="1342250040" type="string">
+	<entry name="close_window" mtime="1419065221" type="string">
 		<stringvalue>&lt;Alt&gt;F4</stringvalue>
 	</entry>
-	<entry name="close_tab" mtime="1342250034" type="string">
+	<entry name="close_tab" mtime="1419065217" type="string">
 		<stringvalue>&lt;Primary&gt;w</stringvalue>
 	</entry>
-	<entry name="new_window" mtime="1342250032" type="string">
+	<entry name="new_window" mtime="1419065213" type="string">
 		<stringvalue>&lt;Primary&gt;n</stringvalue>
 	</entry>
-	<entry name="new_tab" mtime="1342250030" type="string">
+	<entry name="new_tab" mtime="1419065211" type="string">
 		<stringvalue>&lt;Primary&gt;t</stringvalue>
 	</entry>
 </gconf>
