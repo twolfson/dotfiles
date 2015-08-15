@@ -15,7 +15,7 @@
 	<entry name="new_window" mtime="1419065213" type="string">
 		<stringvalue>&lt;Primary&gt;n</stringvalue>
 	</entry>
-	<entry name="new_tab" mtime="1419065211" type="string">
+	<entry name="new_tab" mtime="1439535323" type="string">
 		<stringvalue>&lt;Primary&gt;t</stringvalue>
 	</entry>
 </gconf>
