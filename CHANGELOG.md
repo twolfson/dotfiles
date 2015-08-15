@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.90.0 - Enabled mouse support in nano
+
 0.89.0 - Added "git shortref" alias
 
 0.88.0 - Updated gnome-terminal settings
