@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="use_theme_colors" mtime="1439623372" type="bool" value="false"/>
+	<entry name="use_theme_colors" mtime="1439624504" type="bool" value="false"/>
 	<entry name="allow_bold" mtime="1420728498" type="bool" value="true"/>
 	<entry name="use_system_font" mtime="1420728495" type="bool" value="true"/>
 	<entry name="background_type" mtime="1439027511" type="string">
 		<stringvalue>solid</stringvalue>
 	</entry>
-	<entry name="visible_name" mtime="1439623372" type="string">
+	<entry name="visible_name" mtime="1439624504" type="string">
 		<stringvalue>Default</stringvalue>
 	</entry>
-	<entry name="foreground_color" mtime="1439623372" type="string">
+	<entry name="foreground_color" mtime="1439624504" type="string">
 		<stringvalue>#FFFFFFFFFFFF</stringvalue>
 	</entry>
-	<entry name="background_color" mtime="1439623372" type="string">
+	<entry name="background_color" mtime="1439624504" type="string">
 		<stringvalue>#13A013A013A0</stringvalue>
 	</entry>
-	<entry name="silent_bell" mtime="1439623372" type="bool" value="true"/>
+	<entry name="silent_bell" mtime="1439624504" type="bool" value="true"/>
 	<entry name="default_show_menubar" mtime="1419066425" type="bool" value="true"/>
-	<entry name="bold_color" mtime="1439623372" type="string">
+	<entry name="bold_color" mtime="1439624504" type="string">
 		<stringvalue>#000000000000</stringvalue>
 	</entry>
-	<entry name="palette" mtime="1439623372" type="string">
+	<entry name="palette" mtime="1439624504" type="string">
 		<stringvalue>#2E2E34343636:#FFFF3E4A3E4A:#4E4E9A9A0606:#C4C4A0A00000:#34346565A4A4:#ADAD7F7FA8A8:#060698209A9A:#D3D3D7D7CFCF:#88888A8A8585:#E2211CA41CA4:#8A8AE2E23434:#FCFCE9E94F4F:#72729F9FCFCF:#ADAD7F7FA8A8:#3434E2E2E2E2:#EEEEEEEEECEC</stringvalue>
 	</entry>
-	<entry name="background_darkness" mtime="1439623372" type="float" value="0.94999998807907104"/>
-	<entry name="alternate_screen_scroll" mtime="1439623372" type="bool" value="true"/>
+	<entry name="background_darkness" mtime="1439624504" type="float" value="0.94999998807907104"/>
+	<entry name="alternate_screen_scroll" mtime="1439624504" type="bool" value="true"/>
 </gconf>
