@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.88.0 - Updated gnome-terminal settings
+
 0.87.1 - Added gnome-terminal to install script
 
 0.87.0 - Updated gnome-terminal settings
