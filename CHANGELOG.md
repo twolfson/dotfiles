@@ -1,4 +1,16 @@
 # dotfiles changelog
+0.90.0 - Enabled mouse support in nano
+
+0.89.0 - Added "git shortref" alias
+
+0.88.0 - Updated gnome-terminal settings
+
+0.87.1 - Added gnome-terminal to install script
+
+0.87.0 - Updated gnome-terminal settings
+
+0.86.0 - Updated Sublime Text packages
+
 0.85.0 - Added `ssh-tunnel` command
 
 0.84.0 - Moved to dynamic symlinked git-template-dir with hooks

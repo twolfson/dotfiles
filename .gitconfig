@@ -33,6 +33,7 @@
 	clone-gist = "!f() { git clone $(echo \"$1\" | sed \"s/https:\\/\\/gist.github.com\\//git@gist.github.com:/\") $2; }; f"
         # List sha1, author, and subject in one line
         author-log = "log --format='%h %aN: %s'"
+	shortref = symbolic-ref --short HEAD
 [sequence]
 	# Edit rebases inside of Sublime Text
 	editor = subl -w
