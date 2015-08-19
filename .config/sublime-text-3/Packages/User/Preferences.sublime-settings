@@ -11,10 +11,10 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Snippet Destroyer",
+		"Maybs Quit",
 		"Vintage",
-		"RestructuredText",
-		"Maybs Quit"
+		"Snippet Destroyer",
+		"RestructuredText"
 	],
 	"indent_guide_options":
 	[
