@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.90.1 - Added foundry for release
+
 0.90.0 - Enabled mouse support in nano
 
 0.89.0 - Added "git shortref" alias
