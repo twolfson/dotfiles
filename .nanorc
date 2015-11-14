@@ -11,6 +11,3 @@ icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
 color cyan "(^|[[:space:]])#.*$"
 color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 color ,green "[[:space:]]+$"
-
-# Enable mouse support (via `info nano`)
-set mouse

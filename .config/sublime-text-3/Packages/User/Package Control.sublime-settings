@@ -1,18 +1,22 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
 		"Case Conversion",
+		"ChangeQuotes",
 		"Chmod",
 		"CodeFormatter",
 		"CTags",
+		"Directory Settings",
 		"EasyMotion",
 		"Edit Command Palette",
 		"Extract Sublime Package",
 		"FileDiffs",
 		"Find++",
+		"FindKeyConflicts",
 		"GitHubinator",
 		"HexViewer",
 		"Hooks",

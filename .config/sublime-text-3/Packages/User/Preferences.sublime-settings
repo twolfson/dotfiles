@@ -11,8 +11,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage",
-		"RestructuredText"
+		"RestructuredText",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
