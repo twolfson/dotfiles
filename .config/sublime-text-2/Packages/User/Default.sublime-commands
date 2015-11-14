@@ -2,10 +2,6 @@
     // Define your custom Sublime commands here
     // Format is same as `key bindings` except replace `keys` with `caption`
     {
-        "caption": "Terminal: Open",
-        "command": "open_terminal"
-    },
-    {
         "caption": "Selection: Select Until...",
         "command": "select_until",
         "args": {"extend": true}

@@ -148,6 +148,31 @@ if which grunt &> /dev/null; then
   eval "$(grunt --completion=bash)"
 fi
 
+### foundry setup helpers ###
+# Invocation: `add_foundry git npm bower`
+function add_foundry() {
+  # Set up our default variables
+  npm_packages="foundry"
+  release_commands=""
+
+  # For each of the repos (e.g. `git`, `npm`)
+  for repo in $*; do
+    # Add it to our packages (e.g. `foundry` -> `foundry foundry-release-git`)
+    npm_packages="$npm_packages foundry-release-$repo"
+
+    # Add it to our release commands (e.g. `'foundry-release-git',` -> `'foundry-release-git', 'foundry-release-npm',`)
+    # DEV: This will become JSON later on when we add braces
+    release_commands="$release_commands 'foundry-release-$repo',"
+  done
+
+  # Create our JSON (e.g. `'foundry-release-git',` -> `['foundry-release-git',]`
+  release_commands="[$release_commands]"
+
+  # Run our install commands (e.g. `npm install foundry`)
+  npm install $npm_packages --save-dev
+  node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
+}
+
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
 if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
