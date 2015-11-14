@@ -1,4 +1,18 @@
 # dotfiles changelog
+## 2015.1114.1509 (Nov 14, 2015 3:09PM)
+- Added `add_foundry` bash command to `.bashrc`
+- Updated `gnome-pie` settings
+- Removed "Terminal: Open" command from Sublime Text
+    - Superceded by same command in package itself
+- Added "Directory Preferences" package and "Directory Preferences: Ignore trailing whitespace" command to Sublime Text
+    - This will assist when working in one-off projects that have trailing whitespace
+- Added "ChangeQuotes" package to Sublime Text
+- Added `calculate_gzip: true` to StatusBarFileSize to calculate GZIP file size of pacakges
+    - Currently implementation exists only as a fork/PR
+- Added timezone for Insert Date package in Sublime Text
+- Disabled mouse support in `nano`
+
+## Non-time based releases
 0.90.2 - Added ignore for node_modules
 
 0.90.1 - Added foundry for release
