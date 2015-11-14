@@ -108,6 +108,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - [Shortcut Foo][], flash cards for program shortcuts
 - [grunt-init-node][], prompt style boilerplate for `node` modules
 - [gti][], "alias" similar to `sl` for `ls` that plays GTI animation but runs `git command afterwards
+- [victorious-git][], plays fanfare upon merge conflict resolution
 
 [SideBarEnhancements]: https://github.com/titoBouzout/SideBarEnhancements
 [SyncedSideBar]: https://github.com/sobstel/SyncedSideBar
@@ -154,6 +155,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [Shortcut Foo]: http://shortcutfoo.com/
 [grunt-init-node]: https://github.com/twolfson/grunt-init-node
 [gti]: https://github.com/rwos/gti
+[victorious-git]: https://github.com/twolfson/victorious-git
 
 ### Linux Specific
 - `gnome-terminal`, terminal emulator for Gnome

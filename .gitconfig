@@ -46,7 +46,7 @@
 	excludesfile = /home/todd/.gitignore
 [init]
 	# Instantiate `git` directories with custom set of hooks
-	templatedir = ~/github/dotfiles/dist/git-template-dir/
+	templatedir = ~/.config/victorious-git/templatedir
 [push]
 	# Push to remote branch of the same name by default
 	default = current

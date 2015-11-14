@@ -4,5 +4,4 @@
 *.last-run
 *.log
 *.*-ca-bundle
-dist/
 node_modules/
