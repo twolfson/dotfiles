@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2015.1114.1523 (Nov 14, 2014 3:22PM)
+- Removed leftover binary file from `victorious-git` transition
+
 ## 2015.1114.1522 (Nov 14, 2014 3:22PM)
 - Moved from custom `git` hooks to `victorious-git`
 
