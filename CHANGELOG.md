@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2015.1114.1522 (Nov 14, 2014 3:22PM)
+- Moved from custom `git` hooks to `victorious-git`
+
 ## 2015.1114.1509 (Nov 14, 2015 3:09PM)
 - Added `add_foundry` bash command to `.bashrc`
 - Updated `gnome-pie` settings
