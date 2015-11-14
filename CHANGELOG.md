@@ -1,4 +1,6 @@
 # dotfiles changelog
+0.90.2 - Added ignore for node_modules
+
 0.90.1 - Added foundry for release
 
 0.90.0 - Enabled mouse support in nano
