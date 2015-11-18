@@ -16,11 +16,11 @@
         "command": "mathevaluator"
     },
     {
-        "caption": "Directory Preferences: Set up \"Ignore trailing whitespace\"",
+        "caption": "Directory Preferences: Set up \"Allow no newline at EOF\" and \"Allow trailing whitespace\"",
         "command": "open_file",
         "args": {
             "file": "$folder/.sublime-settings",
-            "contents": "{\n  \"trim_trailing_white_space_on_save\": true\n}"
+            "contents": "{\n  \"ensure_newline_at_eof_on_save\": false,\n  \"trim_trailing_white_space_on_save\": false\n}"
         }
     }
 ]
