@@ -227,6 +227,11 @@ if test -d ~/.linuxbrew; then
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
+# If there is chruby, load it
+if test -f /usr/local/share/chruby/chruby.sh; then
+  source /usr/local/share/chruby/chruby.sh
+fi
+
 # If there is a private bash profile, use it
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
