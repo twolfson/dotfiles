@@ -22,5 +22,13 @@
             "file": "$folder/.sublime-settings",
             "contents": "{\n  \"ensure_newline_at_eof_on_save\": false,\n  \"trim_trailing_white_space_on_save\": false\n}"
         }
+    },
+    {
+        "caption": "Find: Via `git ls-files`",
+        "command": "fpp_find_via_command",
+        "args": {
+            "args": ["git", "ls-files"],
+            "cwd": "${project_folder}"
+        }
     }
 ]
