@@ -1,4 +1,9 @@
 # dotfiles changelog
+## 2015.1223.0217 (Dec 23, 2015 2:17AM)
+- Added chruby integration
+- Added experimental `git ls-files` integration with `Find++`
+- Added INI syntax to Sublime Text packages
+
 ## 2015.1117.2131 (Nov 17, 2015 9:31PM)
 - Updated Sublime Text "Directory Preferences" command to tolerate no newline at EOF
 
