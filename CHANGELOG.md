@@ -1,19 +1,23 @@
 # dotfiles changelog
-## 2015.1223.0217 (Dec 23, 2015 2:17AM)
+## 2016.0210.2042 (Feb 10, 2016 08:42PM)
+- Set `nano` as default editor
+- Updated Gnome-Pie configuration
+
+## 2015.1223.0217 (Dec 23, 2015 02:17AM)
 - Added chruby integration
 - Added experimental `git ls-files` integration with `Find++`
 - Added INI syntax to Sublime Text packages
 
-## 2015.1117.2131 (Nov 17, 2015 9:31PM)
+## 2015.1117.2131 (Nov 17, 2015 09:31PM)
 - Updated Sublime Text "Directory Preferences" command to tolerate no newline at EOF
 
-## 2015.1114.1523 (Nov 14, 2015 3:22PM)
+## 2015.1114.1523 (Nov 14, 2015 03:22PM)
 - Removed leftover binary file from `victorious-git` transition
 
-## 2015.1114.1522 (Nov 14, 2015 3:22PM)
+## 2015.1114.1522 (Nov 14, 2015 03:22PM)
 - Moved from custom `git` hooks to `victorious-git`
 
-## 2015.1114.1509 (Nov 14, 2015 3:09PM)
+## 2015.1114.1509 (Nov 14, 2015 03:09PM)
 - Added `add_foundry` bash command to `.bashrc`
 - Updated `gnome-pie` settings
 - Removed "Terminal: Open" command from Sublime Text
