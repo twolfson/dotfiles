@@ -173,6 +173,9 @@ function add_foundry() {
   node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
 }
 
+# Define `nano` as our default `EDITOR`
+export EDITOR="nano"
+
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
 if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
