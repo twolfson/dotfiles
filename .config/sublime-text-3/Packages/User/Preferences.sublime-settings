@@ -12,9 +12,10 @@
 	"ignored_packages":
 	[
 		"Maybs Quit",
-		"Vintage",
+		"RestructuredText",
 		"Snippet Destroyer",
-		"RestructuredText"
+		"Status Bar File Size",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -35,7 +36,7 @@
 			"scope": "window"
 		}
 	],
-	"reveal-on-activate": true,
+	"reveal-on-activate": false,
 	"rulers":
 	[
 		120

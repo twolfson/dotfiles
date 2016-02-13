@@ -93,12 +93,12 @@ ssh_tunnel () {
   server="$1"
   if [[ "$server" == "" ]]; then
     echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
-    exit 1
+    return 1
   fi
   remote_port="$2"
   if [[ "$remote_port" == "" ]]; then
     echo "\`ssh_tunnel\` requires \`remote_port\` to be passed in but it was empty" 1>&2
-    exit 1
+    return 1
   fi
   local_port="$3"
   if [[ "$local_port" == "" ]]; then
@@ -180,7 +180,7 @@ function BRANCH() {
   echo $(sexy_bash_prompt_get_git_branch)
 }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # PATH=$PATH:/usr/local/go/bin # Add Go to path
 
 ### Added by the Heroku Toolbelt
@@ -210,3 +210,6 @@ if test -f ~/.private_bash_profile; then
 fi
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
+
+# added by travis gem
+[ -f /Users/todd/.travis/travis.sh ] && source /Users/todd/.travis/travis.sh

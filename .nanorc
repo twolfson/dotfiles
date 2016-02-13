@@ -13,4 +13,4 @@ color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
 color ,green "[[:space:]]+$"
 
 # Enable mouse support (via `info nano`)
-set mouse
+# set mouse

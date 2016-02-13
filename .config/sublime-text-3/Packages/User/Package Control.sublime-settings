@@ -1,14 +1,17 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
+		"Better CoffeeScript",
 		"Case Conversion",
 		"Chmod",
 		"CodeFormatter",
 		"CTags",
 		"EasyMotion",
+		"eco",
 		"Edit Command Palette",
 		"Extract Sublime Package",
 		"FileDiffs",
@@ -21,8 +24,8 @@
 		"Insert Nums",
 		"InsertDate",
 		"Jade",
-		"Jinja2",
 		"JavaScriptNext - ES6 Syntax",
+		"Jinja2",
 		"Keymaps",
 		"LESS",
 		"Markdown Extended",
@@ -46,6 +49,8 @@
 		"SelectUntil",
 		"SideBarEnhancements",
 		"Snippet Destroyer",
+		"SortBy",
+		"Status Bar File Size",
 		"StringEncode",
 		"Stylus",
 		"SublimeLinter",
@@ -53,9 +58,11 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
+		"Terminal",
 		"WordCount"
 	]
 }
