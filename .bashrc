@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 ### Common commands ###
 # Open an incognito window in Chrome
-if [[ $(ls /Applications/Google\ Chrome.app 2> /dev/null) != "" ]]; then
+if test "$(ls /Applications/Google\ Chrome.app 2> /dev/null)" != ""; then
   alias inco="open -a /Applications/Google\\ Chrome.app --args --incognito"
 else
   alias inco="google-chrome --incognito"
 fi
 
 # Mimic OSX's `say` command on Linux
-if which festival 2>&1 > /dev/null; then
+if which festival &> /dev/null; then
   function say() {
     echo "(SayText \"$*\")" | festival --pipe
   }
@@ -24,7 +24,7 @@ alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
 ### Directory movements ###
 # cd is now pushd ;D
-alias    cd="pushd $1          > /dev/null"
+alias    cd="pushd             > /dev/null"
 
 # .. brings you up one level, ... is two levels, etc.
 # Additionally, these are added to the directory stack
@@ -43,14 +43,14 @@ alias  ,,,,=",,,  && ,,"
 alias ,,,,,=",,,, && ,,"
 
 # , echoes out the current directory stack
-alias     ,="dirs -l -v $*"
+alias     ,="dirs -l -v"
 
 ### Node aliases ###
 # npm without 304 requests. Perfect for offline use!
 alias lnpm="npm --no-registry"
 
 ### Process management aliases ###
-alias fu="fuck you $*"
+alias fu="fuck you"
 
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
@@ -60,19 +60,16 @@ alias tgi="git"
 alias igt="git"
 
 ### Clipboard help ###
-if which pbcopy > /dev/null; then
+if which pbcopy &> /dev/null; then
   alias copy="pbcopy"
 else
   alias copy="xclip -selection c"
 fi
 
 ### Consistent sorting command ###
-if which gsort > /dev/null; then
+if which gsort &> /dev/null; then
   alias sort="gsort"
 fi
-
-### Live-reload specific ###
-alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
 
 ### Enable aliases to be `sudo`ed ###
 # Taken from https://coderwall.com/p/lyutxw
@@ -91,17 +88,17 @@ alias vagrant-listen-spawn="vagrant_listen_spawn"
 ssh_tunnel () {
   # Load in our parameters
   server="$1"
-  if [[ "$server" == "" ]]; then
+  if test "$server" = ""; then
     echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
     return 1
   fi
   remote_port="$2"
-  if [[ "$remote_port" == "" ]]; then
+  if test "$remote_port" = ""; then
     echo "\`ssh_tunnel\` requires \`remote_port\` to be passed in but it was empty" 1>&2
     return 1
   fi
   local_port="$3"
-  if [[ "$local_port" == "" ]]; then
+  if test "$local_port" = ""; then
     # Fallback our local port to the same as the remote port
     local_port="$remote_port"
   fi
@@ -116,17 +113,17 @@ alias ssh-tunnel="ssh_tunnel"
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
 ### Git autocompletion ###
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+if test -x /usr/local/git/contrib/completion/git-completion.bash; then
   . /usr/local/git/contrib/completion/git-completion.bash
-elif [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+elif which brew &> /dev/null && test -x "$(brew --prefix)/etc/bash_completion"; then
   . "$(brew --prefix)/etc/bash_completion"
 fi
 
-if [ -f /etc/bash_completion.d/git-extras ]; then
+if test -x /etc/bash_completion.d/git-extras; then
   . /etc/bash_completion.d/git-extras
 fi
 
-if [ -f /etc/bash_completion.d/git-sqwish ]; then
+if test -x /etc/bash_completion.d/git-sqwish; then
   . /etc/bash_completion.d/git-sqwish
 fi
 
@@ -180,10 +177,10 @@ export EDITOR="nano"
 
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
-if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
+if test "$TERM" = "xterm" && infocmp xterm-256color &> /dev/null; then
   export TERM="xterm-256color"
 # Otherwise, if we are in a `linux` terminal (e.g. getty) use a simpler set of symbols
-elif [[ "$TERM" == "linux" ]]; then
+elif test "$TERM" = "linux"; then
   PROMPT_SYNCED_SYMBOL=""
   PROMPT_DIRTY_SYNCED_SYMBOL="*"
   PROMPT_UNPUSHED_SYMBOL="↑"
@@ -208,8 +205,12 @@ function BRANCH() {
   echo $(sexy_bash_prompt_get_git_branch)
 }
 
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# PATH=$PATH:/usr/local/go/bin # Add Go to path
+if test -d "$HOME/.rvm/bin"; then
+  PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+fi
+if test -d "/usr/local/go/bin"; then
+  PATH="$PATH:/usr/local/go/bin" # Add Go to path
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -241,8 +242,3 @@ fi
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
 fi
-# Run twolfson/sexy-bash-prompt
-. ~/.bash_prompt
-
-# added by travis gem
-[ -f /Users/todd/.travis/travis.sh ] && source /Users/todd/.travis/travis.sh

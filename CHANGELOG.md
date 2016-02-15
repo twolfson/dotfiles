@@ -1,4 +1,11 @@
 # dotfiles changelog
+## 2016.0214.2019 (Feb 14, 2016 08:19PM)
+- Moved to consistent `test` based conditionals
+- Cleaned up unnecessary `$` variables from aliases
+- Repaired error handling in `ssh_tunnel`
+- Added Sublime Text OS X shortcuts
+- Added `pus` git alias for `push`
+
 ## 2016.0214.1953 (Feb 14, 2016 07:53PM)
 - Added ColorHelper plugin for Sublime Text
 
