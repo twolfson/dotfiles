@@ -11,5 +11,3 @@ export CLICOLOR=1
 if test -f ~/.private_bash_profile; then
   . ~/.private_bash_profile
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

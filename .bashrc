@@ -203,8 +203,12 @@ function BRANCH() {
   echo $(sexy_bash_prompt_get_git_branch)
 }
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# PATH=$PATH:/usr/local/go/bin # Add Go to path
+if test -d "$HOME/.rvm/bin"; then
+  PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+fi
+if test -d "/usr/local/go/bin"; then
+  PATH="$PATH:/usr/local/go/bin" # Add Go to path
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
