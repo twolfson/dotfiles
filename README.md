@@ -1,10 +1,9 @@
 # dotfiles
-
 A collection of my dotfiles (e.g. `.config`, `.bashrc`)
 
-This is written for both [Linux Mint 14 (Cinnamon)][mint] and [Mac OS X Mountain Lion][osx].
+This is written for both [Linux Mint 17.1 (Cinnamon)][linux-mint] and [Mac OS X Mountain Lion][osx].
 
-[mint]: http://www.linuxmint.com/
+[linux-mint]: http://www.linuxmint.com/
 [osx]: http://www.apple.com/osx/
 
 ## Getting started
@@ -22,7 +21,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 
 #### Files
 - `.bash_profile` - Bash script that is run at login
-    - Sets default editor to [Sublime Text 2][]
+    - Sets default editor to [Sublime Text][]
     - Enables CLI coloring
     - Runs `.bashrc` for aliases and `PATH` updates
 - `.bashrc` - Run when a new terminal is opened
@@ -30,10 +29,10 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Add helper and polyfill commands
     - Enables tab completion for `git` and `fab`
     - Adds customized sexy bash prompt
-- `.config/sublime-text-2/Packages/User` - Configuration for [Sublime Text 2][]
-    - Includes list of commonly used packages in [Package Control.sublime-settings](.config/sublime-text-2/Packages/User/Package Control.sublime-settings)
+- `.config/sublime-text-3/Packages/User` - Configuration for [Sublime Text][]
+    - Includes list of commonly used packages in [Package Control.sublime-settings](.config/sublime-text-3/Packages/User/Package Control.sublime-settings)
 - `.fonts/anonymous+Pro-Powerline.ttf` - [Anonymous Pro][], a monospaced font with serifs
-    - This font comes from [powerline][] which contains additional characters. However, I don't use them.
+    - This font comes from [Powerline][] which contains additional characters. However, I don't use them.
 - `.gitconfig`
     - Set up credentials for `twolfson` (me)
     - Disable creation of `.orig` files
@@ -46,9 +45,9 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
 - `.nanorc` - Adds syntax highlighting for `nano`
 
-[Sublime Text 2]: http://www.sublimetext.com/2
+[Sublime Text 3]: http://www.sublimetext.com/3
 [Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
-[powerline]: https://github.com/milkbikis/powerline-shell
+[Powerline]: https://github.com/milkbikis/powerline-shell
 
 ##### `.bashrc` aliases
 - `inco` - Opens a Chrome Incognito window
@@ -64,7 +63,7 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
 ## Programs
-- [Sublime Text 2][] with [Package Control][], text editor with great plugin system and ecosystem
+- [Sublime Text 3][] with [Package Control][], text editor with great plugin system and ecosystem
     - [SideBarEnhancements][], adds a bunch of file system comands to command palette
     - [SyncedSideBar][], adds command to reveal current file in side bar (expands folder structure)
     - [Table Editor][], edit Markdown tables easily (GFM compatible)
@@ -172,13 +171,12 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [gnome-pie]: https://github.com/Simmesimme/Gnome-Pie
 
 ### Mac OS X Specific
-- `Terminal`, OSX built in terminal
-- [DockView][], adds badge for how many windows are open for a program
+- [iTerm 2][], terminal emulator for OS X with nice configuration settings
 - [Spectacle][], adds shortcuts to position windows
 - [Alfred][], makes actions more accessible (e.g. `lock`)
 - [Go2Shell][], open a shell via button in Finder window
 
-[DockView]: http://www.macworld.com/product/682136/dockview.html
+[iTerm 2]: https://www.iterm2.com/
 [Spectacle]: http://spectacleapp.com/
 [Alfred]: http://www.alfredapp.com/
 [Go2Shell]: https://itunes.apple.com/us/app/go2shell/id445770608?mt=12
