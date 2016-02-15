@@ -75,13 +75,18 @@ fi
 
 # Fonts
 # Using Anonymous Pro but not powerline piece of font
-if ! test -f ~/.fonts/anonymous+Pro-Powerline.ttf; then
-  mkdir -p ~/.fonts
-  ln -s $PWD/.fonts/anonymous+Pro-Powerline.ttf ~/.fonts/anonymous+Pro-Powerline.ttf
-  echo "Installed Anonymous Pro font" 1>&2
-else
-  echo "Anonymous Pro already installed" 1>&2
-fi
+for file in .fonts/*; do
+  if ! echo "$file" | grep -E ".ttf$"; then
+    continue
+  fi
+  if ! test -f ~/"$file"; then
+    mkdir -p ~/.fonts
+    ln -s $PWD/"$file" ~/"$file"
+    echo "Installed $file font" 1>&2
+  else
+    echo "$file already installed" 1>&2
+  fi
+done
 
 # Nano settings
 if ! test -f ~/.nanorc; then
