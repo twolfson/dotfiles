@@ -88,17 +88,17 @@ alias vagrant-listen-spawn="vagrant_listen_spawn"
 ssh_tunnel () {
   # Load in our parameters
   server="$1"
-  if [[ "$server" == "" ]]; then
+  if test "$server" = ""; then
     echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
     return 1
   fi
   remote_port="$2"
-  if [[ "$remote_port" == "" ]]; then
+  if test "$remote_port" = ""; then
     echo "\`ssh_tunnel\` requires \`remote_port\` to be passed in but it was empty" 1>&2
     return 1
   fi
   local_port="$3"
-  if [[ "$local_port" == "" ]]; then
+  if test "$local_port" = ""; then
     # Fallback our local port to the same as the remote port
     local_port="$remote_port"
   fi
@@ -113,15 +113,15 @@ alias ssh-tunnel="ssh_tunnel"
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
 ### Git autocompletion ###
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+if test -x /usr/local/git/contrib/completion/git-completion.bash; then
   . /usr/local/git/contrib/completion/git-completion.bash
 fi
 
-if [ -f /etc/bash_completion.d/git-extras ]; then
+if test -x /etc/bash_completion.d/git-extras; then
   . /etc/bash_completion.d/git-extras
 fi
 
-if [ -f /etc/bash_completion.d/git-sqwish ]; then
+if test -x /etc/bash_completion.d/git-sqwish; then
   . /etc/bash_completion.d/git-sqwish
 fi
 
@@ -175,10 +175,10 @@ export EDITOR="nano"
 
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
-if [[ "$TERM" == "xterm" ]] && infocmp xterm-256color &> /dev/null; then
+if test "$TERM" = "xterm" && infocmp xterm-256color &> /dev/null; then
   export TERM="xterm-256color"
 # Otherwise, if we are in a `linux` terminal (e.g. getty) use a simpler set of symbols
-elif [[ "$TERM" == "linux" ]]; then
+elif test "$TERM" = "linux"; then
   PROMPT_SYNCED_SYMBOL=""
   PROMPT_DIRTY_SYNCED_SYMBOL="*"
   PROMPT_UNPUSHED_SYMBOL="↑"
@@ -195,7 +195,7 @@ fi
 # Define function to update title
 # DEV: Makes it less annoying to deal with ssh titles
 title () {
-  echo -ne "\033]2;$*\007"
+  echo -ne "\033]0;$*\007"
 }
 
 # Expose helper method for git branch
