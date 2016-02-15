@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2016.0214.2031 (Feb 14, 2016 08:31PM)
+- Updated README content to reflect latest OS X changes
+
 ## 2016.0214.2019 (Feb 14, 2016 08:19PM)
 - Moved to consistent `test` based conditionals
 - Cleaned up unnecessary `$` variables from aliases
