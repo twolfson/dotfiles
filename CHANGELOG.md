@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2016.0214.1953 (Feb 14, 2016 07:53PM)
+- Added ColorHelper plugin for Sublime Text
+
 ## 2016.0210.2042 (Feb 10, 2016 08:42PM)
 - Set `nano` as default editor
 - Updated Gnome-Pie configuration
