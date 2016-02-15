@@ -40,6 +40,7 @@
 		"Preference Helper",
 		"Pretty JSON",
 		"Python Fix Imports",
+		"Query Completions Silencer",
 		"Quick File Creator",
 		"Request",
 		"RestructuredText Improved",
@@ -48,6 +49,9 @@
 		"Selection Evaluator",
 		"SelectUntil",
 		"SideBarEnhancements",
+		"Snippet Destroyer",
+		"SortBy",
+		"Status Bar File Size",
 		"StringEncode",
 		"Stylus",
 		"SublimeLinter",
@@ -58,6 +62,7 @@
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
+		"Terminal",
 		"WordCount"
 	]
 }
