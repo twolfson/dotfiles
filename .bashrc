@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 ### Common commands ###
 # Open an incognito window in Chrome
-if [[ $(ls /Applications/Google\ Chrome.app 2> /dev/null) != "" ]]; then
+if test "$(ls /Applications/Google\ Chrome.app 2> /dev/null)" != ""; then
   alias inco="open -a /Applications/Google\\ Chrome.app --args --incognito"
 else
   alias inco="google-chrome --incognito"
 fi
 
 # Mimic OSX's `say` command on Linux
-if which festival 2>&1 > /dev/null; then
+if which festival &> /dev/null; then
   function say() {
     echo "(SayText \"$*\")" | festival --pipe
   }
@@ -24,7 +24,7 @@ alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
 ### Directory movements ###
 # cd is now pushd ;D
-alias    cd="pushd $1          > /dev/null"
+alias    cd="pushd             > /dev/null"
 
 # .. brings you up one level, ... is two levels, etc.
 # Additionally, these are added to the directory stack
@@ -43,14 +43,14 @@ alias  ,,,,=",,,  && ,,"
 alias ,,,,,=",,,, && ,,"
 
 # , echoes out the current directory stack
-alias     ,="dirs -l -v $*"
+alias     ,="dirs -l -v"
 
 ### Node aliases ###
 # npm without 304 requests. Perfect for offline use!
 alias lnpm="npm --no-registry"
 
 ### Process management aliases ###
-alias fu="fuck you $*"
+alias fu="fuck you"
 
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
@@ -60,19 +60,16 @@ alias tgi="git"
 alias igt="git"
 
 ### Clipboard help ###
-if which pbcopy > /dev/null; then
+if which pbcopy &> /dev/null; then
   alias copy="pbcopy"
 else
   alias copy="xclip -selection c"
 fi
 
 ### Consistent sorting command ###
-if which gsort > /dev/null; then
+if which gsort &> /dev/null; then
   alias sort="gsort"
 fi
-
-### Live-reload specific ###
-alias tiny-lr-update="curl http://localhost:35729/changed?files=/"
 
 ### Enable aliases to be `sudo`ed ###
 # Taken from https://coderwall.com/p/lyutxw
@@ -93,12 +90,12 @@ ssh_tunnel () {
   server="$1"
   if [[ "$server" == "" ]]; then
     echo "\`ssh_tunnel\` requires \`server\` to be passed in but it was empty" 1>&2
-    exit 1
+    return 1
   fi
   remote_port="$2"
   if [[ "$remote_port" == "" ]]; then
     echo "\`ssh_tunnel\` requires \`remote_port\` to be passed in but it was empty" 1>&2
-    exit 1
+    return 1
   fi
   local_port="$3"
   if [[ "$local_port" == "" ]]; then
