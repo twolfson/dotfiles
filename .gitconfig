@@ -34,6 +34,7 @@
         # List sha1, author, and subject in one line
         author-log = "log --format='%h %aN: %s'"
 	shortref = symbolic-ref --short HEAD
+	pus = push
 [sequence]
 	# Edit rebases inside of Sublime Text
 	editor = subl -w
@@ -43,7 +44,7 @@
 [core]
 	# Edit commit messages inside of `pico`
 	editor = pico
-	excludesfile = /home/todd/.gitignore
+	excludesfile = /Users/todd/.gitignore
 [init]
 	# Instantiate `git` directories with custom set of hooks
 	templatedir = ~/.config/victorious-git/templatedir

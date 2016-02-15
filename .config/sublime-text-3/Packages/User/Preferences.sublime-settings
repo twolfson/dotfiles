@@ -7,11 +7,14 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input",
-	"font_size": 11.0,
+	"font_size": 14.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Maybs Quit",
 		"RestructuredText",
+		"Snippet Destroyer",
+		"Status Bar File Size",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -38,6 +41,7 @@
 	[
 		120
 	],
+	"scroll_past_end": true,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"spell_check": false,

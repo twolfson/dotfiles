@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Better CoffeeScript",
 		"Case Conversion",
 		"ChangeQuotes",
 		"Chmod",
@@ -13,6 +14,7 @@
 		"CTags",
 		"Directory Settings",
 		"EasyMotion",
+		"eco",
 		"Edit Command Palette",
 		"Extract Sublime Package",
 		"FileDiffs",
@@ -27,6 +29,7 @@
 		"InsertDate",
 		"Jade",
 		"JavaScriptNext - ES6 Syntax",
+		"Jinja2",
 		"Keymaps",
 		"LESS",
 		"Markdown Extended",
@@ -40,6 +43,7 @@
 		"Preference Helper",
 		"Pretty JSON",
 		"Python Fix Imports",
+		"Query Completions Silencer",
 		"Quick File Creator",
 		"Request",
 		"RestructuredText Improved",
@@ -48,6 +52,9 @@
 		"Selection Evaluator",
 		"SelectUntil",
 		"SideBarEnhancements",
+		"Snippet Destroyer",
+		"SortBy",
+		"Status Bar File Size",
 		"StringEncode",
 		"Stylus",
 		"SublimeLinter",
@@ -55,9 +62,11 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
+		"Terminal",
 		"WordCount"
 	]
 }

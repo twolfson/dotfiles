@@ -56,7 +56,7 @@ else
 fi
 
 # Sublime Text 2 settings
-if ! test -d ~/.config/sublime-text-2/Packages/User; then
+if false; then
   mkdir -p ~/.config/sublime-text-2/Packages/
   ln -s $PWD/.config/sublime-text-2/Packages/User ~/.config/sublime-text-2/Packages/User
   echo "Installed Sublime Text 2 \`User\` folder" 1>&2
