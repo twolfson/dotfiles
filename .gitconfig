@@ -34,6 +34,7 @@
         # List sha1, author, and subject in one line
         author-log = "log --format='%h %aN: %s'"
 	shortref = symbolic-ref --short HEAD
+	pus = push
 [sequence]
 	# Edit rebases inside of Sublime Text
 	editor = subl -w
