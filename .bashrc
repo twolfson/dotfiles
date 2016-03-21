@@ -115,6 +115,25 @@ alias hex-practice="hexadecimal-practice --maximum-digits 1"
 ### Screencast customization ###
 # DEV: Force 2x2 selection since our computer can only record at divisors of 2
 alias record-a-cast="record-a-cast --height-divisor 2 --width-divisor 2"
+function record_a_gif() {
+  # Navigate to a temporary directory
+  cd "$(mktemp -d)"
+
+  # Prompt to record a video
+  # DEV: We use `-r 10` for 10FPS since GIFs are slooow
+  record-a-cast recording.mov -- -r 10
+
+  # Break down our movie into frames
+  mkdir frames
+  ffmpeg -i recording.mov frames/recording%03d.png
+
+  # Combine our frames into a GIF and open it
+  convert -loop 0 frames/recording*.png recording.gif
+  xdg-open recording.gif
+
+  # TODO: Prompt ourselves with commands to edit it
+}
+alias record-a-gif="record_a_gif"
 
 ### Git autocompletion ###
 if test -x /usr/local/git/contrib/completion/git-completion.bash; then
