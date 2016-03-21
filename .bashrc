@@ -22,10 +22,6 @@ fi
 # Lock the computer
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
-# Video recording
-# DEV: Our computer can only record at divisors of 2
-alias record-a-cast="record-a-cast --height-divisor 2 --width-divisor 2"
-
 ### Directory movements ###
 # cd is now pushd ;D
 alias    cd="pushd             > /dev/null"
@@ -115,6 +111,10 @@ alias ssh-tunnel="ssh_tunnel"
 
 ### Hexadecimal practice for my current level ###
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
+
+### Screencast customization ###
+# DEV: Force 2x2 selection since our computer can only record at divisors of 2
+alias record-a-cast="record-a-cast --height-divisor 2 --width-divisor 2"
 
 ### Git autocompletion ###
 if test -x /usr/local/git/contrib/completion/git-completion.bash; then
