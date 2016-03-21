@@ -119,15 +119,26 @@ function record_a_gif() {
   # Navigate to a temporary directory
   cd "$(mktemp -d)"
 
+  # Ignore SIGINT yet magically forward it to child processes (e.g. `FFmpeg`)
+  # DEV: We need to do this sing `FFmpeg` only stops on SIGINT but it kills our bash script too
+  trap "true" SIGINT
+
   # Prompt to record a video
   # DEV: We use `-r 10` for 10FPS since GIFs are slooow
+  echo "Starting recording..." 1>&2
   record-a-cast recording.mov -- -r 10
 
+  # Wait for our script to stop encoding
+  echo "Waiting for avconv to stop running..." 1>&2
+  sleep 0.5
+
   # Break down our movie into frames
+  echo "Extracting frames..." 1>&2
   mkdir frames
-  ffmpeg -i recording.mov frames/recording%03d.png
+  avconv -i recording.mov frames/recording%03d.png
 
   # Combine our frames into a GIF and open it
+  echo "Generating GIF..." 1>&2
   convert -loop 0 frames/recording*.png recording.gif
   xdg-open recording.gif
 
