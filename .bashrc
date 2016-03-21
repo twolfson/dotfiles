@@ -142,7 +142,10 @@ function record_a_gif() {
   convert -loop 0 frames/recording*.png recording.gif
   xdg-open recording.gif
 
-  # TODO: Prompt ourselves with commands to edit it
+  # Prompt ourselves with commands to edit it
+  echo "GIF generation complete" 1>&2
+  echo "To edit the frames, run: \`cd frames && nemo\`" 1>&2
+  echo "To generate new GIF, run: \`convert -loop 0 frames/recording*.png recording.gif\`" 1>&2
 }
 alias record-a-gif="record_a_gif"
 
