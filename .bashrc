@@ -22,6 +22,10 @@ fi
 # Lock the computer
 alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
+# Video recording
+# DEV: Our computer can only record at divisors of 2
+alias record-a-cast="record-a-cast --height-divisor 2 --width-divisor 2"
+
 ### Directory movements ###
 # cd is now pushd ;D
 alias    cd="pushd             > /dev/null"
