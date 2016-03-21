@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2016.0321.0209 (Mar 21, 2016 02:09AM)
+- Added `record-a-gif` bash function to make screencasts easy
+
 ## 2016.0214.2031 (Feb 14, 2016 08:31PM)
 - Updated README content to reflect latest OS X changes
 
