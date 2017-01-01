@@ -222,6 +222,14 @@ function set_fake_brightness() {
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 
+# Append to history on every prompt generation
+# DEV: By default `bash` appends on shell exit
+PROMPT_COMMAND="history -a"
+
+# Set up timestamping for bash history
+# 2016-12-26T12:50:00-0800
+HISTTIMEFORMAT="%FT%T%z "
+
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt
 if test "$TERM" = "xterm" && infocmp xterm-256color &> /dev/null; then
