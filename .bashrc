@@ -52,6 +52,9 @@ alias lnpm="npm --no-registry"
 ### Process management aliases ###
 alias fu="fuck you"
 
+### Date/Time helpers ###
+alias epoch="date +%s"
+
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
 # Replaced `gti` with https://github.com/rwos/gti (speed 100)
