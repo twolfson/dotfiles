@@ -213,6 +213,12 @@ function add_foundry() {
   node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
 }
 
+# Set fake brightness (non-hardware)
+# http://askubuntu.com/a/149264
+function set_fake_brightness() {
+  xrandr --output LVDS-0 --brightness "$1"
+}
+
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 
