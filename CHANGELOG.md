@@ -1,4 +1,14 @@
 # dotfiles changelog
+## 2016.1231.1837 (Dec 31, 2016 06:37PM)
+- Added timestamp to `lock`
+- Added `epoch` convenience alias
+- Removed navigation step in GIF recording workflow
+- Added fake brightness weakener
+- Added synced history across tabs
+- Added UnitTesting to SublimeText
+- Added HTML boilerplate command to Sublime Text
+- Removed Gratipay from `grunt-init` defaults
+
 ## 2016.0321.0209 (Mar 21, 2016 02:09AM)
 - Added `record-a-gif` bash function to make screencasts easy
 
