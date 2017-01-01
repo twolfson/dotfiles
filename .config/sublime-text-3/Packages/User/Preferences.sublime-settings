@@ -38,6 +38,7 @@
 	[
 		120
 	],
+	"show_definitions": false,
 	"show_encoding": true,
 	"show_line_endings": true,
 	"spell_check": false,
