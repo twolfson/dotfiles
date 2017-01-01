@@ -20,7 +20,7 @@ if which pactl &> /dev/null; then
 fi
 
 # Lock the computer
-alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
+alias lock="date; sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
 ### Directory movements ###
 # cd is now pushd ;D
