@@ -147,7 +147,7 @@ function record_a_gif() {
 
   # Prompt ourselves with commands to edit it
   echo "GIF generation complete" 1>&2
-  echo "To edit the frames, run: \`cd frames && nemo\`" 1>&2
+  echo "To edit the frames, run: \`nemo frames\`" 1>&2
   echo "To generate new GIF, run: \`convert -loop 0 frames/recording*.png recording.gif\`" 1>&2
   echo "To crop a GIF, use Imgur or run: \`convert -crop 100x120+550+330 -page 0x0+0+0 recording.gif recording.cropped.gif\`" 1>&2
 }
