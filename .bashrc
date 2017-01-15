@@ -243,6 +243,12 @@ function set_fake_brightness() {
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 
+# Disable XON/XOFF key bindings so we can use forward history traversal
+# DEV: `-` settings in`stty` disables them. You can verify this via `stty --all`
+#   Initial attribution to: https://www.blockloop.io/mastering-bash-and-terminal#repeat-commands
+#   http://unix.stackexchange.com/a/12108
+stty -ixon
+
 # Append to history on every prompt generation
 # DEV: By default `bash` appends on shell exit
 PROMPT_COMMAND="history -a"
