@@ -112,6 +112,27 @@ ssh_tunnel () {
 }
 alias ssh-tunnel="ssh_tunnel"
 
+### Sandbox utility ###
+function docker_sandbox() {
+  # Load in our parameters
+  name="$1"
+  if test "$name" = ""; then
+    echo "docker_sandbox expected a name parameter. Please specify one" 1>&2
+    return 1
+  fi
+
+  # Provide common commands
+  echo "# Common setup commands"
+  echo "sudo apt-get update"
+  echo "sudo apt-get install -y curl wget build-essential"
+  echo "## Node.js"
+  echo "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -"
+  echo "sudo apt-get install -y nodejs"
+
+  # Start a Docker instance
+  docker run -it --volume "$PWD:/vagrant" --name "$name" ubuntu:14.04 /bin/bash
+}
+
 ### Hexadecimal practice for my current level ###
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
