@@ -115,7 +115,7 @@ alias hex-practice="hexadecimal-practice --maximum-digits 1"
 ### Git autocompletion ###
 if test -x /usr/local/git/contrib/completion/git-completion.bash; then
   . /usr/local/git/contrib/completion/git-completion.bash
-elif which brew &> /dev/null && test -x "$(brew --prefix)/etc/bash_completion"; then
+elif which brew &> /dev/null && test -f "$(brew --prefix)/etc/bash_completion"; then
   . "$(brew --prefix)/etc/bash_completion"
 fi
 
