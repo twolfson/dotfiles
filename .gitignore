@@ -5,3 +5,4 @@
 *.log
 *.*-ca-bundle
 node_modules/
+.DS_Store

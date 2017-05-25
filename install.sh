@@ -20,6 +20,14 @@ else
   echo "~/.gitconfig already exists" 1>&2
 fi
 
+# Link up git ignore
+if ! test -f ~/.gitignore; then
+  ln -s $PWD/.gitignore ~/.gitignore
+  echo "Installed ~/.gitignore" 1>&2
+else
+  echo "~/.gitignore already exists" 1>&2
+fi
+
 # Applications (configured for Linux Mint)
 # cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-2.desktop;gedit.desktop/'
 if false; then
