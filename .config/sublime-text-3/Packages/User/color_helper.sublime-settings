@@ -1,5 +1,6 @@
 {
     "auto_popup": false,
     "upper_case_hex": true,
-    "use_webcolor_names": false
+    "use_webcolor_names": false,
+    "inline_preview_position": "right"
 }

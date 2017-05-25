@@ -1,4 +1,4 @@
-# Specify Sublime Text 2 as our editor
+# Specify Sublime Text as our editor
 export EDITOR=subl
 
 # Allow for CLI coloring

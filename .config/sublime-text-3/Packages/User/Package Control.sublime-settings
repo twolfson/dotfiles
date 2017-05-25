@@ -13,6 +13,7 @@
 		"ColorHelper",
 		"CTags",
 		"Directory Settings",
+		"Dockerfile Syntax Highlighting",
 		"EasyMotion",
 		"eco",
 		"Edit Command Palette",
@@ -67,6 +68,7 @@
 		"SyncedSideBar",
 		"Table Editor",
 		"Terminal",
+		"UnitTesting",
 		"WordCount"
 	]
 }

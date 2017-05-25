@@ -20,7 +20,7 @@ if which pactl &> /dev/null; then
 fi
 
 # Lock the computer
-alias lock="sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
+alias lock="date; sleep 1 ; xset dpms force off ; gnome-screensaver-command -l"
 
 ### Directory movements ###
 # cd is now pushd ;D
@@ -51,6 +51,9 @@ alias lnpm="npm --no-registry"
 
 ### Process management aliases ###
 alias fu="fuck you"
+
+### Date/Time helpers ###
+alias epoch="date +%s"
 
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
@@ -112,6 +115,44 @@ alias ssh-tunnel="ssh_tunnel"
 ### Hexadecimal practice for my current level ###
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
+### Screencast customization ###
+# DEV: Force 2x2 selection since our computer can only record at divisors of 2
+alias record-a-cast="record-a-cast --height-divisor 2 --width-divisor 2"
+function record_a_gif() {
+  # Navigate to a temporary directory
+  cd "$(mktemp -d)"
+
+  # Ignore SIGINT yet magically forward it to child processes (e.g. `FFmpeg`)
+  # DEV: We need to do this sing `FFmpeg` only stops on SIGINT but it kills our bash script too
+  trap "true" SIGINT
+
+  # Prompt to record a video
+  # DEV: We use `-r 10` for 10FPS since GIFs are slooow
+  echo "Starting recording..." 1>&2
+  record-a-cast recording.mov -- -r 10
+
+  # Wait for our script to stop encoding
+  echo "Waiting for avconv to stop running..." 1>&2
+  sleep 0.5
+
+  # Break down our movie into frames
+  echo "Extracting frames..." 1>&2
+  mkdir frames
+  avconv -i recording.mov frames/recording%03d.png
+
+  # Combine our frames into a GIF and open it
+  echo "Generating GIF..." 1>&2
+  convert -loop 0 frames/recording*.png recording.gif
+  xdg-open recording.gif
+
+  # Prompt ourselves with commands to edit it
+  echo "GIF generation complete" 1>&2
+  echo "To edit the frames, run: \`nemo frames\`" 1>&2
+  echo "To generate new GIF, run: \`convert -loop 0 frames/recording*.png recording.gif\`" 1>&2
+  echo "To crop a GIF, use Imgur or run: \`convert -crop 100x120+550+330 -page 0x0+0+0 recording.gif recording.cropped.gif\`" 1>&2
+}
+alias record-a-gif="record_a_gif"
+
 ### Git autocompletion ###
 if test -x /usr/local/git/contrib/completion/git-completion.bash; then
   . /usr/local/git/contrib/completion/git-completion.bash
@@ -172,8 +213,22 @@ function add_foundry() {
   node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
 }
 
+# Set fake brightness (non-hardware)
+# http://askubuntu.com/a/149264
+function set_fake_brightness() {
+  xrandr --output LVDS-0 --brightness "$1"
+}
+
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
+
+# Append to history on every prompt generation
+# DEV: By default `bash` appends on shell exit
+PROMPT_COMMAND="history -a"
+
+# Set up timestamping for bash history
+# 2016-12-26T12:50:00-0800
+HISTTIMEFORMAT="%FT%T%z "
 
 # If we are in an xterm and we can support 256 colors, do it
 # DEV: This is used to get better colors in sexy-bash-prompt

@@ -30,5 +30,13 @@
             "args": ["git", "ls-files"],
             "cwd": "${project_folder}"
         }
+    },
+    // http://docs.sublimetext.info/en/latest/reference/commands.html
+    {
+        "caption": "Insert: HTML boilerplate",
+        "command": "insert_snippet",
+        "args": {
+            "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n  </body>\n</html>"
+        }
     }
 ]

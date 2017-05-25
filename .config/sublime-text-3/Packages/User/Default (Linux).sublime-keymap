@@ -7,5 +7,8 @@
 
   // Add back alt+- due to resize pane plugin overriding it
   { "keys": ["ctrl+alt+-"], "command": "jump_back" },
-  { "keys": ["ctrl+alt+shift+-"], "command": "jump_forward" }
+  { "keys": ["ctrl+alt+shift+-"], "command": "jump_forward" },
+
+  // https://github.com/randy3k/UnitTesting/blob/0.7.4/Default.sublime-commands
+  { "keys": ["alt+x"], "command": "unit_testing_current_project" }
 ]
