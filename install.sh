@@ -57,7 +57,7 @@ fi
 # Symlink sublime text
 if false; then
   sudo ln -s /usr/lib/sublime-text-2/sublime_text /usr/bin/sublime_text
-  su -c 'echo "sublime_text \$@ > /dev/null 2> /dev/null &" > /usr/bin/subl'
+  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
   sudo chmod +x /usr/bin/subl
 else
   echo "Skipping \`sublime_text\` symlink (also seems like a bad idea)" 1>&2
@@ -79,6 +79,14 @@ if ! test -d ~/.config/sublime-text-3/Packages/User; then
   echo "Installed Sublime Text 3 \`User\` folder" 1>&2
 else
   echo "Sublime Text 3 \`User\` folder already exists" 1>&2
+fi
+
+# Set up Meld
+if false; then
+  echo "#!/usr/bin/env bash
+set -e
+open -W -a Meld --args $*" > ~/bin/meld
+  chmod +x ~/bin/meld
 fi
 
 # Fonts

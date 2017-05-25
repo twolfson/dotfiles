@@ -260,6 +260,9 @@ function BRANCH() {
   echo $(sexy_bash_prompt_get_git_branch)
 }
 
+if test -d "$HOME/bin"; then
+  PATH="$PATH:$HOME/bin" # Add ~/bin to PATH for scripting
+fi
 if test -d "$HOME/.rvm/bin"; then
   PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
