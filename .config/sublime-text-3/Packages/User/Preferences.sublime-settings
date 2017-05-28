@@ -12,6 +12,8 @@
 	"ignored_packages":
 	[
 		"RestructuredText",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
 		"Vintage"
 	],
 	"indent_guide_options":

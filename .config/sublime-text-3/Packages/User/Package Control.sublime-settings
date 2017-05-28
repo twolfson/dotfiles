@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"C++ Starting Kit",
 		"Case Conversion",
 		"ChangeQuotes",
 		"Chmod",
@@ -59,6 +60,7 @@
 		"StringEncode",
 		"Stylus",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-flake8",
 		"SublimeLinter-jscs",

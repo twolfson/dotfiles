@@ -234,6 +234,51 @@ function add_foundry() {
   node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
 }
 
+### eslint setup helpers ###
+# Invocation: `add_eslint`
+function add_eslint() {
+  # Add a standard ESLint config
+  cp ~/github/foundry/.eslintrc.js .eslintrc.js
+
+  # Install our ESLint package
+  npm install eslint --save-dev
+  echo "TODO: Install eslint-config-twolfson instead of symlink" 1>&2
+  npm link eslint-config-twolfson
+
+  # Update our package.json settings
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.precheck) {
+      pkg.scripts.precheck = pkg.scripts.precheck.replace('twolfson-style precheck', 'eslint');
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.lint) {
+      pkg.scripts.lint = pkg.scripts.lint.replace('twolfson-style lint', 'eslint') + ' --max-warnings 0';
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.pretest && pkg.scripts.pretest === 'twolfson-style install') {
+      delete pkg.scripts.pretest;
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+
+  # Remove our old configs/packages
+  rm .jscsrc .jshintrc
+  npm uninstall jshint jscs twolfson-style --save-dev
+
+  # Notify our user of success and next steps
+  echo "ESLint transition complete!" 1>&2
+  echo "Don't forget to remove any existing JSHint/JSCS rules:" 1>&2
+  echo "  git grep -i jscs" 1>&2
+  echo "  git grep -i jshint" 1>&2
+}
+
 # Set fake brightness (non-hardware)
 # http://askubuntu.com/a/149264
 function set_fake_brightness() {
