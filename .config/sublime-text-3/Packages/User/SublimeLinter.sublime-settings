@@ -15,11 +15,17 @@
                 "ignore": "",
                 "warnings": ""
             },
+            "eslint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
             "flake8": {
                 "@disable": false,
                 "args": [],
                 "builtins": "",
                 "excludes": [],
+                "executable": "",
                 "ignore": "",
                 "jobs": "1",
                 "max-complexity": -1,
@@ -28,12 +34,12 @@
                 "show-code": false
             },
             "jscs": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
             "jshint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
@@ -65,8 +71,13 @@
             "html (rails)": "html",
             "html 5": "html",
             "php": "html",
-            "python django": "python"
+            "python django": "python",
+            "jsx": "javascript (jsx)"
         },
+        "tooltip_fontsize": "1rem",
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+        "tooltip_theme_excludes": [],
+        "tooltips": false,
         "warning_color": "DDB700",
         "wrap_find": true
     }
