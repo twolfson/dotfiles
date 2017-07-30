@@ -360,9 +360,13 @@ if test -d ~/.linuxbrew; then
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
-# If there is chruby, load it
+# If there is chruby
 if test -f /usr/local/share/chruby/chruby.sh; then
+  # Load it
   source /usr/local/share/chruby/chruby.sh
+
+  # Prepend "(Ruby 2.2.3)" whenever we use `chruby`
+  PS1="\$(test -n \"\$RUBY_VERSION\" && echo -n \"(Ruby \$RUBY_VERSION)\")$PS1"
 fi
 
 # If there is a private bash profile, use it
