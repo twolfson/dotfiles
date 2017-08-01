@@ -222,6 +222,12 @@ function set_fake_brightness() {
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 
+# Disable XON/XOFF key bindings so we can use forward history traversal
+# DEV: `-` settings in`stty` disables them. You can verify this via `stty --all`
+#   Initial attribution to: https://www.blockloop.io/mastering-bash-and-terminal#repeat-commands
+#   http://unix.stackexchange.com/a/12108
+stty -ixon
+
 # Append to history on every prompt generation
 # DEV: By default `bash` appends on shell exit
 PROMPT_COMMAND="history -a"
@@ -291,9 +297,13 @@ if test -d ~/.linuxbrew; then
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
-# If there is chruby, load it
+# If there is chruby
 if test -f /usr/local/share/chruby/chruby.sh; then
+  # Load it
   source /usr/local/share/chruby/chruby.sh
+
+  # Prepend "(Ruby 2.2.3)" whenever we use `chruby`
+  PS1="\$(test -n \"\$RUBY_VERSION\" && echo -n \"(Ruby \$RUBY_VERSION)\")$PS1"
 fi
 
 # If there is a private bash profile, use it
