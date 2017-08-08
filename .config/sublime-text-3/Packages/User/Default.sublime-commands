@@ -38,5 +38,15 @@
         "args": {
             "contents": "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n  </body>\n</html>"
         }
+    },
+    {
+        "caption": "Set Tab Width: 2",
+        "command": "set_setting",
+        "args": {"setting": "tab_size", "value": 2},
+    },
+    {
+        "caption": "Set Tab Width: 4",
+        "command": "set_setting",
+        "args": {"setting": "tab_size", "value": 4},
     }
 ]
