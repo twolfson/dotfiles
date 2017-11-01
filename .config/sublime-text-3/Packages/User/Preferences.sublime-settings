@@ -18,6 +18,8 @@
 	],
 	"indent_guide_options":
 	[
+		"draw_normal",
+		"draw_active"
 	],
 	"on_post_save_user":
 	[
