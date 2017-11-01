@@ -17,7 +17,7 @@
             },
             "eslint": {
                 "@disable": false,
-                "args": [],
+                "args": ["--ignore-pattern", "!.eslintrc.js"],
                 "excludes": []
             },
             "flake8": {
