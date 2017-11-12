@@ -34,16 +34,11 @@
                 "show-code": false
             },
             "jscs": {
-                "@disable": true,
+                "@disable": false,
                 "args": [],
                 "excludes": []
             },
             "jshint": {
-                "@disable": true,
-                "args": [],
-                "excludes": []
-            },
-            "rubocop": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
