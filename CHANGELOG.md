@@ -1,4 +1,11 @@
 # dotfiles changelog
+## 2017.1112.0342 (Nov 12, 2017 03:42AM)
+- Added `docker_sandbox` utility
+- Added `add_eslint` transition helper
+- Fixed `bash` forward history traversal via XON/XOFF
+- Added Ruby version to `bash` prompt
+- Updated Sublime Text linter packages/settings
+
 ## 2016.1231.1837 (Dec 31, 2016 06:37PM)
 - Added timestamp to `lock`
 - Added `epoch` convenience alias

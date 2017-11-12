@@ -15,11 +15,17 @@
                 "ignore": "",
                 "warnings": ""
             },
+            "eslint": {
+                "@disable": false,
+                "args": ["--ignore-pattern", "!.eslintrc.js"],
+                "excludes": []
+            },
             "flake8": {
                 "@disable": false,
                 "args": [],
                 "builtins": "",
                 "excludes": [],
+                "executable": "",
                 "ignore": "",
                 "jobs": "1",
                 "max-complexity": -1,
@@ -64,9 +70,14 @@
             "html (django)": "html",
             "html (rails)": "html",
             "html 5": "html",
+            "jsx": "javascript (jsx)",
             "php": "html",
             "python django": "python"
         },
+        "tooltip_fontsize": "1rem",
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+        "tooltip_theme_excludes": [],
+        "tooltips": false,
         "warning_color": "DDB700",
         "wrap_find": true
     }
