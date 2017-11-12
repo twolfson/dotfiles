@@ -1,4 +1,14 @@
 # dotfiles changelog
+## 2017.1112.0425 (Nov 12, 2017 04:25AM)
+- Added multi-font support in installer
+- Fixed up OS X bash completion
+- Added support for ~/bin
+- Added Rubocop linter
+- Added global `.gitignore` install
+- Removed Sublime Text 2 support
+- Added Sublime Text tab width commands
+- Updated Sublime Text configuration (e.g. packages, file syntaxes)
+
 ## 2017.1112.0342 (Nov 12, 2017 03:42AM)
 - Added `docker_sandbox` utility
 - Added `add_eslint` transition helper

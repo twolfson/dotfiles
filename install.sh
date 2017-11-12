@@ -29,10 +29,9 @@ else
 fi
 
 # Applications (configured for Linux Mint)
-# cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-2.desktop;gedit.desktop/'
+# cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-3.desktop;gedit.desktop/'
 if false; then
   mkdir -p ~/.local/share/applications
-  ln -s $PWD/sublime-text-2.desktop ~/.local/share/applications/sublime-text-2.desktop
   ln -s $PWD/defaults.list ~/.local/share/applications/defaults.list
 else
   echo "Skipping Linux Mint dotfiles (they seem like a bad idea)" 1>&2
@@ -54,24 +53,6 @@ else
   echo "Skipping gnome-terminal configuration (already exists)" 1>&2
 fi
 
-# Symlink sublime text
-if false; then
-  sudo ln -s /usr/lib/sublime-text-2/sublime_text /usr/bin/sublime_text
-  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
-  sudo chmod +x /usr/bin/subl
-else
-  echo "Skipping \`sublime_text\` symlink (also seems like a bad idea)" 1>&2
-fi
-
-# Sublime Text 2 settings
-if false; then
-  mkdir -p ~/.config/sublime-text-2/Packages/
-  ln -s $PWD/.config/sublime-text-2/Packages/User ~/.config/sublime-text-2/Packages/User
-  echo "Installed Sublime Text 2 \`User\` folder" 1>&2
-else
-  echo "Sublime Text 2 \`User\` folder already exists" 1>&2
-fi
-
 # Sublime Text 3 settings
 if ! test -d ~/.config/sublime-text-3/Packages/User; then
   mkdir -p ~/.config/sublime-text-3/Packages/
@@ -91,13 +72,18 @@ fi
 
 # Fonts
 # Using Anonymous Pro but not powerline piece of font
-if ! test -f ~/.fonts/anonymous+Pro-Powerline.ttf; then
-  mkdir -p ~/.fonts
-  ln -s $PWD/.fonts/anonymous+Pro-Powerline.ttf ~/.fonts/anonymous+Pro-Powerline.ttf
-  echo "Installed Anonymous Pro font" 1>&2
-else
-  echo "Anonymous Pro already installed" 1>&2
-fi
+for file in .fonts/*; do
+  if ! echo "$file" | grep -E ".ttf$"; then
+    continue
+  fi
+  if ! test -f ~/"$file"; then
+    mkdir -p ~/.fonts
+    ln -s $PWD/"$file" ~/"$file"
+    echo "Installed $file font" 1>&2
+  else
+    echo "$file already installed" 1>&2
+  fi
+done
 
 # Nano settings
 if ! test -f ~/.nanorc; then
