@@ -58,6 +58,7 @@ alias epoch="date +%s"
 ### Typos suck ###
 alias gi="git" # Works great with git config help.autocorrect
 # Replaced `gti` with https://github.com/rwos/gti (speed 100)
+export GTI_SPEED=2000
 alias gt="gti"
 alias tgi="git"
 alias igt="git"
