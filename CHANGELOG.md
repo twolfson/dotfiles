@@ -1,5 +1,5 @@
 # dotfiles changelog
-## Upcoming
+## 2017.1112.0425 (Nov 12, 2017 04:25AM)
 - Added multi-font support in installer
 - Fixed up OS X bash completion
 - Added support for ~/bin
