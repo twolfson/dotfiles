@@ -1,4 +1,7 @@
 # dotfiles changelog
+## Upcoming
+- Added multi-font support in installer
+
 ## 2017.1112.0342 (Nov 12, 2017 03:42AM)
 - Added `docker_sandbox` utility
 - Added `add_eslint` transition helper
