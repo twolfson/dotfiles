@@ -1,6 +1,10 @@
 # dotfiles changelog
 ## Upcoming
 - Added multi-font support in installer
+- Fixed up OS X bash completion
+- Added support for ~/bin
+- Added Rubocop linter
+- Added global `.gitignore` install
 
 ## 2017.1112.0342 (Nov 12, 2017 03:42AM)
 - Added `docker_sandbox` utility
