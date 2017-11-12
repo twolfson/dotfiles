@@ -5,6 +5,9 @@
 - Added support for ~/bin
 - Added Rubocop linter
 - Added global `.gitignore` install
+- Removed Sublime Text 2 support
+- Added Sublime Text tab width commands
+- Updated Sublime Text configuration (e.g. packages, file syntaxes)
 
 ## 2017.1112.0342 (Nov 12, 2017 03:42AM)
 - Added `docker_sandbox` utility
