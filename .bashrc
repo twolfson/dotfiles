@@ -286,26 +286,40 @@ function remove_gratipay() {
     // Load in our dependencies
     const fs = require('fs');
 
+    // Define our replacement content
+    let gittipStr = [
+      '## Donating',
+      'Support this project and [others by twolfson][gittip] via [gittip][].',
+      '',
+      '[![Support via Gittip][gittip-badge]][gittip]',
+      '',
+      '[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png',
+      '[gittip]: https://www.gittip.com/twolfson/',
+    ].join('\n');
+    let gratipayStr = [
+      '## Donating',
+      'Support this project and [others by twolfson][gratipay] via [gratipay][].',
+      '',
+      '[![Support via Gratipay][gratipay-badge]][gratipay]',
+      '',
+      '[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png',
+      '[gratipay]: https://www.gratipay.com/twolfson/',
+    ].join('\n');
+    let supportMeStr = [
+      '## Donating',
+      'Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].',
+      '',
+      '<http://twolfson.com/support-me>',
+      '',
+      '[twolfson-projects]: http://twolfson.com/projects',
+      '[twolfson-support-me]: http://twolfson.com/support-me',
+    ].join('\n');
+
     // Load in our file and replace its content
     let inputStr = fs.readFileSync('README.md', 'utf8');
     let outputStr = inputStr
-      .replace([
-        '## Donating',
-        'Support this project and [others by twolfson][gittip] via [gittip][].',
-        '',
-        '[![Support via Gittip][gittip-badge]][gittip]',
-        '',
-        '[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png',
-        '[gittip]: https://www.gittip.com/twolfson/',
-      ].join('\n'), [
-        '## Donating',
-        'Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].',
-        '',
-        '<http://twolfson.com/support-me>',
-        '',
-        '[twolfson-projects]: http://twolfson.com/projects',
-        '[twolfson-support-me]: http://twolfson.com/support-me',
-      ].join('\n'));
+      .replace(gittipStr, supportMeStr)
+      .replace(gratipayStr, supportMeStr);
 
     // Write our file
     fs.writeFileSync('README.md', outputStr, 'utf8');
