@@ -66,6 +66,7 @@
 		"SublimeLinter-flake8",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
