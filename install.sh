@@ -20,6 +20,14 @@ else
   echo "~/.gitconfig already exists" 1>&2
 fi
 
+# Link up git ignore
+if ! test -f ~/.gitignore; then
+  ln -s $PWD/.gitignore ~/.gitignore
+  echo "Installed ~/.gitignore" 1>&2
+else
+  echo "~/.gitignore already exists" 1>&2
+fi
+
 # Applications (configured for Linux Mint)
 # cat /usr/share/applications/defaults.list | sed 's/gedit.desktop/sublime-text-2.desktop;gedit.desktop/'
 if false; then
@@ -56,7 +64,7 @@ else
 fi
 
 # Sublime Text 2 settings
-if ! test -d ~/.config/sublime-text-2/Packages/User; then
+if false; then
   mkdir -p ~/.config/sublime-text-2/Packages/
   ln -s $PWD/.config/sublime-text-2/Packages/User ~/.config/sublime-text-2/Packages/User
   echo "Installed Sublime Text 2 \`User\` folder" 1>&2
