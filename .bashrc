@@ -177,7 +177,7 @@ alias record-a-gif="record_a_gif"
 ### Git autocompletion ###
 if test -x /usr/local/git/contrib/completion/git-completion.bash; then
   . /usr/local/git/contrib/completion/git-completion.bash
-elif which brew &> /dev/null && test -x "$(brew --prefix)/etc/bash_completion"; then
+elif which brew &> /dev/null && test -f "$(brew --prefix)/etc/bash_completion"; then
   . "$(brew --prefix)/etc/bash_completion"
 fi
 
