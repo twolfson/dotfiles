@@ -238,12 +238,10 @@ function add_foundry() {
 # Invocation: `add_eslint`
 function add_eslint() {
   # Add a standard ESLint config
-  cp ~/github/foundry/.eslintrc.js .eslintrc.js
+  cp ~/github/twolfson.com/.eslintrc.js .eslintrc.js
 
   # Install our ESLint package
-  npm install eslint --save-dev
-  echo "TODO: Install eslint-config-twolfson instead of symlink" 1>&2
-  npm link eslint-config-twolfson
+  npm install eslint eslint-config-twolfson --save-dev
 
   # Update our package.json settings
   node -e "
@@ -277,6 +275,7 @@ function add_eslint() {
   echo "Don't forget to remove any existing JSHint/JSCS rules:" 1>&2
   echo "  git grep -i jscs" 1>&2
   echo "  git grep -i jshint" 1>&2
+  echo "  git grep -i twolfson-style" 1>&2
 }
 
 # Set fake brightness (non-hardware)
