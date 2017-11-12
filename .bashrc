@@ -279,6 +279,32 @@ function add_eslint() {
   echo "  git grep -i twolfson-style" 1>&2
 }
 
+### README configuration helpers ###
+function remove_gratipay() {
+  # Perform our replacements
+  # DEV: If we ever need multi-line matching, then I suggest using Python or Node.js with docblocks
+  sed "s/\
+Support this project and [others by twolfson][gittip] via [gittip][].\
+Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me]./g" --in-place README.md
+  sed "s/\
+[![Support via Gittip][gittip-badge]][gittip]
+<http:\/\/twolfson.com\/support-me>/g" --in-place README.md
+  sed "s/\
+[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+<http:\/\/twolfson.com\/support-me>/g" --in-place README.md
+
+  [gittip]: https://www.gittip.com/twolfson/
+
+  [twolfson-projects]: http://twolfson.com/projects
+  [twolfson-support-me]: http://twolfson.com/support-me
+
+  # Notify our user of success and next steps
+  echo "Gratipay successfully removed!" 1>&2
+  echo "Don't forget to search for remaining traces:" 1>&2
+  echo "  git grep -i gittip" 1>&2
+  echo "  git grep -i gratipay" 1>&2
+}
+
 # Set fake brightness (non-hardware)
 # http://askubuntu.com/a/149264
 function set_fake_brightness() {
