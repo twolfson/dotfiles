@@ -282,21 +282,34 @@ function add_eslint() {
 ### README configuration helpers ###
 function remove_gratipay() {
   # Perform our replacements
-  # DEV: If we ever need multi-line matching, then I suggest using Python or Node.js with docblocks
-  sed "s/\
-Support this project and [others by twolfson][gittip] via [gittip][].\
-Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me]./g" --in-place README.md
-  sed "s/\
-[![Support via Gittip][gittip-badge]][gittip]
-<http:\/\/twolfson.com\/support-me>/g" --in-place README.md
-  sed "s/\
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-<http:\/\/twolfson.com\/support-me>/g" --in-place README.md
+  node --eval "
+    // Load in our dependencies
+    const fs = require('fs');
 
-  [gittip]: https://www.gittip.com/twolfson/
+    // Load in our file and replace its content
+    let inputStr = fs.readFileSync('README.md', 'utf8');
+    let outputStr = inputStr
+      .replace([
+        '## Donating',
+        'Support this project and [others by twolfson][gittip] via [gittip][].',
+        '',
+        '[![Support via Gittip][gittip-badge]][gittip]',
+        '',
+        '[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png',
+        '[gittip]: https://www.gittip.com/twolfson/',
+      ].join('\n'), [
+        '## Donating',
+        'Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].',
+        '',
+        '<http://twolfson.com/support-me>',
+        '',
+        '[twolfson-projects]: http://twolfson.com/projects',
+        '[twolfson-support-me]: http://twolfson.com/support-me',
+      ].join('\n'));
 
-  [twolfson-projects]: http://twolfson.com/projects
-  [twolfson-support-me]: http://twolfson.com/support-me
+    // Write our file
+    fs.writeFileSync('README.md', outputStr, 'utf8');
+  "
 
   # Notify our user of success and next steps
   echo "Gratipay successfully removed!" 1>&2
