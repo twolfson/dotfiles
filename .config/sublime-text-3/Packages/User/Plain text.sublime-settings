@@ -1,3 +1,7 @@
 {
+	"extensions":
+	[
+		".eslintrc"
+	],
 	"tab_size": 4
 }

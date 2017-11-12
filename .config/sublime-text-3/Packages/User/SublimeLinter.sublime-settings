@@ -17,7 +17,7 @@
             },
             "eslint": {
                 "@disable": false,
-                "args": [],
+                "args": ["--ignore-pattern", "!.eslintrc.js"],
                 "excludes": []
             },
             "flake8": {
@@ -70,9 +70,9 @@
             "html (django)": "html",
             "html (rails)": "html",
             "html 5": "html",
+            "jsx": "javascript (jsx)",
             "php": "html",
-            "python django": "python",
-            "jsx": "javascript (jsx)"
+            "python django": "python"
         },
         "tooltip_fontsize": "1rem",
         "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",

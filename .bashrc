@@ -113,6 +113,27 @@ ssh_tunnel () {
 }
 alias ssh-tunnel="ssh_tunnel"
 
+### Sandbox utility ###
+function docker_sandbox() {
+  # Load in our parameters
+  name="$1"
+  if test "$name" = ""; then
+    echo "docker_sandbox expected a name parameter. Please specify one" 1>&2
+    return 1
+  fi
+
+  # Provide common commands
+  echo "# Common setup commands"
+  echo "sudo apt-get update"
+  echo "sudo apt-get install -y curl wget build-essential"
+  echo "## Node.js"
+  echo "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -"
+  echo "sudo apt-get install -y nodejs"
+
+  # Start a Docker instance
+  docker run -it --volume "$PWD:/vagrant" --name "$name" ubuntu:14.04 /bin/bash
+}
+
 ### Hexadecimal practice for my current level ###
 alias hex-practice="hexadecimal-practice --maximum-digits 1"
 
@@ -214,6 +235,50 @@ function add_foundry() {
   node -e "var pkg = require('./package.json'); pkg.foundry = {'releaseCommands': $release_commands}; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));"
 }
 
+### eslint setup helpers ###
+# Invocation: `add_eslint`
+function add_eslint() {
+  # Add a standard ESLint config
+  cp ~/github/twolfson.com/.eslintrc.js .eslintrc.js
+
+  # Install our ESLint package
+  npm install eslint eslint-config-twolfson --save-dev
+
+  # Update our package.json settings
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.precheck) {
+      pkg.scripts.precheck = pkg.scripts.precheck.replace('twolfson-style precheck', 'eslint');
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.lint) {
+      pkg.scripts.lint = pkg.scripts.lint.replace('twolfson-style lint', 'eslint') + ' --max-warnings 0';
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+  node -e "
+    var pkg = require('./package.json');
+    if (pkg.scripts.pretest && pkg.scripts.pretest === 'twolfson-style install') {
+      delete pkg.scripts.pretest;
+    }
+    require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  "
+
+  # Remove our old configs/packages
+  rm .jscsrc .jshintrc
+  npm uninstall jshint jscs twolfson-style --save-dev
+
+  # Notify our user of success and next steps
+  echo "ESLint transition complete!" 1>&2
+  echo "Don't forget to remove any existing JSHint/JSCS rules:" 1>&2
+  echo "  git grep -i jscs" 1>&2
+  echo "  git grep -i jshint" 1>&2
+  echo "  git grep -i twolfson-style" 1>&2
+}
+
 # Set fake brightness (non-hardware)
 # http://askubuntu.com/a/149264
 function set_fake_brightness() {
@@ -222,6 +287,12 @@ function set_fake_brightness() {
 
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
+
+# Disable XON/XOFF key bindings so we can use forward history traversal
+# DEV: `-` settings in`stty` disables them. You can verify this via `stty --all`
+#   Initial attribution to: https://www.blockloop.io/mastering-bash-and-terminal#repeat-commands
+#   http://unix.stackexchange.com/a/12108
+stty -ixon
 
 # Append to history on every prompt generation
 # DEV: By default `bash` appends on shell exit
@@ -292,9 +363,13 @@ if test -d ~/.linuxbrew; then
   export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
 fi
 
-# If there is chruby, load it
+# If there is chruby
 if test -f /usr/local/share/chruby/chruby.sh; then
+  # Load it
   source /usr/local/share/chruby/chruby.sh
+
+  # Prepend "(Ruby 2.2.3)" whenever we use `chruby`
+  PS1="\$(test -n \"\$RUBY_VERSION\" && echo -n \"(Ruby \$RUBY_VERSION)\")$PS1"
 fi
 
 # If there is a private bash profile, use it
