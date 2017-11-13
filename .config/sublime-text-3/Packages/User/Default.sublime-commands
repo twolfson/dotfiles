@@ -48,5 +48,9 @@
         "caption": "Set Tab Width: 4",
         "command": "set_setting",
         "args": {"setting": "tab_size", "value": 4},
+    },
+    {
+        "caption": "Toggle Overwrite",
+        "command": "toggle_overwrite"
     }
 ]

@@ -7,7 +7,7 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input",
-	"font_size": 12.0,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
@@ -47,6 +47,7 @@
 	"show_line_endings": true,
 	"spell_check": false,
 	"tab_size": 2,
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }
