@@ -1,4 +1,7 @@
 # dotfiles changelog
+## 2017.1113.1132 (Nov 13, 2017 11:32PM)
+- Replaced Gratipay with support me page
+
 ## 2017.1112.0425 (Nov 12, 2017 04:25AM)
 - Added multi-font support in installer
 - Fixed up OS X bash completion
