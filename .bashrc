@@ -296,7 +296,7 @@ function remove_gratipay() {
       '[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png',
       '[gittip]: https://www.gittip.com/twolfson/',
     ].join('\n');
-    let gratipayStr = [
+    let gratipayPngStr = [
       '## Donating',
       'Support this project and [others by twolfson][gratipay] via [gratipay][].',
       '',
@@ -305,6 +305,7 @@ function remove_gratipay() {
       '[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png',
       '[gratipay]: https://www.gratipay.com/twolfson/',
     ].join('\n');
+    let gratipaySvgStr = gratipayPngStr.replace('/gratipay.png', '/gratipay.svg');
     let supportMeStr = [
       '## Donating',
       'Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].',
@@ -319,7 +320,8 @@ function remove_gratipay() {
     let inputStr = fs.readFileSync('README.md', 'utf8');
     let outputStr = inputStr
       .replace(gittipStr, supportMeStr)
-      .replace(gratipayStr, supportMeStr);
+      .replace(gratipayPngStr, supportMeStr)
+      .replace(gratipaySvgStr, supportMeStr);
 
     // Write our file
     fs.writeFileSync('README.md', outputStr, 'utf8');
