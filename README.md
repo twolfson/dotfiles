@@ -207,12 +207,12 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 [Coderwall protips]: https://coderwall.com/p/u/twolfson
 
 ## Donating
-Support this project and [others by twolfson][gittip] via [gittip][].
+Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].
 
-[![Support via Gittip][gittip-badge]][gittip]
+<http://twolfson.com/support-me>
 
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/twolfson/
+[twolfson-projects]: http://twolfson.com/projects
+[twolfson-support-me]: http://twolfson.com/support-me
 
 ## Unlicense
 As of Feb 28 2014, Todd Wolfson has released this repository and its contents to the public domain.
