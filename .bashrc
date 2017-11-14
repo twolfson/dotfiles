@@ -287,7 +287,7 @@ function remove_gratipay() {
     const fs = require('fs');
 
     // Define our replacement content
-    let gittipStr = [
+    let gittipSlashfulStr = [
       '## Donating',
       'Support this project and [others by twolfson][gittip] via [gittip][].',
       '',
@@ -296,6 +296,8 @@ function remove_gratipay() {
       '[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png',
       '[gittip]: https://www.gittip.com/twolfson/',
     ].join('\n');
+    let gittipSlashlessStr = gittipSlashfulStr.replace(
+      'https://www.gittip.com/twolfson/', 'https://www.gittip.com/twolfson');
     let gratipayPngStr = [
       '## Donating',
       'Support this project and [others by twolfson][gratipay] via [gratipay][].',
@@ -319,7 +321,8 @@ function remove_gratipay() {
     // Load in our file and replace its content
     let inputStr = fs.readFileSync('README.md', 'utf8');
     let outputStr = inputStr
-      .replace(gittipStr, supportMeStr)
+      .replace(gittipSlashfulStr, supportMeStr)
+      .replace(gittipSlashlessStr, supportMeStr)
       .replace(gratipayPngStr, supportMeStr)
       .replace(gratipaySvgStr, supportMeStr);
 
