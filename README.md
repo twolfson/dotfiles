@@ -1,6 +1,19 @@
 # dotfiles
 A collection of my dotfiles (e.g. `.config`, `.bashrc`)
 
+- iTerm2
+- Sublime Text 3
+- Firefox
+- Chrome (mostly for incognito)
+- Slack
+- Figma
+- MacPass
+- google-music-electron (via `nohup google-music-electron &` in new tab)
+- Meld
+- nano
+- livereload-cli
+- listen-spawn
+
 This is written for both [Linux Mint 17.1 (Cinnamon)][linux-mint] and [Mac OS X Mountain Lion][osx].
 
 [linux-mint]: http://www.linuxmint.com/
