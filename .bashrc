@@ -311,3 +311,8 @@ fi
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
 fi
+
+# If Qt is installed, add it to our path
+if which brew &> /dev/null && test -d "$(brew --prefix qt@5.5)"; then
+  export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+fi
