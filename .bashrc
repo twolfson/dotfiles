@@ -333,6 +333,11 @@ function remove_gratipay() {
   echo "  git grep -i gratipay" 1>&2
 }
 
+function add_funding_yml() {
+  mkdir -p .github
+  echo "custom: https://twolfson.com/support-me" >> .github/FUNDING.yml
+}
+
 # Set fake brightness (non-hardware)
 # http://askubuntu.com/a/149264
 function set_fake_brightness() {
