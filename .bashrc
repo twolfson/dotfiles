@@ -431,6 +431,22 @@ if test -f /usr/local/share/chruby/chruby.sh; then
   PS1="\$(test -n \"\$RUBY_VERSION\" && echo -n \"(Ruby \$RUBY_VERSION)\")$PS1"
 fi
 
+# Enable toggling of touchscreen on the fly
+function enable_touchscreen() {
+  test -n "$TOUCHSCREEN_DEVICE_ID" || (echo "Missing TOUCHSCREEN_DEVICE_ID" 1>&2 && exit 1)
+  xinput enable "$TOUCHSCREEN_DEVICE_ID"
+}
+function disable_touchscreen() {
+  test -n "$TOUCHSCREEN_DEVICE_ID" || (echo "Missing TOUCHSCREEN_DEVICE_ID" 1>&2 && exit 1)
+  xinput disable "$TOUCHSCREEN_DEVICE_ID"
+}
+function map_touchscreen_to_display() {
+  # https://unix.stackexchange.com/a/439625
+  test -n "$TOUCHSCREEN_DEVICE_ID" || (echo "Missing TOUCHSCREEN_DEVICE_ID" 1>&2 && exit 1)
+  test -n "$TOUCHSCREEN_DISPLAY_NAME" || (echo "Missing TOUCHSCREEN_DISPLAY_NAME" 1>&2 && exit 1)
+  xinput map-to-output "$TOUCHSCREEN_DEVICE_ID" "$TOUCHSCREEN_DISPLAY_NAME"
+}
+
 # If there is a private bash profile, use it
 if test -f ~/.private_bash_profile; then
   source ~/.private_bash_profile
