@@ -402,7 +402,7 @@ if test -d "/usr/local/go/bin"; then
 fi
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin"
 
 ## Python virtualenvs
 if test -f /usr/local/bin/virtualenvwrapper.sh; then
