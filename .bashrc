@@ -175,19 +175,15 @@ function record_a_gif() {
 }
 alias record-a-gif="record_a_gif"
 
-### Git autocompletion ###
-if test -x /usr/local/git/contrib/completion/git-completion.bash; then
-  . /usr/local/git/contrib/completion/git-completion.bash
+### Bash autocompletion ###
+if test -f /usr/share/bash-completion/bash_completion; then
+  . /usr/share/bash-completion/bash_completion
+  # DEV: Load `git-extras` directly as `bash_completion` looks for `git` and we can't figure out how to resolve it
+  if test -f /usr/share/bash-completion/completions/git-extras; then
+    . /usr/share/bash-completion/completions/git-extras
+  fi
 elif which brew &> /dev/null && test -f "$(brew --prefix)/etc/bash_completion"; then
   . "$(brew --prefix)/etc/bash_completion"
-fi
-
-if test -x /etc/bash_completion.d/git-extras; then
-  . /etc/bash_completion.d/git-extras
-fi
-
-if test -x /etc/bash_completion.d/git-sqwish; then
-  . /etc/bash_completion.d/git-sqwish
 fi
 
 ### Fabric bash completion ###
