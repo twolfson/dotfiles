@@ -48,5 +48,11 @@
         "caption": "Set Tab Width: 4",
         "command": "set_setting",
         "args": {"setting": "tab_size", "value": 4},
+    },
+    // https://stackoverflow.com/a/19561427
+    {
+        "caption": "File: Open folder",
+        "command": "open_dir",
+        "args": {"dir": "$file_path", "file": "$file_name"}
     }
 ]
