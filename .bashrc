@@ -431,6 +431,19 @@ if test -f /usr/local/share/chruby/chruby.sh; then
   PS1="\$(test -n \"\$RUBY_VERSION\" && echo -n \"(Ruby \$RUBY_VERSION)\")$PS1"
 fi
 
+# Custom Java version switcher
+# https://docs.oracle.com/cd/E19509-01/820-3208/inst_cli_jdk_javahome_t/
+function switch_to_java() {
+  # Switch to our target directory
+  test -n "$1" || (echo "Missing Java filepath" 1>&2 && exit 1)
+  export JAVA_HOME="$1"
+  export PATH="$JAVA_HOME/bin:$PATH"
+
+  # Prepend Java version
+  java_version=$(java -version 2>&1 | head -n 1 | sed -E 's/java version "([^"]+)"/\1/')
+  PS1="\$(echo -n \"(Java \$java_version)\")$PS1"
+}
+
 # Enable toggling of touchscreen on the fly
 function enable_touchscreen() {
   test -n "$TOUCHSCREEN_DEVICE_ID" || (echo "Missing TOUCHSCREEN_DEVICE_ID" 1>&2 && exit 1)
