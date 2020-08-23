@@ -353,10 +353,6 @@ export EDITOR="nano"
 #   http://unix.stackexchange.com/a/12108
 stty -ixon
 
-# Append to history on every prompt generation
-# DEV: By default `bash` appends on shell exit
-PROMPT_COMMAND="history -a"
-
 # Set up timestamping for bash history
 # 2016-12-26T12:50:00-0800
 HISTTIMEFORMAT="%FT%T%z "
@@ -379,6 +375,47 @@ fi
 
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
+
+# Extend our bash prompt with a timer
+# https://jakemccrary.com/blog/2015/05/03/put-the-last-commands-run-time-in-your-bash-prompt/
+last_command_time=""
+_start_run_timer() {
+  # If we haven't hit the `stop` call yet, then save our start time
+  # DEV: For `ms` timing, use %3N, https://serverfault.com/a/588705
+  if test -n "$_run_start_time"; then
+    _run_start_time="$(date '+%s')"
+  fi
+  echo "hi"
+}
+_stop_run_timer() {
+  _run_stop_time="$(date '+%s')"
+  if test -n "$_run_start_time"; then
+    last_command_time="$(($_run_stop_time - $_run_start_time))"
+  else
+    last_command_time="0"
+  fi
+  __run_start_time="$_run_start_time"
+  __run_stop_time="$_run_stop_time"
+  unset _run_start_time
+  unset _run_stop_time
+}
+twolfson_prompt_command() {
+  # Run sexy-bash-prompt first to pick up exit code
+  sexy_bash_prompt_command
+
+  # Stop our timer for now
+  _stop_run_timer
+
+  # Append to history on every prompt generation
+  # DEV: By default `bash` appends on shell exit
+  #   $ history --help
+  #   -a	append history lines from this session to the history file
+  history -a
+
+  echo "$last_command_time" "$_run_start_time" "$_run_stop_time"
+}
+trap _start_run_timer DEBUG
+PROMPT_COMMAND="twolfson_prompt_command"
 
 # Define function to update title
 # DEV: Makes it less annoying to deal with ssh titles
