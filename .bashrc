@@ -382,10 +382,9 @@ last_command_time=""
 _start_run_timer() {
   # If we haven't hit the `stop` call yet, then save our start time
   # DEV: For `ms` timing, use %3N, https://serverfault.com/a/588705
-  if test -n "$_run_start_time"; then
+  if test -z "$_run_start_time"; then
     _run_start_time="$(date '+%s')"
   fi
-  echo "hi"
 }
 _stop_run_timer() {
   _run_stop_time="$(date '+%s')"
@@ -394,8 +393,8 @@ _stop_run_timer() {
   else
     last_command_time="0"
   fi
-  __run_start_time="$_run_start_time"
-  __run_stop_time="$_run_stop_time"
+  _last_run_start_time="$_run_start_time"
+  _last_run_stop_time="$_run_stop_time"
   unset _run_start_time
   unset _run_stop_time
 }
@@ -412,7 +411,13 @@ twolfson_prompt_command() {
   #   -a	append history lines from this session to the history file
   history -a
 
-  echo "$last_command_time" "$_run_start_time" "$_run_stop_time"
+  # If our command took over 10s to run, then log it out
+  if test "$last_command_time" -gt 1; then
+    echo "Command runtime: ${last_command_time}s"
+  fi
+
+  # PS1 will echo out after this
+  # DEV: We could extend/replace PS1 here but meh
 }
 trap _start_run_timer DEBUG
 PROMPT_COMMAND="twolfson_prompt_command"
