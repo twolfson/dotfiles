@@ -386,6 +386,23 @@ title () {
   echo -ne "\033]0;$*\007"
 }
 
+# Define function to timestamp images
+# DSC_0001.JPG -> 2019-09-23--DSC_0001.JPG
+timestamp_images () {
+  for filepath in $*; do
+    # Extract our timestamp data
+    #  GPS Date/Time                   : 2018:07:24 04:35:55Z -> "2018-07-24"
+    timestamp="$(exiftool "$filepath" | grep "GPS Date/Time" | sed -E "s/[^:]+: ([0-9]+):([0-9]+):([0-9]+).*+/\1-\2-\3/")"
+    if test -z "$timestamp"; then
+      echo "Missing GPS Date/Time for $filepath" 1>&2
+      return 1
+    fi
+
+    # Rename our file
+    mv "$filepath" "$(dirname "$filepath")/$timestamp--$(basename $filepath)"
+  done
+}
+
 # Expose helper method for git branch
 function BRANCH() {
   echo $(sexy_bash_prompt_get_git_branch)
