@@ -378,7 +378,6 @@ fi
 
 # Extend our bash prompt with a timer
 # https://jakemccrary.com/blog/2015/05/03/put-the-last-commands-run-time-in-your-bash-prompt/
-last_command_time=""
 _start_run_timer() {
   # If we haven't hit the `stop` call yet, then save our start time
   # DEV: For `ms` timing, use %3N, https://serverfault.com/a/588705
@@ -387,14 +386,12 @@ _start_run_timer() {
   fi
 }
 _stop_run_timer() {
+  # Capture our stop time, and if we had a start time (i.e. not a new shell), then calculate our run time
   _run_stop_time="$(date '+%s')"
+  last_command_time="0"
   if test -n "$_run_start_time"; then
     last_command_time="$(($_run_stop_time - $_run_start_time))"
-  else
-    last_command_time="0"
   fi
-  _last_run_start_time="$_run_start_time"
-  _last_run_stop_time="$_run_stop_time"
   unset _run_start_time
   unset _run_stop_time
 }
