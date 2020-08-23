@@ -160,7 +160,7 @@ function record_a_gif() {
   # Break down our movie into frames
   echo "Extracting frames..." 1>&2
   mkdir frames
-  avconv -i recording.mov frames/recording%03d.png
+  ffmpeg -i recording.mov frames/recording%03d.png
 
   # Combine our frames into a GIF and open it
   echo "Generating GIF..." 1>&2
