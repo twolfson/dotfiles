@@ -408,8 +408,9 @@ twolfson_prompt_command() {
   #   -a	append history lines from this session to the history file
   history -a
 
-  # If our command took over 10s to run, then log it out
-  if test "$last_command_time" -gt 1; then
+  # If our command took over 1s to run and was an unexpected long command (usually non-interactive), then log it out
+  if test "$last_command_time" -gt 1 && \
+      $(history 1 | grep --invert-match -E "(pico|nano|git add|git checkout|less)" &> /dev/null); then
     echo "Command runtime: ${last_command_time}s"
   fi
 
