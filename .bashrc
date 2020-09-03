@@ -436,9 +436,26 @@ time_pid () {
   # Define an inner function for our watch command
   # https://stackoverflow.com/a/35006244
   # DEV: We've verified different shells stay separate via `export random="$RANDOM"` so we're good
-  export random="$RANDOM"
+  # https://github.com/arlowhite/process-watcher
+  # https://superuser.com/a/447427
+  export _time_pid_start_time="$(date '+%s')"
+  export pid
   _time_pid_fn () {
-    echo "$random"
+    # If our process is running, then let ourselves know
+    if ps -p "$pid" &> /dev/null; then
+      echo "Process ${pid} still running at $(date)"
+      export _time_pid_last_time="$(date '+%s')"
+    # Otherwise
+    else
+      # If our process was never running, then complain
+      if test "$_time_pid_last_time" = ""; then
+        echo "Process ${pid} was never running"
+      # Otherwise, let us know the total run time
+      else
+        echo "Process ${pid} stopped at around ${_time_pid_last_time}"
+        echo "  with total runtime of: $((_time_pid_last_time - _time_pid_start_time)) seconds (from start of \`time_pid\`)"
+      fi
+    fi
   }
   export -f _time_pid_fn
   watch -x bash -c _time_pid_fn
