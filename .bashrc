@@ -118,17 +118,20 @@ function docker_sandbox() {
   # Load in our parameters
   name="$1"
   if test "$name" = ""; then
+    echo "Usage: docker_sandbox <container_name>" 1>&2
     echo "docker_sandbox expected a name parameter. Please specify one" 1>&2
     return 1
   fi
 
   # Provide common commands
+  echo "\`\`\`"
   echo "# Common setup commands"
-  echo "sudo apt-get update"
-  echo "sudo apt-get install -y curl wget build-essential"
+  echo "apt-get update"
+  echo "apt-get install -y curl wget build-essential"
   echo "## Node.js"
-  echo "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -"
-  echo "sudo apt-get install -y nodejs"
+  echo "curl -sL https://deb.nodesource.com/setup_12.x | bash -"
+  echo "apt-get install -y nodejs"
+  echo "\`\`\`"
 
   # Start a Docker instance
   docker run -it --volume "$PWD:/vagrant" --name "$name" ubuntu:14.04 /bin/bash
