@@ -423,6 +423,27 @@ twolfson_prompt_command() {
 trap _start_run_timer DEBUG
 PROMPT_COMMAND="twolfson_prompt_command"
 
+# Define function to see how long it takes for program to exit
+time_pid () {
+  # Resolve our pid
+  pid="$1"
+  if test "$pid" = ""; then
+    echo "Usage: time_pid <pid>" 1>&2
+    echo "Missing \`pid\` parameter. Please specify it" 1>&2
+    return 1
+  fi
+
+  # Define an inner function for our watch command
+  # https://stackoverflow.com/a/35006244
+  # DEV: We've verified different shells stay separate via `export random="$RANDOM"` so we're good
+  export random="$RANDOM"
+  _time_pid_fn () {
+    echo "$random"
+  }
+  export -f _time_pid_fn
+  watch -x bash -c _time_pid_fn
+}
+
 # Define function to update title
 # DEV: Makes it less annoying to deal with ssh titles
 title () {
