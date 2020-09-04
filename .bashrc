@@ -425,40 +425,42 @@ PROMPT_COMMAND="twolfson_prompt_command"
 
 # Define function to see how long it takes for program to exit
 time_pid () {
+  # Define configuration options
+  local sleep_time=2 # seconds
+
   # Resolve our pid
-  pid="$1"
+  local pid="$1"
   if test "$pid" = ""; then
     echo "Usage: time_pid <pid>" 1>&2
     echo "Missing \`pid\` parameter. Please specify it" 1>&2
     return 1
   fi
 
-  # Define an inner function for our watch command
-  # https://stackoverflow.com/a/35006244
-  # DEV: We've verified different shells stay separate via `export random="$RANDOM"` so we're good
+  # Collect our program's start time
+  local start_time_str="$(ps -p "$pid" -o lstart | grep --invert-match STARTED)"
+  if test "$start_time_str" = ""; then
+    echo "Process ${pid} isn\'t running. Double check pid" 1>&2
+    return 1
+  fi
+  local start_time="$(date --date "${start_time_str}" '+%s')"
+  echo "Process ${pid} running since ${start_time_str}"
+
+  # Loop until our process stops
   # https://github.com/arlowhite/process-watcher
   # https://superuser.com/a/447427
-  export _time_pid_start_time="$(date '+%s')"
-  export pid
-  _time_pid_fn () {
-    # If our process is running, then let ourselves know
-    if ps -p "$pid" &> /dev/null; then
-      echo "Process ${pid} still running at $(date)"
-      export _time_pid_last_time="$(date '+%s')"
-    # Otherwise
-    else
-      # If our process was never running, then complain
-      if test "$_time_pid_last_time" = ""; then
-        echo "Process ${pid} was never running"
-      # Otherwise, let us know the total run time
-      else
-        echo "Process ${pid} stopped at around ${_time_pid_last_time}"
-        echo "  with total runtime of: $((_time_pid_last_time - _time_pid_start_time)) seconds (from start of \`time_pid\`)"
-      fi
+  while true; do
+    echo "Process ${pid} still running at $(date)"
+    local last_time="$(date '+%s')"
+    sleep "$sleep_time"
+
+    if ! ps -p "$pid" &> /dev/null; then
+      break
     fi
-  }
-  export -f _time_pid_fn
-  watch -x bash -c _time_pid_fn
+  done
+
+  # Output our result
+  echo "Process ${pid} stopped at around $(date --date "@${last_time}")"
+  echo "  with total runtime of about: $((last_time - start_time)) seconds"
 }
 
 # Define function to update title
