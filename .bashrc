@@ -400,9 +400,6 @@ _stop_run_timer() {
   unset _run_stop_time
 }
 twolfson_prompt_command() {
-  # Run sexy-bash-prompt first to pick up exit code
-  sexy_bash_prompt_command
-
   # Stop our timer for now
   _stop_run_timer
 
@@ -413,16 +410,14 @@ twolfson_prompt_command() {
   history -a
 
   # If our command took over 1s to run and was an unexpected long command (usually non-interactive), then log it out
+  # DEV: We could extend/replace PS1 at top level to output as part of the prompt (via a variable/subshell) but meh
   if test "$last_command_time" -gt 1 && \
       $(history 1 | grep --invert-match -E "(pico|nano|git add|git checkout|less)" &> /dev/null); then
     echo "Command runtime: ${last_command_time}s"
   fi
-
-  # PS1 will echo out after this
-  # DEV: We could extend/replace PS1 here but meh
 }
 trap _start_run_timer DEBUG
-PROMPT_COMMAND="twolfson_prompt_command"
+PROMPT_COMMAND="$PROMPT_COMMAND ; twolfson_prompt_command"
 
 # Define function to see how long it takes for program to exit
 time_pid () {
