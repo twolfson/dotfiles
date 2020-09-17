@@ -16,7 +16,8 @@ fi
 
 # Adjust volume easily
 if which pactl &> /dev/null; then
-  alias volume="pactl -- set-sink-volume 1"
+  alias volume_0="pactl -- set-sink-volume 0"
+  alias volume_1="pactl -- set-sink-volume 1"
 fi
 
 # Lock the computer
