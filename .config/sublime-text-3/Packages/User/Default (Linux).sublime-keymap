@@ -10,5 +10,27 @@
   { "keys": ["ctrl+alt+shift+-"], "command": "jump_forward" },
 
   // https://github.com/randy3k/UnitTesting/blob/0.7.4/Default.sublime-commands
-  { "keys": ["alt+x"], "command": "unit_testing_current_project" }
+  { "keys": ["alt+x"], "command": "unit_testing_current_project" },
+
+  // Custom C++ specific layout (hello header files)
+  {
+    "keys": ["alt+shift+c"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.5, 1.0],
+      "rows": [0.0, 0.5, 1.0],
+      "cells": [[0, 0, 1, 1], [0, 1, 1, 2], [1, 0, 2, 2]]
+    }
+  },
+  {
+    "keys": ["alt+shift+d"],
+    "command": "set_layout",
+    "args":
+    {
+      "cols": [0.0, 0.5, 1.0],
+      "rows": [0.0, 0.5, 1.0],
+      "cells": [[0, 0, 1, 2], [1, 0, 2, 1], [1, 1, 2, 2]]
+    }
+  },
 ]

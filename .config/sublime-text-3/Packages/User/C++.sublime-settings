@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"h",
-		"cpp"
+		"cpp",
+		"hpp"
 	]
 }
