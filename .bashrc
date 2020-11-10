@@ -64,6 +64,13 @@ alias gt="gti"
 alias tgi="git"
 alias igt="git"
 
+### Bin script helpers ###
+odsgrep () {
+  # DEV: ${1+"$@"} dumps $@ as-is without interpretation, very neat
+  #   Grabbed blindly from `zipgrep`
+  zipgrep-pattern -H -l ${1+"$@"} content.xml
+}
+
 ### Clipboard help ###
 if which pbcopy &> /dev/null; then
   alias copy="pbcopy"
