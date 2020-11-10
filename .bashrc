@@ -547,6 +547,11 @@ function switch_to_java() {
   PS1="\$(echo -n \"(Java \$java_version)\")$PS1"
 }
 
+# Add Python scripts to PATH
+# https://pipenv.pypa.io/en/latest/install/#pragmatic-installation-of-pipenv
+# https://docs.python.org/3/library/site.html#site.USER_BASE
+export PATH="$PATH:$HOME/.local/bin"
+
 # Enable toggling of touchscreen on the fly
 function enable_touchscreen() {
   test -n "$TOUCHSCREEN_DEVICE_ID" || (echo "Missing TOUCHSCREEN_DEVICE_ID" 1>&2 && exit 1)
