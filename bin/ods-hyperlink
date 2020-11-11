@@ -1,15 +1,21 @@
 #!/usr/bin/env bash
+# Add hyperlinks to a LibreOffice Calc file
+# We appreciate https://ask.libreoffice.org/en/question/81492/convert-clickable-hyperlink-to-viewable-url/
+# but don't want to handwrite the action every time nor trust a macro (though I guess a bash script isn't much better)
+
 # Exit on first error, unset variable, or pipe failure
 set -euo pipefail
 
 # Retrieve our parameters
 set +u
-filepath="$1"
+ods_filepath="$1"
 set -u
-if test "$filepath" = ""; then
-  echo "Usage: $0 <filepath>" 1>&2
+if test "$ods_filepath" = ""; then
+  echo "Usage: $0 <ods-filepath>" 1>&2
   exit 1
 fi
+
+set -x
 
 # Create a temporary folder to work in and set up cleanup hooks
 tmp_folder="$(mktemp --directory)"
@@ -18,6 +24,20 @@ cleanup () {
 }
 trap cleanup EXIT
 
+
 # Extract content from our `.ods` as a `.zip`
-unzip "$filepath" "content.xml" -d "$tmp_folder"
-cat "$tmp_folder/content.xml"
+unzip "$ods_filepath" "content.xml" -d "$tmp_folder" 1> /dev/null
+# sed --in-place -E 's/http:\/\//https:\/\//g' "$tmp_folder/content.xml" && echo "hi"
+sed --in-place -E 's/http/httpssss/g' "$tmp_folder/content.xml"
+echo foo > "$tmp_folder/content.xml"
+touch "$tmp_folder/content.xml"
+ls -la "$tmp_folder/content.xml"
+
+# Add our `.xml` back into our `.ods` (as a zip)
+# DEV: `-u` is `update`
+old_pwd="$PWD"
+cd "$tmp_folder"
+cat "content.xml"
+zip --verbose -d "$old_pwd/$ods_filepath" "content.xml"
+zip --verbose -u -r "$old_pwd/$ods_filepath" "content.xml"
+cd -
