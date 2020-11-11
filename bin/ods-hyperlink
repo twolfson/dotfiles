@@ -29,15 +29,10 @@ trap cleanup EXIT
 unzip "$ods_filepath" "content.xml" -d "$tmp_folder" 1> /dev/null
 # sed --in-place -E 's/http:\/\//https:\/\//g' "$tmp_folder/content.xml" && echo "hi"
 sed --in-place -E 's/http/httpssss/g' "$tmp_folder/content.xml"
-echo foo > "$tmp_folder/content.xml"
-touch "$tmp_folder/content.xml"
-ls -la "$tmp_folder/content.xml"
 
 # Add our `.xml` back into our `.ods` (as a zip)
 # DEV: `-u` is `update`
 old_pwd="$PWD"
 cd "$tmp_folder"
-cat "content.xml"
-zip --verbose -d "$old_pwd/$ods_filepath" "content.xml"
-zip --verbose -u -r "$old_pwd/$ods_filepath" "content.xml"
+zip --verbose "$old_pwd/$ods_filepath" "content.xml"
 cd -
