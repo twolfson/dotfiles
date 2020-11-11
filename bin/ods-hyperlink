@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Exit on first error, unset variable, or pipe failure
+set -euo pipefail
+
+# Retrieve our parameters
+set +u
+filepath="$1"
+set -u
+if test "$filepath" = ""; then
+  echo "Usage: $0 <filepath>" 1>&2
+  exit 1
+fi
+
+# Create a temporary folder to work in and set up cleanup hooks
+tmp_folder="$(mktemp --directory)"
+cleanup () {
+  rm -r "$tmp_folder"
+}
+trap cleanup EXIT
+
+# Extract content from our `.ods` as a `.zip`
+unzip "$filepath" "content.xml" -d "$tmp_folder"
+cat "$tmp_folder/content.xml"
