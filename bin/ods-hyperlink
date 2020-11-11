@@ -15,8 +15,6 @@ if test "$ods_filepath" = ""; then
   exit 1
 fi
 
-set -x
-
 # Create a temporary folder to work in and set up cleanup hooks
 tmp_folder="$(mktemp --directory)"
 cleanup () {
@@ -24,15 +22,15 @@ cleanup () {
 }
 trap cleanup EXIT
 
-
 # Extract content from our `.ods` as a `.zip`
 unzip "$ods_filepath" "content.xml" -d "$tmp_folder" 1> /dev/null
-# sed --in-place -E 's/http:\/\//https:\/\//g' "$tmp_folder/content.xml" && echo "hi"
-sed --in-place -E 's/http/httpssss/g' "$tmp_folder/content.xml"
+# <text:p>Non-link text <text:a xlink:href="https://google.com/" xlink:type="simple">https://google.com/</text:a></text:p>
+# DEV: Regexp to match URLs without leading/trailing quotes or angel brackets (as likely in HTML attribute/content)
+sed --in-place -E 's/([^">])(https?:\/\/[^ <$]+)([^<"])/\1<text:a xlink:href="\2" xlink:type="simple">\2<\/text:a>\3/g' "$tmp_folder/content.xml"
 
 # Add our `.xml` back into our `.ods` (as a zip)
 # DEV: `-u` is `update`
 old_pwd="$PWD"
 cd "$tmp_folder"
-zip --verbose "$old_pwd/$ods_filepath" "content.xml"
-cd -
+zip --verbose "$old_pwd/$ods_filepath" "content.xml" 1> /dev/null
+cd - 1> /dev/null
