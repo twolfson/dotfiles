@@ -2,6 +2,7 @@
 # Add hyperlinks to a LibreOffice Calc file
 # We appreciate https://ask.libreoffice.org/en/question/81492/convert-clickable-hyperlink-to-viewable-url/
 # but don't want to handwrite the action every time nor trust a macro (though I guess a bash script isn't much better)
+# Intended to be used on `.ods` with no hyperlinks at all, would need XML parser otherwise
 
 # Exit on first error, unset variable, or pipe failure
 set -euo pipefail
@@ -26,7 +27,10 @@ trap cleanup EXIT
 unzip "$ods_filepath" "content.xml" -d "$tmp_folder" 1> /dev/null
 # <text:p>Non-link text <text:a xlink:href="https://google.com/" xlink:type="simple">https://google.com/</text:a></text:p>
 # DEV: Regexp to match URLs without leading/trailing quotes or angel brackets (as likely in HTML attribute/content)
-sed --in-place -E 's/([^">])(https?:\/\/[^ <$]+)([^<"])/\1<text:a xlink:href="\2" xlink:type="simple">\2<\/text:a>\3/g' "$tmp_folder/content.xml"
+# DEV: Use list to know when to terminate URL
+#   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+#   Except removing ",;()" since they could be in sentences but `.` is critical obviously for `.com`
+sed --in-place -E 's/([^"])(https?:\/\/[-A-Za-z0-9_!~*;.\/?:@&=+$#]+)([^"])/\1<text:a xlink:href="\2" xlink:type="simple">\2<\/text:a>\3/g' "$tmp_folder/content.xml"
 
 # Add our `.xml` back into our `.ods` (as a zip)
 # DEV: `-u` is `update`
