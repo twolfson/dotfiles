@@ -17,6 +17,7 @@
 		"Dockerfile Syntax Highlighting",
 		"EasyMotion",
 		"Edit Command Palette",
+		"Emmet",
 		"Extract Sublime Package",
 		"FileDiffs",
 		"Find++",
@@ -72,6 +73,7 @@
 		"SyncedSideBar",
 		"Table Editor",
 		"Terminal",
+		"TypeScript Syntax",
 		"UnitTesting",
 		"WordCount"
 	]
