@@ -1,0 +1,8 @@
+[
+  // https://github.com/twolfson/sublime-files/blob/3207.0.0/Packages/Default/Default%20(Linux).sublime-mousemap
+
+  // Disable font resize on scroll
+  // https://superuser.com/a/473074
+  { "button": "scroll_down", "modifiers": ["ctrl"], "command": "" },
+  { "button": "scroll_up", "modifiers": ["ctrl"], "command": "" },
+]
