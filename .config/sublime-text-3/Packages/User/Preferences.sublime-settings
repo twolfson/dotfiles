@@ -33,11 +33,11 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Emmet",
 		"RestructuredText",
-		"SublimeLinter-eslint",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -52,10 +52,10 @@
 				"open_args":
 				[
 					"http://localhost:7060/"
-				]
+				],
 			},
 			"command": "request",
-			"scope": "window"
+			"scope": "window",
 		}
 	],
 	"reveal-on-activate": false,
@@ -70,5 +70,5 @@
 	"sublime_merge_path": "/dev/null",
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
 }

@@ -13,7 +13,6 @@
 		"ColorHelper",
 		"CTags",
 		"Cucumber",
-		"Directory Settings",
 		"Dockerfile Syntax Highlighting",
 		"EasyMotion",
 		"Edit Command Palette",
@@ -69,6 +68,7 @@
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
+		"SuperSettings",
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
@@ -76,5 +76,5 @@
 		"TypeScript Syntax",
 		"UnitTesting",
 		"WordCount"
-	]
+	],
 }
