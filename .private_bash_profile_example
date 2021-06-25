@@ -1,0 +1,32 @@
+work_begin () {
+  cd ~/projects
+
+  # https://apple.stackexchange.com/a/356748
+  open -a iTerm ~/projects/folder1
+# https://github.com/wbond/sublime_terminal/blob/1.23.0/iTerm2-v3.sh#L33-L42
+osascript<<END
+        tell application "iTerm"
+                tell current window
+            activate
+                        tell current session
+                                write text "npm start"
+                        end tell
+                end tell
+        end tell
+END
+
+  subl
+
+  pico ~/github/work-log/README.txt
+}
+
+git_config_email_work () {
+  git config user.email "todd@work-email.com"
+  echo 'Single commit: git commit --amend --reset-author --no-edit'
+  echo 'Deep fix: https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History'
+}
+
+git_config_email_personal () {
+  git config user.email "todd@twolfson.com"
+  echo 'Single commit: git commit --amend --reset-author --no-edit'
+}
