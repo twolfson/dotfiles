@@ -294,10 +294,6 @@ export EDITOR="nano"
 #   http://unix.stackexchange.com/a/12108
 stty -ixon
 
-# Append to history on every prompt generation
-# DEV: By default `bash` appends on shell exit
-PROMPT_COMMAND="history -a"
-
 # Set up timestamping for bash history
 # 2016-12-26T12:50:00-0800
 HISTTIMEFORMAT="%FT%T%z "
@@ -321,10 +317,106 @@ fi
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
 
+# Extend our bash prompt with a timer
+# https://jakemccrary.com/blog/2015/05/03/put-the-last-commands-run-time-in-your-bash-prompt/
+_start_run_timer() {
+  # If we haven't hit the `stop` call yet, then save our start time
+  # DEV: For `ms` timing, use %3N, https://serverfault.com/a/588705
+  if test -z "$_run_start_time"; then
+    _run_start_time="$(date '+%s')"
+  fi
+}
+_stop_run_timer() {
+  # Capture our stop time, and if we had a start time (i.e. not a new shell), then calculate our run time
+  _run_stop_time="$(date '+%s')"
+  last_command_time="0"
+  if test -n "$_run_start_time"; then
+    last_command_time="$(($_run_stop_time - $_run_start_time))"
+  fi
+  unset _run_start_time
+  unset _run_stop_time
+}
+twolfson_prompt_command() {
+  # Stop our timer for now
+  _stop_run_timer
+
+  # Append to history on every prompt generation
+  # DEV: By default `bash` appends on shell exit
+  #   $ history --help
+  #   -a	append history lines from this session to the history file
+  history -a
+
+  # If our command took over 1s to run and was an unexpected long command (usually non-interactive), then log it out
+  # DEV: We could extend/replace PS1 at top level to output as part of the prompt (via a variable/subshell) but meh
+  if test "$last_command_time" -gt 1 && \
+      $(history 1 | grep --invert-match -E "(pico|nano|git add|git checkout|less)" &> /dev/null); then
+    echo "Command runtime: ${last_command_time}s"
+  fi
+}
+trap _start_run_timer DEBUG
+PROMPT_COMMAND="$PROMPT_COMMAND ; twolfson_prompt_command"
+
+# Define function to see how long it takes for program to exit
+time_pid () {
+  # Define configuration options
+  local sleep_time=2 # seconds
+
+  # Resolve our pid
+  local pid="$1"
+  if test "$pid" = ""; then
+    echo "Usage: time_pid <pid>" 1>&2
+    echo "Missing \`pid\` parameter. Please specify it" 1>&2
+    return 1
+  fi
+
+  # Collect our program's start time
+  local start_time_str="$(ps -p "$pid" -o lstart | grep --invert-match STARTED)"
+  if test "$start_time_str" = ""; then
+    echo "Process ${pid} isn\'t running. Double check pid" 1>&2
+    return 1
+  fi
+  local start_time="$(date --date "${start_time_str}" '+%s')"
+  echo "Process ${pid} running since ${start_time_str}"
+
+  # Loop until our process stops
+  # https://github.com/arlowhite/process-watcher
+  # https://superuser.com/a/447427
+  while true; do
+    echo "Process ${pid} still running at $(date)"
+    local last_time="$(date '+%s')"
+    sleep "$sleep_time"
+
+    if ! ps -p "$pid" &> /dev/null; then
+      break
+    fi
+  done
+
+  # Output our result
+  echo "Process ${pid} stopped at around $(date --date "@${last_time}")"
+  echo "  with total runtime of about: $((last_time - start_time)) seconds"
+}
+
 # Define function to update title
 # DEV: Makes it less annoying to deal with ssh titles
 title () {
   echo -ne "\033]0;$*\007"
+}
+
+# Define function to timestamp images
+# DSC_0001.JPG -> 2019-09-23--DSC_0001.JPG
+timestamp_images () {
+  for filepath in $*; do
+    # Extract our timestamp data
+    #  GPS Date/Time                   : 2018:07:24 04:35:55Z -> "2018-07-24"
+    timestamp="$(exiftool "$filepath" | grep "GPS Date/Time" | sed -E "s/[^:]+: ([0-9]+):([0-9]+):([0-9]+).*+/\1-\2-\3/")"
+    if test -z "$timestamp"; then
+      echo "Missing GPS Date/Time for $filepath" 1>&2
+      return 1
+    fi
+
+    # Rename our file
+    mv "$filepath" "$(dirname "$filepath")/$timestamp--$(basename $filepath)"
+  done
 }
 
 # Expose helper method for git branch
@@ -343,7 +435,7 @@ if test -d "/usr/local/go/bin"; then
 fi
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/heroku/bin"
 
 ## Python virtualenvs
 if test -f /usr/local/bin/virtualenvwrapper.sh; then

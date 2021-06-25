@@ -7,5 +7,9 @@
 
   // Add back alt+- due to resize pane plugin overriding it
   { "keys": ["super+alt+-"], "command": "jump_back" },
-  { "keys": ["super+alt+shift+-"], "command": "jump_forward" }
+  { "keys": ["super+alt+shift+-"], "command": "jump_forward" },
+
+  // https://stackoverflow.com/a/25569796
+  { "keys": ["ctrl+tab"], "command": "next_view" },
+  { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
 ]

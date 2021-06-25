@@ -1,6 +1,5 @@
 [user]
 	name = Todd Wolfson
-	email = todd@twolfson.com
 [mergetool]
 	# Do not create `.orig` files (I trust my git history competency)
 	keepBackup = false
@@ -35,6 +34,7 @@
         author-log = "log --format='%h %aN: %s'"
 	shortref = symbolic-ref --short HEAD
 	pus = push
+	back = git reset --soft HEAD~1
 [sequence]
 	# Edit rebases inside of Sublime Text
 	editor = subl -w
@@ -47,10 +47,12 @@
 	excludesfile = /home/todd/.gitignore
 [init]
 	# Instantiate `git` directories with custom set of hooks
-	templatedir = ~/.config/victorious-git/templatedir
+	templatedir = ~/.config/victorious-git/dotgit
 [push]
 	# Push to remote branch of the same name by default
 	default = current
 [grep]
 	# Display line numbers in `git grep`
 	lineNumber = true
+[pull]
+	rebase = false
