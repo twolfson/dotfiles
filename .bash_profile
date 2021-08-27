@@ -11,3 +11,5 @@ export CLICOLOR=1
 if test -f ~/.private_bash_profile; then
   . ~/.private_bash_profile
 fi
+
+export PATH="$HOME/.poetry/bin:$PATH"

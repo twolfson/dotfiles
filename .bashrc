@@ -503,6 +503,10 @@ fi
 if test -d "/usr/local/go/bin"; then
   PATH="$PATH:/usr/local/go/bin" # Add Go to path
 fi
+if test -d "$HOME/.poetry/bin"; then
+  PATH="$PATH:$HOME/.poetry/bin" # Add Poetry to PATH
+fi
+
 
 ### Added by the Heroku Toolbelt
 export PATH="$PATH:/usr/local/heroku/bin"
