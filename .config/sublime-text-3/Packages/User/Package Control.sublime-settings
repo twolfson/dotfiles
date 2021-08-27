@@ -72,8 +72,9 @@
 		"SyncedSideBar",
 		"Table Editor",
 		"Terminal",
+		"TOML",
 		"TypeScript Syntax",
 		"UnitTesting",
-		"WordCount"
+		"WordCount",
 	],
 }

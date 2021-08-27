@@ -28,6 +28,7 @@
 		"*.db",
 		"*.sublime-workspace"
 	],
+	"file_tab_style": "angled",
 	"font_face": "Input",
 	"font_size": 11,
 	"highlight_line": true,
@@ -69,6 +70,8 @@
 	"spell_check": false,
 	"sublime_merge_path": "/dev/null",
 	"tab_size": 2,
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"update_check": true,
 }
