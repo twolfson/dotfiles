@@ -1,5 +1,6 @@
 [user]
 	name = Todd Wolfson
+	email = todd@twolfson.com
 [mergetool]
 	# Do not create `.orig` files (I trust my git history competency)
 	keepBackup = false
