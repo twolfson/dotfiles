@@ -28,7 +28,7 @@
 		"*.db",
 		"*.sublime-workspace"
 	],
-	"file_tab_style": "angled",
+	"inactive_sheet_dimming": false,
 	"font_face": "Input",
 	"font_size": 11,
 	"highlight_line": true,
