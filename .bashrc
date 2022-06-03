@@ -124,6 +124,14 @@ alias ssh-tunnel="ssh_tunnel"
 
 ### Sandbox utility ###
 function docker_sandbox() {
+  echo "Use something like:"
+  echo "docker run --detach --volume $PWD:/host-pwd --name sandbox ubuntu:18.04 tail -f /dev/null"
+  echo "docker exec -it sandbox /bin/bash"
+  echo "Mising line for home dir, so run cd /host-pwd or fix it... unsure if at run or exec..."
+  echo "Clean up via: docker stop sandbox; docker rm sandbox"
+  echo "or remove stub for the legacy nodejs setup instead"
+  return 0
+
   # Load in our parameters
   name="$1"
   if test "$name" = ""; then
