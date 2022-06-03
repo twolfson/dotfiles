@@ -285,6 +285,11 @@ function set_fake_brightness() {
   xrandr --output LVDS-0 --brightness "$1"
 }
 
+# Mimic only `hub browse` behavior we use
+function hub() {
+  gh browse --branch "$(BRANCH)"
+}
+
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 
