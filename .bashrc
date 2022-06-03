@@ -66,6 +66,7 @@ alias igt="git"
 
 ### Bin script helpers ###
 odsgrep () {
+  # Usage: odsgrep 'searchterm' '*.ods' # (quotes important for pattern)
   # DEV: ${1+"$@"} dumps $@ as-is without interpretation, very neat
   #   Grabbed blindly from `zipgrep`
   zipgrep-pattern -H -l ${1+"$@"} content.xml
