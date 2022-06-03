@@ -178,6 +178,12 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Integrates nicely with keyboard shortcuts
 - [gnome-pie][], cursor based launcher
     - Useful for GUI tasks like quick launching screenshot selection
+- Insync
+- CrashPlan
+- YouTube Music desktop, https://github.com/ytmdesktop/ytmdesktop
+- Clementine
+- Linux Mint desktop snapping
+
 
 [Amarok]: http://amarok.kde.org/
 [Quod Libet]: https://code.google.com/p/quodlibet/
