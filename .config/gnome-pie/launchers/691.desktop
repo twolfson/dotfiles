@@ -1,8 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Main Menu
-Exec=/usr/bin/gnome-pie -o 691
-Encoding=UTF-8
-Type=Application
-Icon=alacarte
-StartupWMClass=gnome-pie-691

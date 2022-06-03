@@ -1,8 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Window
-Exec=/usr/bin/gnome-pie -o 909
-Encoding=UTF-8
-Type=Application
-Icon=gnome-window-manager
-StartupWMClass=gnome-pie-909
