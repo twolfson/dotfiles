@@ -23,15 +23,15 @@ Walk through [INSTALL.md][] and run the specific pieces of code you'd like to us
 
 [INSTALL.md]: INSTALL.md
 
-### Documentation
-#### Bash prompt
+## Documentation
+### Bash prompt
 My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file system, `git branch`, and `git status` via symbols.
 
 [twolfson/sexy-bash-prompt]: https://github.com/twolfson/sexy-bash-prompt
 
 ![Example screenshot of sexy-bash-prompt](https://f.cloud.github.com/assets/902488/759832/eea8511e-e79b-11e2-9012-3a1ac3ff9e36.png)
 
-#### Files
+### Files
 - `.bash_profile` - Bash script that is run at login
     - Sets default editor to [Sublime Text][]
     - Enables CLI coloring
@@ -64,7 +64,8 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 
 [Sublime Text 3]: http://www.sublimetext.com/3
 
-##### `.bashrc` aliases
+### `bash` configuration
+#### Aliases
 - `inco` - Opens a Chrome Incognito window
 - `lock` - Locks computer via screensaver on Gnome/Cinnamon
 - `volume` - Control sound output
