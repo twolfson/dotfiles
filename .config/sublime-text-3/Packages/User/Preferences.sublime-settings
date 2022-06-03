@@ -7,14 +7,16 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input",
-	"font_size": 14.0,
+	"font_size": 13.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Query Completions Silencer",
 		"RestructuredText",
+		"Snippet Destroyer",
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
-		"Vintage"
+		"Vintage",
 	],
 	"indent_guide_options":
 	[
@@ -29,10 +31,10 @@
 				"open_args":
 				[
 					"http://localhost:7060/"
-				]
+				],
 			},
 			"command": "request",
-			"scope": "window"
+			"scope": "window",
 		}
 	],
 	"reveal-on-activate": false,
@@ -40,6 +42,7 @@
 	[
 		120
 	],
+	"scroll_past_end": true,
 	"show_definitions": false,
 	"show_encoding": true,
 	"show_line_endings": true,
@@ -47,5 +50,5 @@
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"update_check": false
+	"update_check": false,
 }

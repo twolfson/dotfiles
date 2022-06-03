@@ -1,4 +1,13 @@
 // SublimeLinter Settings - User
 {
   "debug": false,
+  // Provide extra paths to be searched when locating system executables.
+  "paths": {
+      "linux": [],
+      "osx": [
+        "/Users/todd-work/Library/Python/3.8/bin",
+        "/Users/todd-work/Library/Python/3.9/bin",
+      ],
+      "windows": []
+  },
 }

@@ -29,9 +29,8 @@
 		"Insert Nums",
 		"InsertDate",
 		"Jade",
-		"JavaScriptNext - ES6 Syntax",
+		"Jinja2",
 		"JsPrettier",
-		"JSX",
 		"Keymaps",
 		"LESS",
 		"Markdown Extended",
@@ -76,6 +75,6 @@
 		"Terminal",
 		"TypeScript Syntax",
 		"UnitTesting",
-		"WordCount"
-	]
+		"WordCount",
+	],
 }
