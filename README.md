@@ -11,6 +11,13 @@ This is written for both:
 [macos]: https://www.apple.com/macos/
 [macbook-pro]: https://support.apple.com/kb/SP809?locale=en_US
 
+# Historical notes
+We traditionally tried to automate/sync many pieces/features ([example tag][]).
+
+However, due to not regularly provisioning a new machine, and software changing more rapidly than that, we now prefer this more as a starting point, than an active version.
+
+[example tag]: https://github.com/twolfson/dotfiles/tree/0.14.0
+
 ## Getting started
 To install `dotfiles`, run `./install.sh`.
 
