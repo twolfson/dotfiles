@@ -1,7 +1,10 @@
 # dotfiles
 A collection of my dotfiles (e.g. `.config`, `.bashrc`)
 
-This is written for both [Linux Mint 20.2 (Cinnamon)][linux-mint] on a [Lenovo P51 (20HJ)][lenovo-p51] and [macOS Monterey (Intel)][macos] on a [2019 16" MacBook Pro (Intel)][macbook-pro].
+This is written for both:
+
+- [Linux Mint 20.2 (Cinnamon)][linux-mint] on a [Lenovo P51 (20HJ)][lenovo-p51]
+- [macOS Monterey (Intel)][macos] on a [2019 16" MacBook Pro (Intel)][macbook-pro]
 
 [linux-mint]: http://www.linuxmint.com/
 [lenovo-p51]: https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p51-type-20hh-20hj/20hh
