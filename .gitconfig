@@ -25,15 +25,6 @@
 	# Correct typos that `help.autocorrect` does not fix
 	ad = add
 	dif = diff
-	# Utility methods for working with tags
-	tags-sorted = !git tag | (sort -V 2> /dev/null || gsort -V 2> /dev/null)
-	last-tag = !git tags-sorted | tail -n 1
-	compare-last-tag = !hub compare \"$(git last-tag)\"...master
-	# Clone a gist via `ssh` from an `https` url
-	clone-gist = "!f() { git clone $(echo \"$1\" | sed \"s/https:\\/\\/gist.github.com\\//git@gist.github.com:/\") $2; }; f"
-        # List sha1, author, and subject in one line
-        author-log = "log --format='%h %aN: %s'"
-	shortref = symbolic-ref --short HEAD
 	pus = push
 [sequence]
 	# Edit rebases inside of Sublime Text
