@@ -14,7 +14,7 @@ This is written for both:
 # Historical notes
 We traditionally tried to automate/sync many pieces/features ([example tag][]).
 
-However, due to not regularly provisioning a new machine, and software changing more rapidly than that, we now prefer this more as a starting point, than an active version.
+However, due to not regularly provisioning a new machine, and software changing more rapidly than that, we now prefer this more as a starting point / slightly out of date runbook, than an actively maintained set of scripts.
 
 [example tag]: https://github.com/twolfson/dotfiles/tree/0.14.0
 
