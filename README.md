@@ -53,8 +53,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `.nanorc` - Adds syntax highlighting for `nano`
 
 [Sublime Text 3]: http://www.sublimetext.com/3
-[Anonymous Pro]: http://www.marksimonson.com/fonts/view/anonymous-pro
-[Powerline]: https://github.com/milkbikis/powerline-shell
 
 ##### `.bashrc` aliases
 - `inco` - Opens a Chrome Incognito window
