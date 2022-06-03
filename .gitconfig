@@ -31,6 +31,7 @@
 	editor = subl -w
 [help]
 	# Automatically correct typos within 0.7 seconds (e.g. `git sttus` -> `git status`)
+	#   https://twolfson.com/2013-07-27-develop-faster
 	autocorrect = 7
 [core]
 	# Edit commit messages inside of `pico`

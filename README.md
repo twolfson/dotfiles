@@ -48,6 +48,8 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
         - `add-pr` - Adds a new `remote` for fetching pull requests as branches
         - `amend` - Update previous commit
         - `git` - For chaining of multiple `git's` (e.g. `git git status`)
+    - Handle common typos via `help.autocorrect` and more aliases (e.g. `git sttus` -> `git status`)
+        - More techniques like this in <https://twolfson.com/2013-07-27-develop-faster>
 - `.gconf` - Configurations for Gnome (e.g. Ctrl+Alt+Del for `gnome-system-monitor`)
 - `.nanorc` - Adds syntax highlighting for `nano`
 
