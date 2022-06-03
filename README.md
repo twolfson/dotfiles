@@ -68,7 +68,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 #### Aliases
 - `inco` - Opens a Chrome Incognito window
 - `lock` - Locks computer via screensaver on Gnome/Cinnamon
-- `volume` - Control sound output
 
 #### Directory movements
 - `cd` - Moved to directory and pushes onto directory stack (via `pushd`)
@@ -76,7 +75,6 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
 - `~` - Navigate to the home directory (via `pushd`)
 - `,,`, [...], `,,,,,` - Navigate back one, [...], five directories (in the `pushd` stack via `popd`)
 - `,` - List out current `pushd`/`popd` stack
-- `copy` - Aliases for consistent copying functionality across Linux Mint and OSX
 
 ## Programs
 - [Sublime Text 3][] with [Package Control][], text editor with great plugin system and ecosystem
