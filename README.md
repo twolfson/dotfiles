@@ -12,16 +12,16 @@ This is written for both:
 [macbook-pro]: https://support.apple.com/kb/SP809?locale=en_US
 
 # Historical notes
-We traditionally tried to automate/sync many pieces/features ([example tag][]).
+In the past, we tried to automate/sync many pieces/features ([example tag][]).
 
 However, due to not regularly provisioning a new machine, and software changing more rapidly than that, we now prefer this more as a starting point / slightly out of date runbook, than an actively maintained set of scripts.
 
 [example tag]: https://github.com/twolfson/dotfiles/tree/0.14.0
 
 ## Getting started
-To install `dotfiles`, run `./install.sh`.
+Walk through [INSTALL.md][] and run the specific pieces of code you'd like to use (e.g. symlinks, copy/append files)
 
-This will create symlinks and copy/append files when symlinks are inappropriate.
+[INSTALL.md]: INSTALL.md
 
 ### Documentation
 #### Bash prompt

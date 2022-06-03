@@ -1,3 +1,4 @@
+```bash
 # Bash settings
 if ! test -f ~/.bashrc; then
   ln -s $PWD/.bashrc ~/.bashrc
@@ -84,3 +85,4 @@ if ! test -f ~/.nanorc; then
 else
   echo "\`nano\` syntax highlighting already installed" 1>&2
 fi
+```
