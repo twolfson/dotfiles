@@ -33,8 +33,12 @@ My bash prompt is hosted at [twolfson/sexy-bash-prompt][]. It provides file syst
     - Adds customized sexy bash prompt
 - `.config/sublime-text-3/Packages/User` - Configuration for [Sublime Text][]
     - Includes list of commonly used packages in [Package Control.sublime-settings](.config/sublime-text-3/Packages/User/Package Control.sublime-settings)
-- `.fonts/anonymous+Pro-Powerline.ttf` - [Anonymous Pro][], a monospaced font with serifs
-    - This font comes from [Powerline][] which contains additional characters. However, I don't use them.
+- `.fonts/` - Collection of monospaced fonts I may be using for programming
+    - Sublime Text is using a custom version of [Input](.fonts/README.md) in Regular, size depends on OS
+    - gnome-terminal is using default: [DejaVu Sans Mono][] (Linux Mint monospace default) in Regular at size 10
+        [DejaVu Sans Mono]: https://dejavu-fonts.github.io/
+        <!-- Verified Linux Mint monospace default via https://unix.stackexchange.com/a/154746/498167 -->
+    - iTerm is using default: [Monaco](https://en.wikipedia.org/wiki/Monaco_(typeface)) in Regular at size 12
 - `.gitconfig`
     - Set up credentials for `twolfson` (me)
     - Disable creation of `.orig` files
