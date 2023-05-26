@@ -1,0 +1,39 @@
+Dock:
+- Finder
+- Firefox
+- iTerm
+- Sublime Text
+- Slack
+- YouTube Music
+- `|`
+- Downloads (Sort by name, Display as Folder, View Content as List)
+- Trash
+
+Menu bar:
+- Middle
+- Google Drive Sync
+    - Shortcut
+- Karabiner Elements
+    - Overrides for:
+    - Broken C key (Opt+X)
+    - Fn+Number for F# keys substitute
+    - Shift+Fn for toggling touchbar on/off
+        - I keep touchbar off normally
+- Docker Desktop
+- Rectangle
+
+Scripts:
+- `work_begin`
+
+iTerm:
+- sexy-bash-prompt (as is configured in dotfiles)
+- Preferences: Load via custom folder (dotfiles), https://stackoverflow.com/a/23356086/1960509
+    - Custom profile:
+        - General
+            - Name: Custom
+            - Command: Custom shell: /bin/bash
+            - Working directory: Reuse previous session's directory
+        - Colors
+            - Colors: Adjusted somewhat
+        - Terminal
+            - Unlimited scrollback
