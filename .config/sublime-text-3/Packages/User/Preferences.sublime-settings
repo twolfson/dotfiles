@@ -7,7 +7,8 @@
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Input",
-	"font_size": 13.0,
+	// Normal working typeface: "font_size": 14.0,
+	"font_size": 14.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[

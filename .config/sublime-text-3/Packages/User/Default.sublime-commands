@@ -48,5 +48,18 @@
         "caption": "Set Tab Width: 4",
         "command": "set_setting",
         "args": {"setting": "tab_size", "value": 4},
+    },
+    // We always forget the "Find All Under" key combination and name since it's not used frequently enough
+    {
+        "caption": "Select: Find Next",
+        "command": "find_next",
+    },
+    {
+        "caption": "Select: Find Previous",
+        "command": "find_prev",
+    },
+    {
+        "caption": "Select: Find All Under",
+        "command": "find_all_under",
     }
 ]

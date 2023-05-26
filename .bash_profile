@@ -16,7 +16,8 @@ if test -f ~/.private_bash_profile; then
 fi
 
 
-. /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+# Was erroring on Monterey, seems to not be needed?
+# . /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export PATH="$HOME/.poetry/bin:$PATH"
