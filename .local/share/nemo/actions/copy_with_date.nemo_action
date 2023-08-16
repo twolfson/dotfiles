@@ -1,0 +1,8 @@
+[Nemo Action]
+Name=_Copy with Date
+Comment=Copy file/folder with timestamp in name to today's date
+Exec=<action_scripts/copy_with_date.sh %F>
+Icon-Name=edit-copy-symbolic
+Selection=notnone
+Extensions=any;
+EscapeSpaces=true

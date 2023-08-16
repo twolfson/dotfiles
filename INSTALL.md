@@ -70,3 +70,15 @@ else
   echo "\`nano\` syntax highlighting already installed" 1>&2
 fi
 ```
+
+## Nemo Actions
+Utilizes https://github.com/smurphos/nemo_actions_and_cinnamon_scripts
+
+```bash
+if ! test -f ~/.nanorc; then
+  ln -s $PWD/.local/share/nemo/actions ~/.local/share/nemo/actions
+  echo "Installed Nemo actions" 1>&2
+else
+  echo "Please remove \`~/.local/share/nemo/actions\` first" 1>&2
+fi
+```
