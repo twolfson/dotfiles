@@ -1,3 +1,5 @@
+TODO: Talk about touchbar customizations + annotating keyboard
+
 # dotfiles
 A collection of my dotfiles (e.g. `.config`, `.bashrc`)
 
