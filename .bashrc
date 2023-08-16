@@ -515,7 +515,9 @@ fi
 if test -d "$HOME/.poetry/bin"; then
   PATH="$PATH:$HOME/.poetry/bin" # Add Poetry to PATH
 fi
-
+if test -d "$HOME/bin-private"; then
+  PATH="$PATH:$HOME/bin-private" # Add ~/bin-private to PATH for untracked scripting
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="$PATH:/usr/local/heroku/bin"
