@@ -290,6 +290,9 @@ function hub() {
   gh browse --branch "$(BRANCH)"
 }
 
+# Set up for macOS Meld, https://yousseb.github.io/meld/
+alias meld="open -W -a Meld $@"
+
 # Define `nano` as our default `EDITOR`
 export EDITOR="nano"
 

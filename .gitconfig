@@ -1,13 +1,23 @@
 [user]
 	name = Todd Wolfson
 	email = todd@twolfson.com
+[diff]
+	tool = meld
+[difftool "meld"]
+	# macOS specific, https://yousseb.github.io/meld/
+	trustExitCode = true
+	# $PWD fix for Meld on Sonoma, https://stackoverflow.com/q/75358432
+	cmd = open -W -a Meld --args \"$PWD/$LOCAL\" \"$PWD/$REMOTE\"
+[merge]
+	tool = meld
 [mergetool]
 	# Do not create `.orig` files (I trust my git history competency)
 	keepBackup = false
-[mergetool "[tool]"]
-	cmd = meld
-[merge]
-	tool = meld
+[mergetool "meld"]
+	# macOS specific, https://yousseb.github.io/meld/
+	trustExitCode = true
+	# $PWD fix for Meld on Sonoma, https://stackoverflow.com/q/75358432
+	cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [color]
 	# Get colors for all commands
 	ui = true
