@@ -444,7 +444,7 @@ export PATH="$PATH:/usr/local/heroku/bin"
 
 ## Python virtualenvs
 if test -f /usr/local/bin/virtualenvwrapper.sh; then
-  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/Devel
   source /usr/local/bin/virtualenvwrapper.sh

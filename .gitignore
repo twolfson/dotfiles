@@ -6,3 +6,4 @@
 *.*-ca-bundle
 node_modules/
 *.sublime-settings
+.DS_Store
