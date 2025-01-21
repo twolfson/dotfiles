@@ -84,3 +84,7 @@ if ! test -f ~/.nanorc; then
 else
   echo "\`nano\` syntax highlighting already installed" 1>&2
 fi
+
+# Karabiner Elements
+# Remove if needed: rm ~/.config/karabiner/karabiner.json
+# ln -s $PWD/.config/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
