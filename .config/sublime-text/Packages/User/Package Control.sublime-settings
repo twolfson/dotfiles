@@ -67,7 +67,6 @@
 		"SublimeLinter-jscs",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
-		"SuperSettings",
 		"SwapStrings",
 		"SyncedSideBar",
 		"Table Editor",
@@ -75,5 +74,6 @@
 		"TOML",
 		"UnitTesting",
 		"WordingStatus",
+		"DirectorySettings",
 	],
 }
