@@ -5,4 +5,6 @@
 *.log
 *.*-ca-bundle
 node_modules/
-*.sublime-settings
+
+# Hide telemetry ID
+.config/sublime-text-3/Packages/User/Emmet.sublime-settings
